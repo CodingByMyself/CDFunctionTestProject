@@ -8,6 +8,7 @@
 
 #import "CDMainViewController.h"
 #import "CDCollectionViewController.h"
+#import "CDTestCustomGroupController.h"
 
 @interface CDMainViewController () <UITableViewDelegate,UITableViewDataSource>
 {
@@ -35,7 +36,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    _functionList = @[@"collectionView 的扩展方法"];
+    _functionList = @[@"collectionView 的扩展方法",@"TableView自定义分组显示"];
     
     self.view.backgroundColor = [UIColor whiteColor];
     
@@ -62,9 +63,23 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    switch ([indexPath row]) {
+        case 0:
+        {
+            CDCollectionViewController *collection = [[CDCollectionViewController alloc] init];
+            [self.navigationController pushViewController:collection animated:YES];
+        }
+            break;
+        case 1:
+        {
+            CDTestCustomGroupController *group = [[CDTestCustomGroupController alloc] init];
+            [self.navigationController pushViewController:group animated:YES];
+        }
+            break;
+        default:
+            break;
+    }
     
-    CDCollectionViewController *collection = [[CDCollectionViewController alloc] init];
-    [self.navigationController pushViewController:collection animated:YES];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
