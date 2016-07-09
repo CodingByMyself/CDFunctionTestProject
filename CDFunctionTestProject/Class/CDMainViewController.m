@@ -9,6 +9,7 @@
 #import "CDMainViewController.h"
 #import "CDCollectionViewController.h"
 #import "CDTestCustomGroupController.h"
+#import "CDTestMenuViewController.h"
 
 @interface CDMainViewController () <UITableViewDelegate,UITableViewDataSource>
 {
@@ -35,8 +36,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.title = @"功能列表";
     
-    _functionList = @[@"collectionView 的扩展方法",@"TableView自定义分组显示"];
+    _functionList = @[@"CollectionView的扩展方法",@"TableView自定义分组显示",@"CollectionView菜单功能"];
     
     self.view.backgroundColor = [UIColor whiteColor];
     
@@ -54,8 +56,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"UITableViewCellID"];
     }
     
-    cell.textLabel.text = _functionList[indexPath.row];
-    cell.textLabel.textAlignment = NSTextAlignmentCenter;
+    cell.textLabel.text = [NSString stringWithFormat:@" %zi、 %@", ([indexPath row] + 1), _functionList[indexPath.row]];
     
     return cell;
 }
@@ -74,6 +75,12 @@
         {
             CDTestCustomGroupController *group = [[CDTestCustomGroupController alloc] init];
             [self.navigationController pushViewController:group animated:YES];
+        }
+            break;
+        case 2:
+        {
+            CDTestMenuViewController *menu = [[CDTestMenuViewController alloc] init];
+            [self.navigationController pushViewController:menu animated:YES];
         }
             break;
         default:

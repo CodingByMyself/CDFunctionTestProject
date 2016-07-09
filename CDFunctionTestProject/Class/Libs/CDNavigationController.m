@@ -9,7 +9,7 @@
 #import "CDNavigationController.h"
 
 // 3.导航栏标题的字体
-#define MTNavigationTitleFont [UIFont systemFontOfSize:20.0]
+#define MTNavigationTitleFont [UIFont systemFontOfSize:18.0]
 #define  MTNavigationBarColorBlack  MTColor(243, 243, 243, 1.0)
 #define  MTNavigationBarTintColorBlack  MTColor(50, 50, 50, 1.0)
 
@@ -55,7 +55,7 @@
     /**
      *  为导航栏添加底部阴影
      */
-    [self navigationBar].layer.shadowColor = MTColor(190.0, 190.0, 190.0, 1.0).CGColor; //shadowColor阴影颜色
+    [self navigationBar].layer.shadowColor = MTColor(180.0, 180.0, 180.0, 1.0).CGColor; //shadowColor阴影颜色
     [self navigationBar].layer.shadowOffset = CGSizeMake(0.0f , 1.0f); //shadowOffset阴影偏移x，y向(上/下)偏移(-/+)2
     [self navigationBar].layer.shadowOpacity = 0.8f;//阴影透明度，默认0
     [self navigationBar].layer.shadowRadius = 1.0f;//阴影半径

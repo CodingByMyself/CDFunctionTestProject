@@ -39,6 +39,7 @@ CGFloat const FooterViewOtherHeight = 4.0;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.title = @"自定义分组显示";
     
     /**
      * 初始化 tableView

@@ -10,12 +10,8 @@
 #import "CDCollectionViewFlowLayout.h"
 
 
-#define ScreenWidth [[UIScreen mainScreen] bounds].size.width
-#define ScreenHeight [[UIScreen mainScreen] bounds].size.height
-
 NSString *const UICollectionElementKindSectionHeaderID = @"NewLinerHomeCollectionViewHeaderViewID";
 NSString *const UICollectionElementKindSectionFooterID = @"NewLinerHomeCollectionViewFooterViewID";
-
 
 
 @interface CDCollectionViewController () <UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,UITableViewDelegate,UITableViewDataSource>
@@ -36,6 +32,7 @@ NSString *const UICollectionElementKindSectionFooterID = @"NewLinerHomeCollectio
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view
+    self.title = @"侧面导航扩展";
     
     
     //  初始化装载控件
@@ -91,6 +88,8 @@ NSString *const UICollectionElementKindSectionFooterID = @"NewLinerHomeCollectio
         labelDesr.textColor = [UIColor darkGrayColor];
         labelDesr.font = [UIFont systemFontOfSize:14.0];
         [cell addSubview:labelDesr];
+    } else {
+        labelDesr.frame = cell.bounds;
     }
     labelDesr.text = [NSString stringWithFormat:@"%zi%zi",[indexPath section],[indexPath row]];
     cell.backgroundColor = [UIColor yellowColor];
@@ -153,12 +152,12 @@ NSString *const UICollectionElementKindSectionFooterID = @"NewLinerHomeCollectio
             break;
         case 3:
         {
-            size = CGSizeMake(ScreenWidth, 80.0);
+            size = CGSizeMake(ScreenWidth, 50.0);
         }
             break;
         case 4:
         {
-            size = CGSizeMake((ScreenWidth - 3.0)/4.0, 60.0);
+            size = CGSizeMake((ScreenWidth - 3.0)/4.0, (ScreenWidth - 3.0)/4.0);
         }
             break;
         default:
