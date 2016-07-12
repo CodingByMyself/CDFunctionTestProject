@@ -10,11 +10,12 @@
 #import "CDCollectionViewController.h"
 #import "CDTestCustomGroupController.h"
 #import "CDTestMenuViewController.h"
+#import "CDTestAutoLayoutViewController.h"
 
 @interface CDMainViewController () <UITableViewDelegate,UITableViewDataSource>
 {
     NSArray *_functionList;
-    
+    NSArray *_classList;
     UITableView *_table;
 }
 @end
@@ -37,10 +38,17 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = @"功能列表";
-    
-    _functionList = @[@"CollectionView的扩展方法",@"TableView自定义分组显示",@"CollectionView菜单功能"];
-    
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    
+    _functionList = @[@"CollectionView的扩展方法",@"TableView自定义分组显示",@"CollectionView菜单功能",@"SDAutoLayout功能验证"];
+    _classList = @[
+                   [[CDCollectionViewController alloc] init] ,
+                   [[CDTestCustomGroupController alloc] init] ,
+                   [[CDTestMenuViewController alloc] init] ,
+                   [[CDTestAutoLayoutViewController alloc] init]
+                   ];
+    
     
     _table = [[UITableView alloc] initWithFrame:self.view.bounds];
     _table.delegate = self;
@@ -64,29 +72,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    switch ([indexPath row]) {
-        case 0:
-        {
-            CDCollectionViewController *collection = [[CDCollectionViewController alloc] init];
-            [self.navigationController pushViewController:collection animated:YES];
-        }
-            break;
-        case 1:
-        {
-            CDTestCustomGroupController *group = [[CDTestCustomGroupController alloc] init];
-            [self.navigationController pushViewController:group animated:YES];
-        }
-            break;
-        case 2:
-        {
-            CDTestMenuViewController *menu = [[CDTestMenuViewController alloc] init];
-            [self.navigationController pushViewController:menu animated:YES];
-        }
-            break;
-        default:
-            break;
+    if ([_classList count] > [indexPath row]) {
+        [self.navigationController pushViewController:_classList[indexPath.row] animated:YES];
     }
-    
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section

@@ -78,7 +78,7 @@ CGFloat const FooterViewOtherHeight = 4.0;
 {
     CDTestTableCell *cell = [[CDTestTableCell alloc] initWithRestorationIdentifier:@"CDTestTableCell" onTableView:tableView];
     
-    cell.labelTitle.text = [NSString stringWithFormat:@"row%zi in section%zi",[indexPath row],[indexPath section]];
+    cell.baseLabelTitle.text = [NSString stringWithFormat:@"row%zi in section%zi",[indexPath row],[indexPath section]];
     
     [cell updateLayoutAndLayerWithTableView:tableView indexPath:indexPath];  //  分类的扩展方法
     

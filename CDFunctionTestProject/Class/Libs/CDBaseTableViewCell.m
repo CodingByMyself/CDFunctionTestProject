@@ -15,8 +15,8 @@
 @end
 
 @implementation CDBaseTableViewCell
-@synthesize viewBg = _viewBg;
-@synthesize labelTitle = _labelTitle;
+@synthesize baseViewBg = _baseViewBg;
+@synthesize baseLabelTitle = _baseLabelTitle;
 
 
 #pragma mark - Public init method
@@ -48,6 +48,7 @@
             self = [super init];
         }
         [self setRestorationIdentifier:identifier];
+        [self setup];
         return self;
         
     } else {
@@ -70,50 +71,56 @@
     if (cell == nil) {
         self = [super init];
         [self setRestorationIdentifier:identifier];
+        [self setup];
         return self;
     } else {
         return cell;
     }
 }
 
-#pragma mark   -  property  getter  method
-- (UIView *)viewBg
+- (void)setup
 {
-    if (_viewBg == nil) {
-        _viewBg = [[UIView alloc] init];
-        _viewBg.backgroundColor = [UIColor clearColor];
-        [self.contentView addSubview:_viewBg];
-        [_viewBg mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(_viewBg.superview);
-            make.left.equalTo(_viewBg.superview);
-            make.right.equalTo(_viewBg.superview);
-            make.bottom.equalTo(_viewBg.superview);
-        }];
-    }
-    return _viewBg;
+    //  空实现，子类可以重载该方法来自定义初始化代码
 }
 
-- (UILabel *)labelTitle
+#pragma mark   -  property  getter  method
+- (UIView *)baseViewBg
 {
-    if (_labelTitle == nil) {
-        _labelTitle = [[UILabel alloc] init];
-        _labelTitle.font = [UIFont systemFontOfSize:15.0];
-        _labelTitle.textColor = [UIColor darkGrayColor];
-        [self.viewBg addSubview:_labelTitle];
-        [_labelTitle mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(_labelTitle.superview);
-            make.left.equalTo(_labelTitle.superview).offset(6.0);
-            make.right.equalTo(_labelTitle.superview).offset(-6.0);
-            make.bottom.equalTo(_labelTitle.superview);
+    if (_baseViewBg == nil) {
+        _baseViewBg = [[UIView alloc] init];
+        _baseViewBg.backgroundColor = [UIColor clearColor];
+        [self.contentView addSubview:_baseViewBg];
+        [_baseViewBg mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(_baseViewBg.superview);
+            make.left.equalTo(_baseViewBg.superview);
+            make.right.equalTo(_baseViewBg.superview);
+            make.bottom.equalTo(_baseViewBg.superview);
         }];
     }
-    return _labelTitle;
+    return _baseViewBg;
+}
+
+- (UILabel *)baseLabelTitle
+{
+    if (_baseLabelTitle == nil) {
+        _baseLabelTitle = [[UILabel alloc] init];
+        _baseLabelTitle.font = [UIFont systemFontOfSize:15.0];
+        _baseLabelTitle.textColor = [UIColor darkGrayColor];
+        [self.baseViewBg addSubview:_baseLabelTitle];
+        [_baseLabelTitle mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(_baseLabelTitle.superview);
+            make.left.equalTo(_baseLabelTitle.superview).offset(6.0);
+            make.right.equalTo(_baseLabelTitle.superview).offset(-6.0);
+            make.bottom.equalTo(_baseLabelTitle.superview);
+        }];
+    }
+    return _baseLabelTitle;
 }
 
 #pragma mark
 - (void)layoutSubviews
 {
-    [self.contentView sendSubviewToBack:_viewBg];
+    [self.contentView sendSubviewToBack:_baseViewBg];
 }
 
 - (void)awakeFromNib {

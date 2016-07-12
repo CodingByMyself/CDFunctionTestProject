@@ -6,6 +6,10 @@
 //  Copyright © 2016年 Cindy. All rights reserved.
 //
 
+#ifndef CDBaseTableViewCell_h
+#define CDBaseTableViewCell_h
+
+
 #import <UIKit/UIKit.h>
 
 @interface CDBaseTableViewCell : UITableViewCell
@@ -15,8 +19,8 @@
  *
  *  @return 返回cell背景视图的引用对象
  */
-@property (nonatomic,readonly) UIView *viewBg;
-@property (nonatomic,readonly) UILabel *labelTitle;
+@property (nonatomic,readonly) UIView *baseViewBg;
+@property (nonatomic,readonly) UILabel *baseLabelTitle;
 
 
 
@@ -44,5 +48,15 @@
  */
 - (instancetype)initWithRestorationIdentifier:(NSString *)identifier onTableView:(UITableView *)tableView;
 
+/**
+ *  初始化方法 （空实现，子类可以重载该方法来自定义初始化代码）
+ */
+- (void)setup;
 
 @end
+
+
+
+#endif /* CDBaseTableViewCell_h */
+
+
