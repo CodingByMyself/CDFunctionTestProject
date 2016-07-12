@@ -21,6 +21,8 @@
 		3725804A1D1EC117002629B4 /* navigation_bg_color.png in Resources */ = {isa = PBXBuildFile; fileRef = 372580491D1EC117002629B4 /* navigation_bg_color.png */; };
 		3725804C1D1EC6A4002629B4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3725804B1D1EC6A4002629B4 /* Images.xcassets */; };
 		374FE59D1D348CD300AD089B /* CDAutoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 374FE59C1D348CD300AD089B /* CDAutoModel.m */; };
+		374FE5A01D34C2E400AD089B /* CDTestAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 374FE59F1D34C2E400AD089B /* CDTestAnimationViewController.m */; };
+		374FE5A31D34C4D600AD089B /* UIView+CDAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 374FE5A21D34C4D600AD089B /* UIView+CDAnimation.m */; };
 		379D7D411D2F86EA0061F2B6 /* CDMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 379D7D401D2F86EA0061F2B6 /* CDMenuView.m */; };
 		379D7D441D2F88150061F2B6 /* CDMenuCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 379D7D431D2F88150061F2B6 /* CDMenuCollectionCell.m */; };
 		379D7D471D2F91CC0061F2B6 /* CDTestMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 379D7D461D2F91CC0061F2B6 /* CDTestMenuViewController.m */; };
@@ -63,6 +65,10 @@
 		3725804B1D1EC6A4002629B4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		374FE59B1D348CD300AD089B /* CDAutoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDAutoModel.h; sourceTree = "<group>"; };
 		374FE59C1D348CD300AD089B /* CDAutoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDAutoModel.m; sourceTree = "<group>"; };
+		374FE59E1D34C2E400AD089B /* CDTestAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDTestAnimationViewController.h; sourceTree = "<group>"; };
+		374FE59F1D34C2E400AD089B /* CDTestAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDTestAnimationViewController.m; sourceTree = "<group>"; };
+		374FE5A11D34C4D600AD089B /* UIView+CDAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CDAnimation.h"; sourceTree = "<group>"; };
+		374FE5A21D34C4D600AD089B /* UIView+CDAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CDAnimation.m"; sourceTree = "<group>"; };
 		379D7D3F1D2F86EA0061F2B6 /* CDMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDMenuView.h; sourceTree = "<group>"; };
 		379D7D401D2F86EA0061F2B6 /* CDMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDMenuView.m; sourceTree = "<group>"; };
 		379D7D421D2F88150061F2B6 /* CDMenuCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDMenuCollectionCell.h; sourceTree = "<group>"; };
@@ -130,8 +136,6 @@
 			isa = PBXGroup;
 			children = (
 				3725802B1D1E7A33002629B4 /* Class */,
-				372580201D1E79C7002629B4 /* Assets.xcassets */,
-				3725804B1D1EC6A4002629B4 /* Images.xcassets */,
 				372580141D1E79C7002629B4 /* Supporting Files */,
 			);
 			path = CDFunctionTestProject;
@@ -146,6 +150,8 @@
 				372580221D1E79C7002629B4 /* LaunchScreen.storyboard */,
 				372580251D1E79C7002629B4 /* Info.plist */,
 				372580151D1E79C7002629B4 /* main.m */,
+				3725804B1D1EC6A4002629B4 /* Images.xcassets */,
+				372580201D1E79C7002629B4 /* Assets.xcassets */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -153,9 +159,9 @@
 		3725802B1D1E7A33002629B4 /* Class */ = {
 			isa = PBXGroup;
 			children = (
-				37DAF8741D33A26D001BF809 /* SDAutolayout功能验证 */,
 				3725803B1D1E7DBA002629B4 /* CDMainViewController.h */,
 				3725803C1D1E7DBA002629B4 /* CDMainViewController.m */,
+				37DAF8741D33A26D001BF809 /* SDAutolayout功能验证 */,
 				37DAF8711D333748001BF809 /* View的部分动画功能 */,
 				379D7D3C1D2F86A50061F2B6 /* CollectionView菜单选项 */,
 				37A5B6281D2DF9D100F09090 /* TableView自定义扩展 */,
@@ -327,6 +333,8 @@
 		37DAF8721D333748001BF809 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				374FE59E1D34C2E400AD089B /* CDTestAnimationViewController.h */,
+				374FE59F1D34C2E400AD089B /* CDTestAnimationViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -334,6 +342,8 @@
 		37DAF8731D333748001BF809 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				374FE5A11D34C4D600AD089B /* UIView+CDAnimation.h */,
+				374FE5A21D34C4D600AD089B /* UIView+CDAnimation.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -504,6 +514,7 @@
 				37A5B6441D2E349400F09090 /* CDTestTableCell.m in Sources */,
 				372580191D1E79C7002629B4 /* AppDelegate.m in Sources */,
 				37A5B63A1D2E07EB00F09090 /* CDBaseTableViewCell+CDGroupCellCategory.m in Sources */,
+				374FE5A01D34C2E400AD089B /* CDTestAnimationViewController.m in Sources */,
 				37DAF87F1D33A456001BF809 /* CDBaseTableViewCell.m in Sources */,
 				3725803D1D1E7DBA002629B4 /* CDMainViewController.m in Sources */,
 				37A5B6401D2E2C7100F09090 /* UIImage+RoundedCorner.m in Sources */,
@@ -512,6 +523,7 @@
 				379D7D441D2F88150061F2B6 /* CDMenuCollectionCell.m in Sources */,
 				37DAF87C1D33A3F1001BF809 /* CDAutoLayoutTableCell.m in Sources */,
 				372580311D1E7AE7002629B4 /* CDCollectionViewController.m in Sources */,
+				374FE5A31D34C4D600AD089B /* UIView+CDAnimation.m in Sources */,
 				374FE59D1D348CD300AD089B /* CDAutoModel.m in Sources */,
 				37DAF8791D33A287001BF809 /* CDTestAutoLayoutViewController.m in Sources */,
 				372580161D1E79C7002629B4 /* main.m in Sources */,

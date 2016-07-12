@@ -11,6 +11,7 @@
 #import "CDTestCustomGroupController.h"
 #import "CDTestMenuViewController.h"
 #import "CDTestAutoLayoutViewController.h"
+#import "CDTestAnimationViewController.h"
 
 @interface CDMainViewController () <UITableViewDelegate,UITableViewDataSource>
 {
@@ -41,12 +42,13 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     
-    _functionList = @[@"CollectionView的扩展方法",@"TableView自定义分组显示",@"CollectionView菜单功能",@"SDAutoLayout功能验证"];
+    _functionList = @[@"CollectionView的扩展方法",@"TableView自定义分组显示",@"CollectionView菜单功能",@"SDAutoLayout功能验证",@"View相关的动画功能"];
     _classList = @[
                    [[CDCollectionViewController alloc] init] ,
                    [[CDTestCustomGroupController alloc] init] ,
                    [[CDTestMenuViewController alloc] init] ,
-                   [[CDTestAutoLayoutViewController alloc] init]
+                   [[CDTestAutoLayoutViewController alloc] init],
+                   [[CDTestAnimationViewController alloc] init]
                    ];
     
     

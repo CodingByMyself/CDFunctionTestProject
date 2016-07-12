@@ -38,6 +38,10 @@ NSString * const demo14Description = @"xib的cell高度自适应";
 
 @implementation CDTestAutoLayoutViewController
 
+/**
+ *  更加复杂的功能用法可参照SDAutoLayout的官方Demo
+ */
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -65,13 +69,6 @@ NSString * const demo14Description = @"xib的cell高度自适应";
     .rightSpaceToView(self.view,0)
     .bottomSpaceToView(self.view,0);
 }
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [_table reloadData];
-}
-
-
 
 #pragma mark - UI Table View Data And Delegate
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
