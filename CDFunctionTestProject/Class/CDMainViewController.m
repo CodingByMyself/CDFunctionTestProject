@@ -12,6 +12,7 @@
 #import "CDTestMenuViewController.h"
 #import "CDTestAutoLayoutViewController.h"
 #import "CDTestAnimationViewController.h"
+#import "CDTestFontViewController.h"
 
 @interface CDMainViewController () <UITableViewDelegate,UITableViewDataSource>
 {
@@ -42,13 +43,14 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     
-    _functionList = @[@"CollectionView的扩展方法",@"TableView自定义分组显示",@"CollectionView菜单功能",@"SDAutoLayout功能验证",@"View相关的动画功能"];
+    _functionList = @[@"CollectionView 的扩展方法",@"TableView 自定义分组显示",@"CollectionView 菜单功能",@"SDAutoLayout 功能验证",@"View 相关的动画功能",@"iOS 字体大全"];
     _classList = @[
                    [[CDCollectionViewController alloc] init] ,
                    [[CDTestCustomGroupController alloc] init] ,
                    [[CDTestMenuViewController alloc] init] ,
                    [[CDTestAutoLayoutViewController alloc] init],
-                   [[CDTestAnimationViewController alloc] init]
+                   [[CDTestAnimationViewController alloc] init],
+                   [[CDTestFontViewController alloc] init]
                    ];
     
     
@@ -65,8 +67,16 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"UITableViewCellID"];
     }
+    //    cell.textLabel.text = [NSString stringWithFormat:@" %zi、 %@", ([indexPath row] + 1), _functionList[indexPath.row]];
     
-    cell.textLabel.text = [NSString stringWithFormat:@" %zi、 %@", ([indexPath row] + 1), _functionList[indexPath.row]];
+    NSString *text = [NSString stringWithFormat:@" %zi、 %@", ([indexPath row] + 1), _functionList[indexPath.row]];
+    NSMutableAttributedString *str = [[NSMutableAttributedString alloc] initWithString:text];
+    if ([indexPath row]%2) {
+        [str addAttribute:NSFontAttributeName value:[UIFont fontWithName:@"LaoSangamMN" size:16] range:[text rangeOfString:text]];
+    } else {
+        [str addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:16.0] range:[text rangeOfString:text]];
+    }
+    cell.textLabel.attributedText = str;
     
     return cell;
 }

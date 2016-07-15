@@ -42,7 +42,7 @@
 
 - (void)setup
 {
-    self.layer.shadowColor = MTColor(200.0, 200.0, 200.0, 1.0).CGColor;
+    self.layer.shadowColor = DefineColor(200.0, 200.0, 200.0, 1.0).CGColor;
     self.layer.shadowOffset = CGSizeMake(0.0,0.0);
     self.layer.shadowOpacity = 1.0f;
     self.layer.shadowRadius = 2.0f;

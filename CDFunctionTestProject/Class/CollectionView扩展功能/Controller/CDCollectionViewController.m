@@ -60,7 +60,7 @@ NSString *const UICollectionElementKindSectionFooterID = @"NewLinerHomeCollectio
     _toolbarTable.delegate = self;
     _toolbarTable.dataSource = self;
     [_toolbarTable setSeparatorStyle:UITableViewCellSeparatorStyleNone];
-    _toolbarTable.backgroundColor = MTColor(0, 0, 0, 0.3);
+    _toolbarTable.backgroundColor = DefineColor(0, 0, 0, 0.3);
     _toolbarTable.layer.cornerRadius = 2.0;
     [self.view addSubview:_toolbarTable];    [_toolbarTable mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.view).offset(30.0);
@@ -109,7 +109,7 @@ NSString *const UICollectionElementKindSectionFooterID = @"NewLinerHomeCollectio
     
     CDCollectionViewFlowLayout *collectionViewFlowLayout = (CDCollectionViewFlowLayout *)collectionViewLayout;
     // 设置header或footer的size, 如不设置默认是CGSizeZero
-    CGSize size = section == 0 ? CGSizeZero : CGSizeMake(ScreenWidth, 35.0);
+    CGSize size = section == 0 ? CGSizeZero : CGSizeMake(DefineScreenWidth, 35.0);
     collectionViewFlowLayout.headerReferenceSize = size;
     collectionViewFlowLayout.footerReferenceSize = CGSizeZero;  //  不需要显示footer
     
@@ -137,27 +137,27 @@ NSString *const UICollectionElementKindSectionFooterID = @"NewLinerHomeCollectio
     switch ([indexPath section]) {
         case 0:
         {
-            size = CGSizeMake(ScreenWidth, 120.0);
+            size = CGSizeMake(DefineScreenWidth, 120.0);
         }
             break;
         case 1:
         {
-            size = CGSizeMake((ScreenWidth - 3.0)/4.0, 50.0);
+            size = CGSizeMake((DefineScreenWidth - 3.0)/4.0, 50.0);
         }
             break;
         case 2:
         {
-            size = CGSizeMake(ScreenWidth, 100.0);
+            size = CGSizeMake(DefineScreenWidth, 100.0);
         }
             break;
         case 3:
         {
-            size = CGSizeMake(ScreenWidth, 50.0);
+            size = CGSizeMake(DefineScreenWidth, 50.0);
         }
             break;
         case 4:
         {
-            size = CGSizeMake((ScreenWidth - 3.0)/4.0, (ScreenWidth - 3.0)/4.0);
+            size = CGSizeMake((DefineScreenWidth - 3.0)/4.0, (DefineScreenWidth - 3.0)/4.0);
         }
             break;
         default:

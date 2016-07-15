@@ -55,7 +55,7 @@ CGFloat const FooterViewOtherHeight = 4.0;
 
 - (void)initTableViewExpandHeader
 {
-    _customView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, HeaderViewTopHeight)];
+    _customView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, DefineScreenWidth, HeaderViewTopHeight)];
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:_customView.bounds];
     [imageView setImage:[UIImage imageNamed:@"header_view_image_bg.jpg"]];
     //关键步骤 设置可变化背景view属性
