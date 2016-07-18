@@ -7,11 +7,11 @@
 //
 
 #import "CDFlipAnimation.h"
-#import "UIView+CDAnimation.h"
+#import "CDViewAnimation.h"
 
 @interface CDFlipAnimation ()
 {
-    UIView *_flipAnimationBgView;
+    CDViewAnimation *_flipAnimationBgView;
     UIView *_viewOne;
     UIView *_viewTwo;
 }
@@ -39,7 +39,7 @@
 - (void)initView
 {
     // 动画背景
-    _flipAnimationBgView = [UIView new];
+    _flipAnimationBgView = [CDViewAnimation new];
     [self.view addSubview:_flipAnimationBgView];
     _flipAnimationBgView.sd_layout .topSpaceToView(_flipAnimationBgView.superview,20.0) .leftSpaceToView(_flipAnimationBgView.superview,20.0) .rightSpaceToView(_flipAnimationBgView.superview,20.0) .heightIs(100.0);
     _flipAnimationBgView.clipsToBounds = YES;

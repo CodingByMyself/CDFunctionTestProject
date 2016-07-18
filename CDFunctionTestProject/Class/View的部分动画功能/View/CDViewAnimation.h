@@ -1,15 +1,18 @@
 //
-//  UIView+CDAnimation.h
+//  CDViewAnimation.h
 //  CDFunctionTestProject
 //
-//  Created by Cindy on 16/7/12.
+//  Created by Cindy on 16/7/18.
 //  Copyright © 2016年 Cindy. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface UIView (CDAnimation)
+@interface CDViewAnimation : UIView
 
 - (void)startFlipAnimation:(CGFloat)animation onSubviewOne:(UIView *)subviewFirst subviewTwo:(UIView *)subviewSeconde;
+
+- (void)stratWaveAnimationWithBody:(BOOL)body;
+- (void)stopWaveAnimation;
 
 @end
