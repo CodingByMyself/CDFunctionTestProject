@@ -20,6 +20,8 @@
 #import "UIView+CDViewCategory.h"
 #import "CDBaseTableViewCell.h"
 
+#import "UIView+RoundedCorner.h"
+
 #import "Masonry.h"
 #import "SDAutoLayout.h"
 

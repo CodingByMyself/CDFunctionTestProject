@@ -76,7 +76,9 @@ NSString * const demo14Description = @"xib的cell高度自适应";
     CDAutoLayoutTableCell *cell = [[CDAutoLayoutTableCell alloc] initWithRestorationIdentifier:@"CDAutoLayoutTableCellID" onTableView:tableView];
     
     CDAutoModel *model = _dataArray[indexPath.row];
+    cell.titleLabel.font = DefineFontHelveticaNeue(FontBaseSize + 2.0);
     cell.titleLabel.text = model.title;
+    cell.contentLabel.font = DefineFontLaoSangamMN(FontBaseSize);
     cell.contentLabel.text = model.contentDescrip;
     
     return cell;

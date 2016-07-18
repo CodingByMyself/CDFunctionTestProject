@@ -7,8 +7,6 @@
 //
 
 #import "CDBaseTableViewCell+CDGroupCellCategory.h"
-#import "UIView+RoundedCorner.h"
-
 
 
 @implementation CDBaseTableViewCell (CDGroupCellCategory)

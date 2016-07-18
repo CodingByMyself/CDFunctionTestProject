@@ -79,7 +79,7 @@
 #define DefineFontSystem(textSize)  [UIFont systemFontOfSize:(textSize)]
 #define DefineFont(fontName,textSize)  [UIFont fontWithName:(fontName) size:(textSize)]
 #define DefineFontLaoSangamMN(textSize)  [UIFont fontWithName:@"LaoSangamMN" size:(textSize)]
-#define DefineFontHelveticaNeue(textSize)  [UIFont fontWithName:@"HelveticaNeue-LightItalic" size:(textSize)]
+#define DefineFontHelveticaNeue(textSize)  [UIFont fontWithName:@"HelveticaNeue" size:(textSize)]
 
 
 

@@ -7,14 +7,16 @@
 //
 
 #import "CDTestAnimationViewController.h"
-#import "UIView+CDAnimation.h"
+#import "CDFlipAnimation.h"
+#import "CDWaveAnimation.h"
 
 
-@interface CDTestAnimationViewController ()
+
+@interface CDTestAnimationViewController () <UITableViewDelegate,UITableViewDataSource>
 {
-    UIView *_flipAnimationBgView;
-    UIView *_viewOne;
-    UIView *_viewTwo;
+    UITableView *_tableAnimation;
+    NSArray *_animtionList;
+    NSArray *_classList;
 }
 @end
 
@@ -23,49 +25,51 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = @"动画演示";
+    self.title = @"动画列表";
     self.view.backgroundColor = [UIColor whiteColor];
+
+    _animtionList = @[@"翻转动画",@"波浪动画"];
+    _classList = @[
+                   [[CDFlipAnimation alloc] init] ,
+                   [[CDWaveAnimation alloc] init]
+                   ];
+    _tableAnimation = [[UITableView alloc] initWithFrame:self.view.bounds];
+    _tableAnimation.delegate = self;
+    _tableAnimation.dataSource = self;
+    [self.view addSubview:_tableAnimation];
     
-//    UIBarButtonItem *flipButton=[[UIBarButtonItem alloc]
-//                                 initWithTitle:@"翻转"
-//                                 style:UIBarButtonItemStyleBordered
-//                                 target:self
-//                                 action:@selector(startFlipAnimation)];
-//    self.navigationItem.rightBarButtonItem=flipButton;
-    
-    [self initView];  // 初始化动画相关的view
 }
 
-- (void)initView
+#pragma mark - UITableView Delegate
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // 动画背景
-    _flipAnimationBgView = [UIView new];
-    [self.view addSubview:_flipAnimationBgView];
-    _flipAnimationBgView.sd_layout .topSpaceToView(_flipAnimationBgView.superview,20.0) .leftSpaceToView(_flipAnimationBgView.superview,20.0) .rightSpaceToView(_flipAnimationBgView.superview,20.0) .heightIs(100.0);
-    _flipAnimationBgView.clipsToBounds = YES;
-    _flipAnimationBgView.layer.cornerRadius = 5.0f;
-    // 视图三
-    _viewOne = [UIView new];
-    _viewOne.backgroundColor=[UIColor redColor];
-    [_flipAnimationBgView addSubview:_viewOne];
-    _viewOne.sd_layout.topSpaceToView(_flipAnimationBgView,0) .leftSpaceToView(_flipAnimationBgView,0) .rightSpaceToView(_flipAnimationBgView,0) .bottomSpaceToView(_flipAnimationBgView,0);
-    //  视图二
-    _viewTwo = [UIView new];
-    _viewTwo.backgroundColor=[UIColor yellowColor];
-    [_flipAnimationBgView addSubview:_viewTwo];
-    _viewTwo.sd_layout .topSpaceToView(_flipAnimationBgView,0) .leftSpaceToView(_flipAnimationBgView,0) .rightSpaceToView(_flipAnimationBgView,0) .bottomSpaceToView(_flipAnimationBgView,0);
-    
-    UIButton *button = [UIButton new];
-    [_flipAnimationBgView addSubview:button];
-    [button setTitle:@"点我可以翻转哦" forState:UIControlStateNormal];
-    [button setTitleColor:[UIColor brownColor] forState:UIControlStateNormal];
-    [button addTarget:self action:@selector(startFlipAnimation) forControlEvents:UIControlEventTouchUpInside];
-    button.sd_layout.leftSpaceToView(_flipAnimationBgView,0) .rightSpaceToView(_flipAnimationBgView,0) .centerYIs(_flipAnimationBgView.centerY_sd) .heightIs(50.0);
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCellID"];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"UITableViewCellID"];
+    }
+    cell.textLabel.font = DefineFontLaoSangamMN(FontBaseSize);
+    cell.textLabel.text = [NSString stringWithFormat:@"    %zi、 %@", ([indexPath row] + 1), _animtionList[indexPath.row]];
+    return cell;
 }
 
-- (void)startFlipAnimation
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [_flipAnimationBgView startFlipAnimation:0.8 onSubviewOne:_viewOne subviewTwo:_viewTwo];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if ([_classList count] > [indexPath row]) {
+        [self.navigationController pushViewController:_classList[indexPath.row] animated:YES];
+    }
 }
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [_animtionList count];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+
+{
+    return 50.0;
+}
+
 
 @end
