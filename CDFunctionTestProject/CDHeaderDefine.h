@@ -60,16 +60,27 @@
  *  @param a 透明度
  *  @return UIColor的一个实例
  */
-#define DefineColor(r, g, b, a)  [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
+#define DefineColorRGB(r, g, b, a)  [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
 /**
  *  获得指定颜色值的实例
  *  @param hexValue 十六进制颜色值
  *  @return UIColor的一个实例
  */
-#define DefineColorFromHEX(hexValue) [UIColor colorWithRed:((float)((hexValue & 0xFF0000) >> 16))/255.0 green:((float)((hexValue & 0xFF00) >> 8))/255.0 blue:((float)(hexValue & 0xFF))/255.0 alpha:1.0]  // rgb颜色转换（16进制->10进制）
+#define DefineColorHEX(hexValue) [UIColor colorWithRed:((float)((hexValue & 0xFF0000) >> 16))/255.0 green:((float)((hexValue & 0xFF00) >> 8))/255.0 blue:((float)(hexValue & 0xFF))/255.0 alpha:1.0]  // rgb颜色转换（16进制->10进制）
 
 
-#define DefineFont(size)  [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
+
+/**
+ *  获得指定的字体实例
+ *  @param size 字体大小
+ *  @return UIFont的一个实例
+ */
+#define FontBaseSize 15.0f   // 直接调整该值即可放大或缩小整App的字体
+#define DefineFontSystem(textSize)  [UIFont systemFontOfSize:(textSize)]
+#define DefineFont(fontName,textSize)  [UIFont fontWithName:(fontName) size:(textSize)]
+#define DefineFontLaoSangamMN(textSize)  [UIFont fontWithName:@"LaoSangamMN" size:(textSize)]
+#define DefineFontHelveticaNeue(textSize)  [UIFont fontWithName:@"HelveticaNeue-LightItalic" size:(textSize)]
+
 
 
 
@@ -79,12 +90,12 @@
  */
 #define DefineScreenWidth  ((([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortrait) || ([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortraitUpsideDown)) ? [[UIScreen mainScreen] bounds].size.width : [[UIScreen mainScreen] bounds].size.height)
 #define DefineScreenHeight  ((([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortrait) || ([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortraitUpsideDown)) ? [[UIScreen mainScreen] bounds].size.height : [[UIScreen mainScreen] bounds].size.width)
-
 // 判断手机型号
-#define IS_IPHONE_6P     (DefineScreenHeight == 736.0)
-#define IS_IPHONE_6         (DefineScreenHeight == 667.0)
-#define IS_IPHONE_5         (DefineScreenHeight == 568.0)
-#define IS_IPHONE_4         (DefineScreenHeight == 480.0)
+#define  iPhone6P   (DefineScreenHeight == 736.0)
+#define  iPhone6    (DefineScreenHeight == 667.0)
+#define  iPhone5    (DefineScreenHeight == 568.0)
+#define  iPhone4    (DefineScreenHeight == 480.0)
+
 
 // 当前运行的SDK版本号
 #define IOS_VERSION [[[UIDevice currentDevice] systemVersion] floatValue]

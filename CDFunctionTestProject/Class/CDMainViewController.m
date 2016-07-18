@@ -71,10 +71,12 @@
     
     NSString *text = [NSString stringWithFormat:@" %zi、 %@", ([indexPath row] + 1), _functionList[indexPath.row]];
     NSMutableAttributedString *str = [[NSMutableAttributedString alloc] initWithString:text];
-    if ([indexPath row]%2) {
-        [str addAttribute:NSFontAttributeName value:[UIFont fontWithName:@"LaoSangamMN" size:16] range:[text rangeOfString:text]];
+    if ([indexPath row] == 0) {
+        [str addAttribute:NSFontAttributeName value:DefineFontHelveticaNeue(FontBaseSize) range:[text rangeOfString:text]];
+    } else if ([indexPath row]%2) {
+        [str addAttribute:NSFontAttributeName value:DefineFontLaoSangamMN(FontBaseSize) range:[text rangeOfString:text]];
     } else {
-        [str addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:16.0] range:[text rangeOfString:text]];
+        [str addAttribute:NSFontAttributeName value:DefineFontSystem(FontBaseSize) range:[text rangeOfString:text]];
     }
     cell.textLabel.attributedText = str;
     
@@ -99,22 +101,5 @@
 {
     return 55.0;
 }
-
-
-#pragma mark
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

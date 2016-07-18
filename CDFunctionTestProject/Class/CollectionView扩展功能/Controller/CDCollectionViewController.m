@@ -60,7 +60,7 @@ NSString *const UICollectionElementKindSectionFooterID = @"NewLinerHomeCollectio
     _toolbarTable.delegate = self;
     _toolbarTable.dataSource = self;
     [_toolbarTable setSeparatorStyle:UITableViewCellSeparatorStyleNone];
-    _toolbarTable.backgroundColor = DefineColor(0, 0, 0, 0.3);
+    _toolbarTable.backgroundColor = DefineColorRGB(0, 0, 0, 0.3);
     _toolbarTable.layer.cornerRadius = 2.0;
     [self.view addSubview:_toolbarTable];    [_toolbarTable mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.view).offset(30.0);

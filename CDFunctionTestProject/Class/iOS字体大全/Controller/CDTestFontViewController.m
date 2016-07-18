@@ -28,7 +28,15 @@
     self.title = @"字体样式展示";
     self.view.backgroundColor = [UIColor whiteColor];
     
-    
+    /**
+     IOS Font :
+     
+     LaoSangamMN
+     HiraMinProN-W3
+     HiraMinProN-W6
+     HelveticaNeue (Light)
+     
+     */
     
     _fontArray = [[NSMutableArray alloc] initWithCapacity:242];
     for (NSString * familyName in [UIFont familyNames]) {
@@ -58,12 +66,13 @@
     
     cell.textLabel.numberOfLines = 0;
     //    NSString * testStr = @"It has 15 功能测试哦~";
-    NSString * testStr  = [NSString stringWithFormat:@"我随手一打就是漂亮的十五个字了\n\n%@",_fontArray[indexPath.row]];
+    NSString * testStr  = [NSString stringWithFormat:@"我随手一打就是漂亮的十五个字了 \nFontName = \" %@ \"",_fontArray[indexPath.row]];
     NSMutableAttributedString *str = [[NSMutableAttributedString alloc] initWithString:testStr];
-//    [str addAttribute:NSForegroundColorAttributeName value:[UIColor blueColor] range:NSMakeRange(0,3)];
-//    [str addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(3,4)];
-    [str addAttribute:NSForegroundColorAttributeName value:[UIColor darkGrayColor] range:[testStr rangeOfString:testStr]];
-    [str addAttribute:NSFontAttributeName value:[UIFont fontWithName:_fontArray[indexPath.row] size:18] range:[testStr rangeOfString:testStr]];
+    [str addAttribute:NSForegroundColorAttributeName value:[UIColor blueColor] range:NSMakeRange(0,3)];
+    [str addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(3,3)];
+    [str addAttribute:NSForegroundColorAttributeName value:[UIColor greenColor] range:NSMakeRange(6,4)];
+//    [str addAttribute:NSForegroundColorAttributeName value:[UIColor darkGrayColor] range:[testStr rangeOfString:testStr]];
+    [str addAttribute:NSFontAttributeName value:DefineFont(_fontArray[indexPath.row], FontBaseSize) range:[testStr rangeOfString:testStr]];
     cell.textLabel.attributedText = str;
     
     
@@ -83,7 +92,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 
 {
-    return 80.0;
+    return 60.0;
 }
 
 
