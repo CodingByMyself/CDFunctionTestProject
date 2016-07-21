@@ -8,7 +8,6 @@
 
 #import "CDTestBaseModelViewController.h"
 #import "CDTestModel.h"
-#import "NSObject+CDCategory.h"
 
 @interface CDTestBaseModelViewController ()
 
@@ -22,6 +21,18 @@
     self.title = @"模型扩展";
     self.view.backgroundColor = [UIColor whiteColor];
 
+    
+    UILabel *label = [[UILabel alloc] init];
+    label.text = @"打开控制台，查看打印日志";
+    label.textColor = [UIColor redColor];
+    label.textAlignment = NSTextAlignmentCenter;
+    [self.view addSubview:label];
+    [label mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(label.superview);
+        make.right.equalTo(label.superview);
+        make.centerY.equalTo(label.superview);
+        make.height.equalTo(@(20.0));
+    }];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -30,11 +41,10 @@
     CDTestModel *model2 = [[CDTestModel alloc] init];
     model2.contactPersonList = @[[[CDTestModel alloc] init],@"我是个异类！",[[CDTestModel alloc] init]];
     model.contactPersonList = @[model2,@(1002),@(5555)];
-//    MTDetailLog(@"modelDescription = %@\n",[model modelDescription]);
-    NSString *string = model.baseDescription;
-    MTDetailLog(@"baseDescription ********** %@",string);
+    NSDictionary *dd = [model cd_ModelDescription];
+//    MTDetailLog(@"modelDescription = %@\n",dd);
+    MTDetailLog(@"JSONString ********** %@",[dd JSONString]);
     
-
     
     
     
@@ -44,7 +54,7 @@
         NSData *data = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:url]];
         NSLog(@"Loaded");
         //        [jsonData dataUsingEncoding:NSUTF8StringEncoding];
-        [self cd_dictionaryToLogJsonData:data andKey:@"Data" andKeyReplaceDictionary:nil];
+        [CDBaseObject cd_dictionaryToLogJsonData:data andKey:@"Data" andKeyReplaceDictionary:nil];
     });
 }
 
