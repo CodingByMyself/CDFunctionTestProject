@@ -16,6 +16,7 @@
 #import "CDTestBaseModelViewController.h"
 
 #import "CDConstSetup.h"
+#import "CDTestBlurViewController.h"
 
 @interface CDMainViewController () <UITableViewDelegate,UITableViewDataSource>
 {
@@ -47,7 +48,7 @@
     MTDetailLog(@"%@",ConstCDHTTPMethodGet);
     
     
-    _functionList = @[@"CollectionView 的扩展方法",@"TableView 自定义分组显示",@"CollectionView 菜单功能",@"SDAutoLayout 功能验证",@"View 相关的动画功能",@"iOS 字体大全",@"NSObject模型扩展",];
+    _functionList = @[@"CollectionView 的扩展方法",@"TableView 自定义分组显示",@"CollectionView 菜单功能",@"SDAutoLayout 功能验证",@"View 相关的动画功能",@"iOS 字体大全",@"NSObject模型扩展",@"view的模糊效果"];
     _classList = @[
                    [[CDCollectionViewController alloc] init] ,
                    [[CDTestCustomGroupController alloc] init] ,
@@ -55,7 +56,8 @@
                    [[CDTestAutoLayoutViewController alloc] init],
                    [[CDTestAnimationViewController alloc] init],
                    [[CDTestFontViewController alloc] init],
-                   [[CDTestBaseModelViewController alloc] init]
+                   [[CDTestBaseModelViewController alloc] init],
+                   [[CDTestBlurViewController alloc] init]
                    ];
     
     

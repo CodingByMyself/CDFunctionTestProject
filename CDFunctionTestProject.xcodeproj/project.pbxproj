@@ -40,6 +40,11 @@
 		37A5B6441D2E349400F09090 /* CDTestTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A5B6431D2E349400F09090 /* CDTestTableCell.m */; };
 		37A5B64A1D2E444700F09090 /* CDTestCustomGroupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A5B6491D2E444700F09090 /* CDTestCustomGroupController.m */; };
 		37B8EB0E1D4065AF0062C4B6 /* CDConstSetup.m in Sources */ = {isa = PBXBuildFile; fileRef = 37B8EB0D1D4065AF0062C4B6 /* CDConstSetup.m */; };
+		37B8EB1D1D40B3640062C4B6 /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37B8EB1C1D40B3640062C4B6 /* FXBlurView.m */; };
+		37B8EB201D40B3900062C4B6 /* CDTestBlurViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37B8EB1F1D40B3900062C4B6 /* CDTestBlurViewController.m */; };
+		37B8EB241D40B4F40062C4B6 /* IMG_2705.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 37B8EB211D40B4F40062C4B6 /* IMG_2705.JPG */; };
+		37B8EB251D40B4F40062C4B6 /* IMG_2717.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 37B8EB221D40B4F40062C4B6 /* IMG_2717.PNG */; };
+		37B8EB261D40B4F40062C4B6 /* IMG_2718.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 37B8EB231D40B4F40062C4B6 /* IMG_2718.PNG */; };
 		37DAF8791D33A287001BF809 /* CDTestAutoLayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DAF8781D33A287001BF809 /* CDTestAutoLayoutViewController.m */; };
 		37DAF87C1D33A3F1001BF809 /* CDAutoLayoutTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DAF87B1D33A3F1001BF809 /* CDAutoLayoutTableCell.m */; };
 		37DAF87F1D33A456001BF809 /* CDBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DAF87E1D33A456001BF809 /* CDBaseTableViewCell.m */; };
@@ -110,6 +115,13 @@
 		37A5B6491D2E444700F09090 /* CDTestCustomGroupController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDTestCustomGroupController.m; sourceTree = "<group>"; };
 		37B8EB0D1D4065AF0062C4B6 /* CDConstSetup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDConstSetup.m; sourceTree = "<group>"; };
 		37B8EB0F1D40679A0062C4B6 /* CDConstSetup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDConstSetup.h; sourceTree = "<group>"; };
+		37B8EB1B1D40B3640062C4B6 /* FXBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXBlurView.h; sourceTree = "<group>"; };
+		37B8EB1C1D40B3640062C4B6 /* FXBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXBlurView.m; sourceTree = "<group>"; };
+		37B8EB1E1D40B3900062C4B6 /* CDTestBlurViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDTestBlurViewController.h; sourceTree = "<group>"; };
+		37B8EB1F1D40B3900062C4B6 /* CDTestBlurViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDTestBlurViewController.m; sourceTree = "<group>"; };
+		37B8EB211D40B4F40062C4B6 /* IMG_2705.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_2705.JPG; sourceTree = "<group>"; };
+		37B8EB221D40B4F40062C4B6 /* IMG_2717.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_2717.PNG; sourceTree = "<group>"; };
+		37B8EB231D40B4F40062C4B6 /* IMG_2718.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_2718.PNG; sourceTree = "<group>"; };
 		37DAF8771D33A287001BF809 /* CDTestAutoLayoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDTestAutoLayoutViewController.h; sourceTree = "<group>"; };
 		37DAF8781D33A287001BF809 /* CDTestAutoLayoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDTestAutoLayoutViewController.m; sourceTree = "<group>"; };
 		37DAF87A1D33A3F1001BF809 /* CDAutoLayoutTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDAutoLayoutTableCell.h; sourceTree = "<group>"; };
@@ -184,9 +196,10 @@
 		3725802B1D1E7A33002629B4 /* Class */ = {
 			isa = PBXGroup;
 			children = (
-				37532F011D3DD08D003CFE0C /* NSObject自定义模型基类 */,
+				37B8EB101D40A9C90062C4B6 /* View高斯模糊 */,
 				3725803B1D1E7DBA002629B4 /* CDMainViewController.h */,
 				3725803C1D1E7DBA002629B4 /* CDMainViewController.m */,
+				37532F011D3DD08D003CFE0C /* NSObject自定义模型基类 */,
 				3793E3461D38EE7500955777 /* iOS字体大全 */,
 				37DAF8741D33A26D001BF809 /* SDAutolayout功能验证 */,
 				37DAF8711D333748001BF809 /* View的部分动画功能 */,
@@ -410,6 +423,36 @@
 			path = JMRoundedCorner;
 			sourceTree = "<group>";
 		};
+		37B8EB101D40A9C90062C4B6 /* View高斯模糊 */ = {
+			isa = PBXGroup;
+			children = (
+				37B8EB111D40A9C90062C4B6 /* Controller */,
+				37B8EB121D40A9C90062C4B6 /* View */,
+			);
+			path = "View高斯模糊";
+			sourceTree = "<group>";
+		};
+		37B8EB111D40A9C90062C4B6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				37B8EB1E1D40B3900062C4B6 /* CDTestBlurViewController.h */,
+				37B8EB1F1D40B3900062C4B6 /* CDTestBlurViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		37B8EB121D40A9C90062C4B6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				37B8EB211D40B4F40062C4B6 /* IMG_2705.JPG */,
+				37B8EB221D40B4F40062C4B6 /* IMG_2717.PNG */,
+				37B8EB231D40B4F40062C4B6 /* IMG_2718.PNG */,
+				37B8EB1B1D40B3640062C4B6 /* FXBlurView.h */,
+				37B8EB1C1D40B3640062C4B6 /* FXBlurView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		37DAF8711D333748001BF809 /* View的部分动画功能 */ = {
 			isa = PBXGroup;
 			children = (
@@ -541,7 +584,10 @@
 				37A5B6311D2DF9D100F09090 /* header_view_image_bg.jpg in Resources */,
 				372580241D1E79C7002629B4 /* LaunchScreen.storyboard in Resources */,
 				3725804C1D1EC6A4002629B4 /* Images.xcassets in Resources */,
+				37B8EB261D40B4F40062C4B6 /* IMG_2718.PNG in Resources */,
 				3725804A1D1EC117002629B4 /* navigation_bg_color.png in Resources */,
+				37B8EB251D40B4F40062C4B6 /* IMG_2717.PNG in Resources */,
+				37B8EB241D40B4F40062C4B6 /* IMG_2705.JPG in Resources */,
 				37DD7D451D30D6D80053C326 /* test_icon.png in Resources */,
 				372580211D1E79C7002629B4 /* Assets.xcassets in Resources */,
 			);
@@ -619,8 +665,10 @@
 				3774CBDB1D3F793600240D43 /* CDBaseObject.m in Sources */,
 				379D7D471D2F91CC0061F2B6 /* CDTestMenuViewController.m in Sources */,
 				37532F071D3DD0BD003CFE0C /* CDTestBaseModelViewController.m in Sources */,
+				37B8EB1D1D40B3640062C4B6 /* FXBlurView.m in Sources */,
 				379D7D441D2F88150061F2B6 /* CDMenuCollectionCell.m in Sources */,
 				37DAF87C1D33A3F1001BF809 /* CDAutoLayoutTableCell.m in Sources */,
+				37B8EB201D40B3900062C4B6 /* CDTestBlurViewController.m in Sources */,
 				376C16211D3CAD41002AA201 /* CDFlipAnimation.m in Sources */,
 				372580311D1E7AE7002629B4 /* CDCollectionViewController.m in Sources */,
 				37B8EB0E1D4065AF0062C4B6 /* CDConstSetup.m in Sources */,
