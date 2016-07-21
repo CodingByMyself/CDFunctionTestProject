@@ -13,6 +13,9 @@
 #import "CDTestAutoLayoutViewController.h"
 #import "CDTestAnimationViewController.h"
 #import "CDTestFontViewController.h"
+#import "CDTestBaseModelViewController.h"
+
+#import "CDConstSetup.h"
 
 @interface CDMainViewController () <UITableViewDelegate,UITableViewDataSource>
 {
@@ -41,16 +44,18 @@
     // Do any additional setup after loading the view.
     self.title = @"功能列表";
     self.view.backgroundColor = [UIColor whiteColor];
+    MTDetailLog(@"%@",ConstCDHTTPMethodGet);
     
     
-    _functionList = @[@"CollectionView 的扩展方法",@"TableView 自定义分组显示",@"CollectionView 菜单功能",@"SDAutoLayout 功能验证",@"View 相关的动画功能",@"iOS 字体大全"];
+    _functionList = @[@"CollectionView 的扩展方法",@"TableView 自定义分组显示",@"CollectionView 菜单功能",@"SDAutoLayout 功能验证",@"View 相关的动画功能",@"iOS 字体大全",@"NSObject模型扩展",];
     _classList = @[
                    [[CDCollectionViewController alloc] init] ,
                    [[CDTestCustomGroupController alloc] init] ,
                    [[CDTestMenuViewController alloc] init] ,
                    [[CDTestAutoLayoutViewController alloc] init],
                    [[CDTestAnimationViewController alloc] init],
-                   [[CDTestFontViewController alloc] init]
+                   [[CDTestFontViewController alloc] init],
+                   [[CDTestBaseModelViewController alloc] init]
                    ];
     
     
@@ -67,18 +72,16 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"UITableViewCellID"];
     }
-    //    cell.textLabel.text = [NSString stringWithFormat:@" %zi、 %@", ([indexPath row] + 1), _functionList[indexPath.row]];
     
-    NSString *text = [NSString stringWithFormat:@" %zi、 %@", ([indexPath row] + 1), _functionList[indexPath.row]];
-    NSMutableAttributedString *str = [[NSMutableAttributedString alloc] initWithString:text];
+    cell.textLabel.text = [NSString stringWithFormat:@" %zi、 %@", ([indexPath row] + 1), _functionList[indexPath.row]];
+    //  设置字体显示
     if ([indexPath row] == 0) {
-        [str addAttribute:NSFontAttributeName value:DefineFontHelveticaNeue(FontBaseSize) range:[text rangeOfString:text]];
-    } else if ([indexPath row]%2) {
-        [str addAttribute:NSFontAttributeName value:DefineFontLaoSangamMN(FontBaseSize) range:[text rangeOfString:text]];
+        cell.textLabel.font = DefineFontHelveticaNeue(FontBaseSize + 2.0);
+    } else if ([indexPath row] == 1) {
+        cell.textLabel.font = DefineFontSystem(FontBaseSize + 2.0);
     } else {
-        [str addAttribute:NSFontAttributeName value:DefineFontSystem(FontBaseSize) range:[text rangeOfString:text]];
+        cell.textLabel.font = DefineFontLaoSangamMN(FontBaseSize + 2.0);
     }
-    cell.textLabel.attributedText = str;
     
     return cell;
 }

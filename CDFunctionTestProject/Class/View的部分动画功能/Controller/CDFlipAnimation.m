@@ -34,6 +34,15 @@
     
     [self initView];  // 初始化动画相关的view
     
+    UIView *view = [UIView new];
+    view.backgroundColor = [UIColor groupTableViewBackgroundColor];
+    view.frame = CGRectMake(20.0, 300.0, 300.0, 200.0);
+    [self.view addSubview:view];
+    view.layer.borderColor = [UIColor greenColor].CGColor;
+    view.layer.borderWidth = 1.0;
+//        view.borderWhich = ZJViewBorderRight;
+//    view.borderWhich = ZJViewBorderLeft;
+    view.borderWhich = ZJViewBorderBottom | ZJViewBorderRight;
 }
 
 - (void)initView
