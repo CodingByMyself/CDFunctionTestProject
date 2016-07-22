@@ -1,49 +1,46 @@
 //
-//  CDNavigationController.m
-//  MotouchCar_student
+//  CDBaseNavigationController.m
+//  CDFunctionTestProject
 //
-//  Created by Cindy on 15/8/7.
-//  Copyright (c) 2015年 Cindy. All rights reserved.
+//  Created by Cindy on 16/7/22.
+//  Copyright © 2016年 Cindy. All rights reserved.
 //
 
-#import "CDNavigationController.h"
+#import "CDBaseNavigationController.h"
 
-//// 3.导航栏标题的字体
-//#define MTNavigationTitleFont [UIFont systemFontOfSize:18.0]
-//#define  MTNavigationBarTintColorBlack  DefineColorRGB(50, 50, 50, 1.0)
-
-@interface CDNavigationController () <UINavigationControllerDelegate>
+@interface CDBaseNavigationController ()
 
 @end
 
-@implementation CDNavigationController
+@implementation CDBaseNavigationController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+#pragma mark overwrite
++ (void)initialize
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
+    // 设置UINavigationBarTheme的主
+    [self setupNavigationBarTheme];
+    
+    // 设置UIBarButtonItem的主题
+    [self setupBarButtonItemTheme];
+    
 }
 
-#pragma mark - setup method
+#pragma mark  setup method
 //  设置UINavigationBarTheme的主题
 + (void)setupNavigationBarTheme
 {
     UINavigationBar *appearanceNavBar = [UINavigationBar appearance];
     
-    /**
-     * 去掉导航栏原生的底部黑线
-     */
-    [appearanceNavBar setShadowImage:[[UIImage alloc] init]];
-    UIImage *imageBg = [UIImage imageNamed:@"navigation_bg_color"];
-    CGFloat top = 10; // 顶端盖高度
-    CGFloat bottom = 10 ; // 底端盖高度
-    CGFloat left = 10; // 左端盖宽度
-    CGFloat right = 10; // 右端盖宽度
-    UIEdgeInsets insets = UIEdgeInsetsMake(top, left, bottom, right); //  背景拉伸
-    [appearanceNavBar setBackgroundImage:[imageBg resizableImageWithCapInsets:insets resizingMode:UIImageResizingModeTile] forBarMetrics:UIBarMetricsDefault];
+    // 去掉导航栏原生的底部黑线
+    //    [appearanceNavBar setShadowImage:[[UIImage alloc] init]];
+    //    UIImage *imageBg = [UIImage imageNamed:@"navigation_bg_color"];
+    //    CGFloat top = 10; // 顶端盖高度
+    //    CGFloat bottom = 10 ; // 底端盖高度
+    //    CGFloat left = 10; // 左端盖宽度
+    //    CGFloat right = 10; // 右端盖宽度
+    //    UIEdgeInsets insets = UIEdgeInsetsMake(top, left, bottom, right); //  背景拉伸
+    //    [appearanceNavBar setBackgroundImage:[imageBg resizableImageWithCapInsets:insets resizingMode:UIImageResizingModeTile] forBarMetrics:UIBarMetricsDefault];
+    
     
     /**
      *  设置文字属性
@@ -61,7 +58,7 @@
     /**
      *  设置导航栏背景颜色
      */
-//    [appearanceNavBar setBarTintColor:MTNavigationBarBgTintColorBlack];
+    //    [appearanceNavBar setBarTintColor:MTNavigationBarBgTintColorBlack];
 }
 
 /**
@@ -103,42 +100,38 @@
     [super viewDidLoad];
     
     /**
+     *   背景模糊效果
+     */
+    [self.navigationBar setTranslucent:YES];
+    
+    
+    /**
      *  为导航栏添加底部阴影
      */
-    [self navigationBar].layer.shadowColor = DefineColorRGB(180.0, 180.0, 180.0, 1.0).CGColor; //shadowColor阴影颜色
-    [self navigationBar].layer.shadowOffset = CGSizeMake(0.0f , 1.0f); //shadowOffset阴影偏移x，y向(上/下)偏移(-/+)2
-    [self navigationBar].layer.shadowOpacity = 0.8f;//阴影透明度，默认0
-    [self navigationBar].layer.shadowRadius = 1.0f;//阴影半径
+    UIView *bg = [[UIView alloc] initWithFrame:CGRectMake(0, self.navigationBar.cd_height - 0.8, self.navigationBar.cd_width, 0.8)];
+    bg.backgroundColor = DefineColorRGB(180.0, 180.0, 180.0, 0.3);
+    bg.layer.shadowColor = DefineColorRGB(180.0, 180.0, 180.0, 1.0).CGColor; //shadowColor阴影颜色
+    bg.layer.shadowOffset = CGSizeMake(0.0f , 0.6); //shadowOffset阴影偏移x，y向(上/下)偏移(-/+)2
+    bg.layer.shadowOpacity = 1.0;//阴影透明度，默认0
+    bg.layer.shadowRadius = 0.6;//阴影半径
+    [self.navigationBar addSubview:bg];
+    
+    //  直接添加阴影会影响背景模糊的显示，所以改为上面的间接添加阴影的方式
+    //    [self navigationBar].layer.shadowColor = DefineColorRGB(180.0, 180.0, 180.0, 1.0).CGColor; //shadowColor阴影颜色
+    //    [self navigationBar].layer.shadowOffset = CGSizeMake(0.0f , 1.0f); //shadowOffset阴影偏移x，y向(上/下)偏移(-/+)2
+    //    [self navigationBar].layer.shadowOpacity = 0.8f;//阴影透明度，默认0
+    //    [self navigationBar].layer.shadowRadius = 1.0f;//阴影半径
+    
     
     
     /**
      *  设置导航代理
      */
-    self.delegate = self;
-    self.interactivePopGestureRecognizer.enabled = NO;  //  设置导航手势不可用
+    //    self.delegate = self;
+    //    self.interactivePopGestureRecognizer.enabled = NO;  //  设置导航手势不可用
 }
 
-- (BOOL)shouldAutorotate
-{
-    return YES;
-}
-
-- (UIInterfaceOrientationMask)supportedInterfaceOrientations
-{
-    return UIInterfaceOrientationMaskPortrait;
-}
-
-#pragma mark - overwrite method
-// 当第一次使用这个类的时候调用1次
-+ (void)initialize
-{
-    // 设置UINavigationBarTheme的主
-    [self setupNavigationBarTheme];
-    
-    // 设置UIBarButtonItem的主题
-    [self setupBarButtonItemTheme];
-}
-
+#pragma mark
 /**
  *  能拦截所有push进来的子控制器
  */
@@ -179,32 +172,5 @@
 {
     return [super popToRootViewControllerAnimated:NO];
 }
-
-#pragma mark - bottom tabBar
-#pragma mark Delegate
-- (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated
-{
-    
-}
-
-- (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated
-{
-    
-}
-
-//- (nullable id <UIViewControllerInteractiveTransitioning>)navigationController:(UINavigationController *)navigationController
-//                                   interactionControllerForAnimationController:(id <UIViewControllerAnimatedTransitioning>) animationController NS_AVAILABLE_IOS(7_0)
-//{
-//    return nil;
-//}
-
-//- (nullable id <UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
-//                                            animationControllerForOperation:(UINavigationControllerOperation)operation
-//                                                         fromViewController:(UIViewController *)fromVC
-//                                                           toViewController:(UIViewController *)toVC
-//{
-//    return [[CDAnimatedTransitioning alloc] init];
-//}
-
 
 @end

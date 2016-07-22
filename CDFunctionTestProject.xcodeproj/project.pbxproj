@@ -24,6 +24,15 @@
 		374FE5A01D34C2E400AD089B /* CDTestAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 374FE59F1D34C2E400AD089B /* CDTestAnimationViewController.m */; };
 		37532F071D3DD0BD003CFE0C /* CDTestBaseModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37532F061D3DD0BD003CFE0C /* CDTestBaseModelViewController.m */; };
 		37532F0D1D3DD2A1003CFE0C /* CDTestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 37532F0C1D3DD2A1003CFE0C /* CDTestModel.m */; };
+		3769EFFB1D41F6C3008B5083 /* CDTestTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3769EFFA1D41F6C3008B5083 /* CDTestTabBarViewController.m */; };
+		3769EFFE1D41F736008B5083 /* UIBarButtonItem+UIBarButtonItemExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3769EFFD1D41F736008B5083 /* UIBarButtonItem+UIBarButtonItemExtension.m */; };
+		3769F0101D41F903008B5083 /* ZGDTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3769F00F1D41F903008B5083 /* ZGDTabBar.m */; };
+		3769F01F1D420059008B5083 /* CDFiveTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3769F0161D420059008B5083 /* CDFiveTabBarViewController.m */; };
+		3769F0201D420059008B5083 /* CDFourTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3769F0181D420059008B5083 /* CDFourTabBarViewController.m */; };
+		3769F0211D420059008B5083 /* CDOneTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3769F01A1D420059008B5083 /* CDOneTabBarViewController.m */; };
+		3769F0221D420059008B5083 /* CDThreeTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3769F01C1D420059008B5083 /* CDThreeTabBarViewController.m */; };
+		3769F0231D420059008B5083 /* CDTwoTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3769F01E1D420059008B5083 /* CDTwoTabBarViewController.m */; };
+		3769F0281D421E3B008B5083 /* CDBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3769F0271D421E3B008B5083 /* CDBaseNavigationController.m */; };
 		376C16211D3CAD41002AA201 /* CDFlipAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 376C16201D3CAD41002AA201 /* CDFlipAnimation.m */; };
 		376C16241D3CAFF6002AA201 /* CDWaveAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 376C16231D3CAFF6002AA201 /* CDWaveAnimation.m */; };
 		376C16271D3CDC6A002AA201 /* CDViewAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 376C16261D3CDC6A002AA201 /* CDViewAnimation.m */; };
@@ -83,6 +92,24 @@
 		37532F061D3DD0BD003CFE0C /* CDTestBaseModelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDTestBaseModelViewController.m; sourceTree = "<group>"; };
 		37532F0B1D3DD2A1003CFE0C /* CDTestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDTestModel.h; sourceTree = "<group>"; };
 		37532F0C1D3DD2A1003CFE0C /* CDTestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDTestModel.m; sourceTree = "<group>"; };
+		3769EFF91D41F6C3008B5083 /* CDTestTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDTestTabBarViewController.h; sourceTree = "<group>"; };
+		3769EFFA1D41F6C3008B5083 /* CDTestTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDTestTabBarViewController.m; sourceTree = "<group>"; };
+		3769EFFC1D41F736008B5083 /* UIBarButtonItem+UIBarButtonItemExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+UIBarButtonItemExtension.h"; sourceTree = "<group>"; };
+		3769EFFD1D41F736008B5083 /* UIBarButtonItem+UIBarButtonItemExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+UIBarButtonItemExtension.m"; sourceTree = "<group>"; };
+		3769F00E1D41F903008B5083 /* ZGDTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGDTabBar.h; sourceTree = "<group>"; };
+		3769F00F1D41F903008B5083 /* ZGDTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGDTabBar.m; sourceTree = "<group>"; };
+		3769F0151D420059008B5083 /* CDFiveTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDFiveTabBarViewController.h; sourceTree = "<group>"; };
+		3769F0161D420059008B5083 /* CDFiveTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDFiveTabBarViewController.m; sourceTree = "<group>"; };
+		3769F0171D420059008B5083 /* CDFourTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDFourTabBarViewController.h; sourceTree = "<group>"; };
+		3769F0181D420059008B5083 /* CDFourTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDFourTabBarViewController.m; sourceTree = "<group>"; };
+		3769F0191D420059008B5083 /* CDOneTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDOneTabBarViewController.h; sourceTree = "<group>"; };
+		3769F01A1D420059008B5083 /* CDOneTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDOneTabBarViewController.m; sourceTree = "<group>"; };
+		3769F01B1D420059008B5083 /* CDThreeTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDThreeTabBarViewController.h; sourceTree = "<group>"; };
+		3769F01C1D420059008B5083 /* CDThreeTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDThreeTabBarViewController.m; sourceTree = "<group>"; };
+		3769F01D1D420059008B5083 /* CDTwoTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDTwoTabBarViewController.h; sourceTree = "<group>"; };
+		3769F01E1D420059008B5083 /* CDTwoTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDTwoTabBarViewController.m; sourceTree = "<group>"; };
+		3769F0261D421E3B008B5083 /* CDBaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDBaseNavigationController.h; sourceTree = "<group>"; };
+		3769F0271D421E3B008B5083 /* CDBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDBaseNavigationController.m; sourceTree = "<group>"; };
 		376C161F1D3CAD41002AA201 /* CDFlipAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDFlipAnimation.h; sourceTree = "<group>"; };
 		376C16201D3CAD41002AA201 /* CDFlipAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDFlipAnimation.m; sourceTree = "<group>"; };
 		376C16221D3CAFF6002AA201 /* CDWaveAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDWaveAnimation.h; sourceTree = "<group>"; };
@@ -196,9 +223,10 @@
 		3725802B1D1E7A33002629B4 /* Class */ = {
 			isa = PBXGroup;
 			children = (
-				37B8EB101D40A9C90062C4B6 /* View高斯模糊 */,
+				3769EFEF1D41F6AA008B5083 /* TabBarControllerAndBlur */,
 				3725803B1D1E7DBA002629B4 /* CDMainViewController.h */,
 				3725803C1D1E7DBA002629B4 /* CDMainViewController.m */,
+				37B8EB101D40A9C90062C4B6 /* View高斯模糊 */,
 				37532F011D3DD08D003CFE0C /* NSObject自定义模型基类 */,
 				3793E3461D38EE7500955777 /* iOS字体大全 */,
 				37DAF8741D33A26D001BF809 /* SDAutolayout功能验证 */,
@@ -258,6 +286,8 @@
 				372580471D1EBF3E002629B4 /* CDNavigationController.m */,
 				372580431D1E86BF002629B4 /* UIView+CDViewCategory.h */,
 				372580441D1E86BF002629B4 /* UIView+CDViewCategory.m */,
+				3769F0261D421E3B008B5083 /* CDBaseNavigationController.h */,
+				3769F0271D421E3B008B5083 /* CDBaseNavigationController.m */,
 			);
 			path = Libs;
 			sourceTree = "<group>";
@@ -306,6 +336,53 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		3769EFEF1D41F6AA008B5083 /* TabBarControllerAndBlur */ = {
+			isa = PBXGroup;
+			children = (
+				3769EFF01D41F6AA008B5083 /* Controller */,
+				3769EFF61D41F6AA008B5083 /* View */,
+			);
+			path = TabBarControllerAndBlur;
+			sourceTree = "<group>";
+		};
+		3769EFF01D41F6AA008B5083 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3769EFF91D41F6C3008B5083 /* CDTestTabBarViewController.h */,
+				3769EFFA1D41F6C3008B5083 /* CDTestTabBarViewController.m */,
+				3769F0141D420059008B5083 /* ExampleControllers */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3769EFF61D41F6AA008B5083 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3769F00E1D41F903008B5083 /* ZGDTabBar.h */,
+				3769F00F1D41F903008B5083 /* ZGDTabBar.m */,
+				3769EFFC1D41F736008B5083 /* UIBarButtonItem+UIBarButtonItemExtension.h */,
+				3769EFFD1D41F736008B5083 /* UIBarButtonItem+UIBarButtonItemExtension.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3769F0141D420059008B5083 /* ExampleControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3769F0191D420059008B5083 /* CDOneTabBarViewController.h */,
+				3769F01A1D420059008B5083 /* CDOneTabBarViewController.m */,
+				3769F01D1D420059008B5083 /* CDTwoTabBarViewController.h */,
+				3769F01E1D420059008B5083 /* CDTwoTabBarViewController.m */,
+				3769F01B1D420059008B5083 /* CDThreeTabBarViewController.h */,
+				3769F01C1D420059008B5083 /* CDThreeTabBarViewController.m */,
+				3769F0171D420059008B5083 /* CDFourTabBarViewController.h */,
+				3769F0181D420059008B5083 /* CDFourTabBarViewController.m */,
+				3769F0151D420059008B5083 /* CDFiveTabBarViewController.h */,
+				3769F0161D420059008B5083 /* CDFiveTabBarViewController.m */,
+			);
+			path = ExampleControllers;
 			sourceTree = "<group>";
 		};
 		3793E3461D38EE7500955777 /* iOS字体大全 */ = {
@@ -650,12 +727,15 @@
 			files = (
 				376C16271D3CDC6A002AA201 /* CDViewAnimation.m in Sources */,
 				372580481D1EBF3E002629B4 /* CDNavigationController.m in Sources */,
+				3769F01F1D420059008B5083 /* CDFiveTabBarViewController.m in Sources */,
 				379D7D411D2F86EA0061F2B6 /* CDMenuView.m in Sources */,
 				37A5B6441D2E349400F09090 /* CDTestTableCell.m in Sources */,
 				376C16241D3CAFF6002AA201 /* CDWaveAnimation.m in Sources */,
 				372580191D1E79C7002629B4 /* AppDelegate.m in Sources */,
 				37A5B63A1D2E07EB00F09090 /* CDBaseTableViewCell+CDGroupCellCategory.m in Sources */,
 				374FE5A01D34C2E400AD089B /* CDTestAnimationViewController.m in Sources */,
+				3769F0231D420059008B5083 /* CDTwoTabBarViewController.m in Sources */,
+				3769EFFB1D41F6C3008B5083 /* CDTestTabBarViewController.m in Sources */,
 				37532F0D1D3DD2A1003CFE0C /* CDTestModel.m in Sources */,
 				37DAF87F1D33A456001BF809 /* CDBaseTableViewCell.m in Sources */,
 				3725803D1D1E7DBA002629B4 /* CDMainViewController.m in Sources */,
@@ -664,17 +744,23 @@
 				3793E34B1D38EE8B00955777 /* CDTestFontViewController.m in Sources */,
 				3774CBDB1D3F793600240D43 /* CDBaseObject.m in Sources */,
 				379D7D471D2F91CC0061F2B6 /* CDTestMenuViewController.m in Sources */,
+				3769F0101D41F903008B5083 /* ZGDTabBar.m in Sources */,
+				3769F0221D420059008B5083 /* CDThreeTabBarViewController.m in Sources */,
 				37532F071D3DD0BD003CFE0C /* CDTestBaseModelViewController.m in Sources */,
 				37B8EB1D1D40B3640062C4B6 /* FXBlurView.m in Sources */,
 				379D7D441D2F88150061F2B6 /* CDMenuCollectionCell.m in Sources */,
 				37DAF87C1D33A3F1001BF809 /* CDAutoLayoutTableCell.m in Sources */,
+				3769EFFE1D41F736008B5083 /* UIBarButtonItem+UIBarButtonItemExtension.m in Sources */,
 				37B8EB201D40B3900062C4B6 /* CDTestBlurViewController.m in Sources */,
+				3769F0211D420059008B5083 /* CDOneTabBarViewController.m in Sources */,
 				376C16211D3CAD41002AA201 /* CDFlipAnimation.m in Sources */,
 				372580311D1E7AE7002629B4 /* CDCollectionViewController.m in Sources */,
 				37B8EB0E1D4065AF0062C4B6 /* CDConstSetup.m in Sources */,
 				374FE59D1D348CD300AD089B /* CDAutoModel.m in Sources */,
 				37DAF8791D33A287001BF809 /* CDTestAutoLayoutViewController.m in Sources */,
+				3769F0281D421E3B008B5083 /* CDBaseNavigationController.m in Sources */,
 				372580161D1E79C7002629B4 /* main.m in Sources */,
+				3769F0201D420059008B5083 /* CDFourTabBarViewController.m in Sources */,
 				37A5B6301D2DF9D100F09090 /* CExpandHeader.m in Sources */,
 				37A5B64A1D2E444700F09090 /* CDTestCustomGroupController.m in Sources */,
 				372580341D1E7B3A002629B4 /* CDCollectionViewFlowLayout.m in Sources */,
@@ -786,7 +872,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PREFIX_HEADER = CDFunctionTestProject/PrefixHeader.pch;
 				INFOPLIST_FILE = CDFunctionTestProject/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ByMyself.CDFunctionTestProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -801,7 +887,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PREFIX_HEADER = CDFunctionTestProject/PrefixHeader.pch;
 				INFOPLIST_FILE = CDFunctionTestProject/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ByMyself.CDFunctionTestProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";

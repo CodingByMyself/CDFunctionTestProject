@@ -8,7 +8,8 @@
 
 #import "AppDelegate.h"
 #import "CDMainViewController.h"
-#import "CDNavigationController.h"
+#import "CDBaseNavigationController.h"
+//#import "CDNavigationController.h"
 
 @interface AppDelegate ()
 
@@ -21,7 +22,7 @@
     // Override point for customization after application launch.
     
     CDMainViewController *main = [[CDMainViewController alloc] init];
-    CDNavigationController *navi = [[CDNavigationController alloc] initWithRootViewController:main];
+    CDBaseNavigationController *navi = [[CDBaseNavigationController alloc] initWithRootViewController:main];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [self.window setRootViewController:navi];

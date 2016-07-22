@@ -10,6 +10,14 @@
 #define CDHeaderDefine_h
 
 
+/**
+ *  导航栏标题的字体
+ */
+#define MTNavigationTitleFont [UIFont systemFontOfSize:20.0]
+#define  MTNavigationBarItemTintColorBlack  DefineColorRGB(50, 50, 50, 1.0)
+#define  MTNavigationBarBgTintColorBlack  [UIColor whiteColor]
+
+
 
 /**
  *  关于日志输出的宏定义

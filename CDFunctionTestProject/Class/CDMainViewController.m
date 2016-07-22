@@ -17,6 +17,7 @@
 
 #import "CDConstSetup.h"
 #import "CDTestBlurViewController.h"
+#import "CDTestTabBarViewController.h"
 
 @interface CDMainViewController () <UITableViewDelegate,UITableViewDataSource>
 {
@@ -48,7 +49,17 @@
     MTDetailLog(@"%@",ConstCDHTTPMethodGet);
     
     
-    _functionList = @[@"CollectionView 的扩展方法",@"TableView 自定义分组显示",@"CollectionView 菜单功能",@"SDAutoLayout 功能验证",@"View 相关的动画功能",@"iOS 字体大全",@"NSObject模型扩展",@"view的模糊效果"];
+    _functionList = @[@"CollectionView 的扩展方法",@"TableView 自定义分组显示",@"CollectionView 菜单功能",@"SDAutoLayout 功能验证",@"View 相关的动画功能",@"iOS 字体大全",@"NSObject模型扩展",@"view的模糊效果",@"TabBarController的功能"];
+    
+    
+    _table = [[UITableView alloc] initWithFrame:self.view.bounds];
+    _table.delegate = self;
+    _table.dataSource = self;
+    [self.view addSubview:_table];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
     _classList = @[
                    [[CDCollectionViewController alloc] init] ,
                    [[CDTestCustomGroupController alloc] init] ,
@@ -57,14 +68,11 @@
                    [[CDTestAnimationViewController alloc] init],
                    [[CDTestFontViewController alloc] init],
                    [[CDTestBaseModelViewController alloc] init],
-                   [[CDTestBlurViewController alloc] init]
+                   [[CDTestBlurViewController alloc] init],
+                   [[CDTestTabBarViewController alloc] init]
                    ];
     
-    
-    _table = [[UITableView alloc] initWithFrame:self.view.bounds];
-    _table.delegate = self;
-    _table.dataSource = self;
-    [self.view addSubview:_table];
+    [_table reloadData];
 }
 
 #pragma mark - UITableView Delegate
@@ -92,7 +100,12 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if ([_classList count] > [indexPath row]) {
-        [self.navigationController pushViewController:_classList[indexPath.row] animated:YES];
+        if ([_classList count] - 1 == [indexPath row]) {
+            [self presentViewController:_classList[indexPath.row] animated:YES completion:nil];
+        } else {
+            [self.navigationController pushViewController:_classList[indexPath.row] animated:YES];
+        }
+        
     }
 }
 
