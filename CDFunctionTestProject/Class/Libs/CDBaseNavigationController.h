@@ -1,9 +1,8 @@
 //
-//  CDBaseNavigationController.h
-//  CDFunctionTestProject
+//  CDBaseNavigationController.m
 //
-//  Created by Cindy on 16/7/22.
-//  Copyright © 2016年 Cindy. All rights reserved.
+//  Created by Cindy on 15/8/7.
+//  Copyright © 2015年 Cindy. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

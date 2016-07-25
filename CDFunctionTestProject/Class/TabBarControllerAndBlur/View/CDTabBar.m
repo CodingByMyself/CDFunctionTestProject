@@ -1,20 +1,19 @@
 //
-//  ZGDTabBar.m
-//  SinaWeiBo
+//  CDTabBar.m
+//  CDFunctionTestProject
 //
-//  Created by ADAQM on 16/4/25.
-//  Copyright © 2016年 ZGD. All rights reserved.
+//  Created by Cindy on 16/7/25.
+//  Copyright © 2016年 Cindy. All rights reserved.
 //
 
-#import "ZGDTabBar.h"
+#import "CDTabBar.h"
 
-@interface ZGDTabBar()
-
+@interface CDTabBar()
 @property(nonatomic,strong)UIButton *plusBtn;
-
 @end
 
-@implementation ZGDTabBar
+@implementation CDTabBar
+@dynamic delegate;
 
 - (UIButton *)plusBtn
 {
@@ -31,15 +30,15 @@
 }
 - (void)btnAction
 {
-    if ([self.delegate respondsToSelector:@selector(ZGDTabBarClickPlusBtn:)]) {
-        [self.delegate ZGDTabBarClickPlusBtn:self];
+    if ([self.delegate respondsToSelector:@selector(cdTabBarClickCenterPlusBtn:)]) {
+        [self.delegate cdTabBarClickCenterPlusBtn:self];
     }
 }
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
- 
+        
     }
     return self;
 }
@@ -62,12 +61,13 @@
                 index ++;
             }
             view.cd_x = index * width;
-//            view.width = width;
-//            view.y = 0;
-//            view.height = self.height;
+            //            view.width = width;
+            //            view.y = 0;
+            //            view.height = self.height;
             index ++;
         }
     }
 }
+
 
 @end

@@ -7,12 +7,13 @@
 //
 
 #import "CDTestTabBarViewController.h"
-#import "ZGDTabBar.h"
+#import "CDTabBar.h"
 #import "CDOneTabBarViewController.h"
 #import "CDTwoTabBarViewController.h"
 #import "CDThreeTabBarViewController.h"
 #import "CDFourTabBarViewController.h"
 #import "CDBaseNavigationController.h"
+#import "CDCenterViewController.h"
 
 
 typedef NS_ENUM(NSInteger,LxTabBarControllerSwitchType)
@@ -79,7 +80,7 @@ static LxTabBarControllerSwitchType _switchType = LxTabBarControllerSwitchTypeUn
 
 
 #pragma mark  - CDTestTabBarViewController -
-@interface CDTestTabBarViewController ()<UITabBarControllerDelegate,UIGestureRecognizerDelegate,ZGDTabBarDelegate>
+@interface CDTestTabBarViewController ()<UITabBarControllerDelegate,UIGestureRecognizerDelegate,CDTabBarDelegate>
 {
     UIPanGestureRecognizer * _panToSwitchGestureRecognizer;
     UIPercentDrivenInteractiveTransition * _interactiveTransition;
@@ -94,7 +95,7 @@ static LxTabBarControllerSwitchType _switchType = LxTabBarControllerSwitchTypeUn
 {
     self = [super init];
     if (self) {
-        [self setup];
+//        [self setup];
     }
     return self;
 }
@@ -103,92 +104,92 @@ static LxTabBarControllerSwitchType _switchType = LxTabBarControllerSwitchTypeUn
 {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        [self setup];
+//        [self setup];
     }
     return self;
 }
 
 
-- (void)setup
-{
-    self.delegate = self;
-    _panToSwitchGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panGestureRecognizerTriggerd:)];
-    _transitionAnimator = [Transition new];
-    [self.view addGestureRecognizer:_panToSwitchGestureRecognizer];
-}
+//- (void)setup
+//{
+//    self.delegate = self;
+//    _panToSwitchGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panGestureRecognizerTriggerd:)];
+//    _transitionAnimator = [Transition new];
+//    [self.view addGestureRecognizer:_panToSwitchGestureRecognizer];
+//}
 
-- (void)panGestureRecognizerTriggerd:(UIPanGestureRecognizer *)pan
-{
-    self.tabBar.userInteractionEnabled = NO;
-    CGFloat progress = [pan translationInView:pan.view].x / (self.view.frame.size.width);
-    
-    if (progress > 0) {
-        _switchType = LxTabBarControllerSwitchTypeLast;
-    }else if (progress < 0)
-    {
-        _switchType = LxTabBarControllerSwitchTypeNext;
-    }else
-    {
-        _switchType = LxTabBarControllerSwitchTypeUnknown;
-    }
-    progress = MIN(1.0, MAX(0.0, ABS(progress)));
-    switch (pan.state) {
-        case UIGestureRecognizerStateBegan:
-        {
-            _isTranslating = YES;
-            _interactiveTransition = [UIPercentDrivenInteractiveTransition new];
-            switch (_switchType) {
-                case LxTabBarControllerSwitchTypeLast:
-                {
-                    self.selectedIndex = MAX(0, self.selectedIndex - 1);
-                    self.selectedViewController = self.viewControllers[self.selectedIndex];
-                }
-                    break;
-                case LxTabBarControllerSwitchTypeNext:
-                {
-                    self.selectedIndex = MIN(self.viewControllers.count, self.selectedIndex + 1);
-                    self.selectedViewController = self.viewControllers[self.selectedIndex];
-                }
-                    break;
-                case LxTabBarControllerSwitchTypeUnknown:
-                {
-                    
-                }
-                    break;
-                default:
-                    break;
-            }
-        }
-            break;
-        case UIGestureRecognizerStateChanged:
-        {
-            [_interactiveTransition updateInteractiveTransition:progress];
-        }
-            break;
-        case UIGestureRecognizerStateFailed:
-        {
-            _isTranslating = NO;
-            self.tabBar.userInteractionEnabled = YES;
-        }
-            break;
-        default:
-        {
-            if (ABS(progress) > 0.5) {
-                [_interactiveTransition finishInteractiveTransition];
-            }else
-            {
-                [_interactiveTransition cancelInteractiveTransition];
-            }
-            _interactiveTransition = nil;
-            _isTranslating = NO;
-            //enable tabbar when transition ended
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(TRANSITION_DURATION * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                self.tabBar.userInteractionEnabled = YES;
-            });
-        }
-            break;
-    }
-}
+//- (void)panGestureRecognizerTriggerd:(UIPanGestureRecognizer *)pan
+//{
+//    self.tabBar.userInteractionEnabled = NO;
+//    CGFloat progress = [pan translationInView:pan.view].x / (self.view.frame.size.width);
+//    
+//    if (progress > 0) {
+//        _switchType = LxTabBarControllerSwitchTypeLast;
+//    }else if (progress < 0)
+//    {
+//        _switchType = LxTabBarControllerSwitchTypeNext;
+//    }else
+//    {
+//        _switchType = LxTabBarControllerSwitchTypeUnknown;
+//    }
+//    progress = MIN(1.0, MAX(0.0, ABS(progress)));
+//    switch (pan.state) {
+//        case UIGestureRecognizerStateBegan:
+//        {
+//            _isTranslating = YES;
+//            _interactiveTransition = [UIPercentDrivenInteractiveTransition new];
+//            switch (_switchType) {
+//                case LxTabBarControllerSwitchTypeLast:
+//                {
+//                    self.selectedIndex = MAX(0, self.selectedIndex - 1);
+//                    self.selectedViewController = self.viewControllers[self.selectedIndex];
+//                }
+//                    break;
+//                case LxTabBarControllerSwitchTypeNext:
+//                {
+//                    self.selectedIndex = MIN(self.viewControllers.count, self.selectedIndex + 1);
+//                    self.selectedViewController = self.viewControllers[self.selectedIndex];
+//                }
+//                    break;
+//                case LxTabBarControllerSwitchTypeUnknown:
+//                {
+//                    
+//                }
+//                    break;
+//                default:
+//                    break;
+//            }
+//        }
+//            break;
+//        case UIGestureRecognizerStateChanged:
+//        {
+//            [_interactiveTransition updateInteractiveTransition:progress];
+//        }
+//            break;
+//        case UIGestureRecognizerStateFailed:
+//        {
+//            _isTranslating = NO;
+//            self.tabBar.userInteractionEnabled = YES;
+//        }
+//            break;
+//        default:
+//        {
+//            if (ABS(progress) > 0.5) {
+//                [_interactiveTransition finishInteractiveTransition];
+//            }else
+//            {
+//                [_interactiveTransition cancelInteractiveTransition];
+//            }
+//            _interactiveTransition = nil;
+//            _isTranslating = NO;
+//            //enable tabbar when transition ended
+//            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(TRANSITION_DURATION * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//                self.tabBar.userInteractionEnabled = YES;
+//            });
+//        }
+//            break;
+//    }
+//}
 
 #pragma mark - view
 - (void)viewDidLoad {
@@ -208,7 +209,7 @@ static LxTabBarControllerSwitchType _switchType = LxTabBarControllerSwitchTypeUn
     CDFourTabBarViewController *four = [[CDFourTabBarViewController alloc] init];
     [self addChildVC:four title:@"我" imageName:@"tabbar_profile" seletedImage:@"tabbar_profile_selected"];
     
-    ZGDTabBar *tabbar = [ZGDTabBar new];
+    CDTabBar *tabbar = [[CDTabBar alloc] init];
     tabbar.delegate = self;
     [self setValue:tabbar forKeyPath:@"tabBar"];
     
@@ -273,9 +274,13 @@ static LxTabBarControllerSwitchType _switchType = LxTabBarControllerSwitchTypeUn
     return YES;
 }
 
-#pragma mark - ZGDTabBarDelegate
-- (void)ZGDTabBarClickPlusBtn:(ZGDTabBar *)tabbar
+#pragma mark - CDTabBarDelegate
+- (void)cdTabBarClickCenterPlusBtn:(CDTabBar *)tabbar
 {
+    CDCenterViewController *centerController = [[CDCenterViewController alloc] init];
+    [self presentViewController:centerController animated:YES completion:^{
+        
+    }];
     //    ComposeViewController *vc = [[ComposeViewController alloc] init];
     //
     //    HWNavigationController *nav = [[HWNavigationController alloc] initWithRootViewController:vc];
@@ -283,6 +288,7 @@ static LxTabBarControllerSwitchType _switchType = LxTabBarControllerSwitchTypeUn
     //
     //    }];
 }
+
 - (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
 {
     CATransition *transition = [CATransition animation];
