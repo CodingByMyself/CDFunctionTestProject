@@ -18,7 +18,8 @@
 @implementation CDTestFontViewController
 - (void)viewWillLayoutSubviews
 {
-    _table.frame = self.view.bounds;
+    [super viewWillLayoutSubviews];
+    _table.frame = CGRectOffset(self.view.bounds, 0, CDNavigationBarHeight);
 }
 
 - (void)viewDidLoad {
@@ -27,6 +28,7 @@
     
     self.title = @"字体样式展示";
     self.view.backgroundColor = [UIColor whiteColor];
+    self.navigationController.navigationBar.hidden = YES;
     
     /**
      IOS Font :
@@ -51,8 +53,14 @@
     _table = [[UITableView alloc] initWithFrame:self.view.bounds];
     _table.delegate = self;
     _table.dataSource = self;
+    _table.clipsToBounds = NO;
     [self.view addSubview:_table];
     
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    self.navigationController.navigationBar.hidden = NO;
 }
 
 
@@ -62,6 +70,19 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCellID"];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"UITableViewCellID"];
+    }
+    if ([indexPath row] == 0) {
+        UIImageView *bg = [[UIImageView alloc] init];
+        //    bg.backgroundColor = [UIColor yellowColor];
+        bg.image = [UIImage imageNamed:@"IMG_2705.JPG"];
+        bg.contentMode = UIViewContentModeScaleToFill;
+        [cell addSubview:bg];
+        [bg mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(cell);
+            make.left.equalTo(cell);
+            make.right.equalTo(cell);
+            make.bottom.equalTo(cell);
+        }];
     }
     
     cell.textLabel.numberOfLines = 0;
@@ -90,9 +111,12 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-
 {
-    return 60.0;
+    if ([indexPath row] == 0) {
+        return 400.0;
+    } else {
+        return 60.0;
+    }
 }
 
 

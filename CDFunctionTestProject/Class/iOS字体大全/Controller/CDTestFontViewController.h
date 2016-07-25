@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CDBaseViewController.h"
 
-@interface CDTestFontViewController : UIViewController
+@interface CDTestFontViewController : CDBaseViewController
 
 @end

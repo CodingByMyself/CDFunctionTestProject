@@ -18,6 +18,8 @@
 #define  MTNavigationBarBgTintColorBlack  [UIColor whiteColor]
 
 
+#define  CDNavigationBarHeight  64.0f
+#define  CDNavigationBarOffset  20.0f
 
 /**
  *  关于日志输出的宏定义

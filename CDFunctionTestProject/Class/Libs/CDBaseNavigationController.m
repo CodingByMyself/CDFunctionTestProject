@@ -57,7 +57,7 @@
     shadow.shadowOffset = [[NSValue valueWithUIOffset:UIOffsetZero] CGSizeValue];
     textAttrs[NSShadowAttributeName] = shadow;
     [appearanceNavBar setTitleTextAttributes:textAttrs];
-    
+    [appearanceNavBar setTintColor:[UIColor redColor]];
     
     /*** 设置导航栏背景颜色 ***/
     //    [appearanceNavBar setBarTintColor:MTNavigationBarBgTintColorBlack];
@@ -110,10 +110,10 @@
     
     /*** 为导航栏添加底部阴影 ***/
     //  方法一 ：直接添加阴影会影响背景模糊的显示，所以改为下面的方法二间接添加阴影的方式
-    //    [self navigationBar].layer.shadowColor = DefineColorRGB(180.0, 180.0, 180.0, 1.0).CGColor; //shadowColor阴影颜色
-    //    [self navigationBar].layer.shadowOffset = CGSizeMake(0.0f , 1.0f); //shadowOffset阴影偏移x，y向(上/下)偏移(-/+)2
-    //    [self navigationBar].layer.shadowOpacity = 0.8f;//阴影透明度，默认0
-    //    [self navigationBar].layer.shadowRadius = 1.0f;//阴影半径
+//        [self navigationBar].layer.shadowColor = DefineColorRGB(180.0, 180.0, 180.0, 1.0).CGColor; //shadowColor阴影颜色
+//        [self navigationBar].layer.shadowOffset = CGSizeMake(0.0f , 1.0f); //shadowOffset阴影偏移x，y向(上/下)偏移(-/+)2
+//        [self navigationBar].layer.shadowOpacity = 0.8f;//阴影透明度，默认0
+//        [self navigationBar].layer.shadowRadius = 1.0f;//阴影半径
     //  方法二 ：间接添加，不影响背景模糊效果
 //    UIView *bg = [[UIView alloc] initWithFrame:CGRectMake(0, self.navigationBar.cd_height - 0.5, self.navigationBar.cd_width, 0.5)];
 //    bg.backgroundColor = DefineColorRGB(180.0, 180.0, 180.0, 0.2);
