@@ -33,6 +33,26 @@
 		376C16211D3CAD41002AA201 /* CDFlipAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 376C16201D3CAD41002AA201 /* CDFlipAnimation.m */; };
 		376C16241D3CAFF6002AA201 /* CDWaveAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 376C16231D3CAFF6002AA201 /* CDWaveAnimation.m */; };
 		376C16271D3CDC6A002AA201 /* CDViewAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 376C16261D3CDC6A002AA201 /* CDViewAnimation.m */; };
+		376E1A171D46F28A00D62128 /* CDRippleAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 376E1A161D46F28A00D62128 /* CDRippleAnimation.m */; };
+		376E1A1A1D46F8C100D62128 /* CDCubeAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 376E1A191D46F8C100D62128 /* CDCubeAnimation.m */; };
+		376E1A1E1D46F9D800D62128 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 376E1A1B1D46F9D800D62128 /* 1.jpg */; };
+		376E1A1F1D46F9D800D62128 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 376E1A1C1D46F9D800D62128 /* 2.jpg */; };
+		376E1A201D46F9D800D62128 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 376E1A1D1D46F9D800D62128 /* 3.jpg */; };
+		376E1A271D470AA500D62128 /* 0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 376E1A251D470AA500D62128 /* 0.jpg */; };
+		376E1A281D470AA500D62128 /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 376E1A261D470AA500D62128 /* 4.jpg */; };
+		376E1A2B1D4733F200D62128 /* CDContinueFrameAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 376E1A2A1D4733F200D62128 /* CDContinueFrameAnimation.m */; };
+		376E1A391D47353E00D62128 /* loadingState270-0001.png in Resources */ = {isa = PBXBuildFile; fileRef = 376E1A2D1D47353E00D62128 /* loadingState270-0001.png */; };
+		376E1A3A1D47353E00D62128 /* loadingState270-0002.png in Resources */ = {isa = PBXBuildFile; fileRef = 376E1A2E1D47353E00D62128 /* loadingState270-0002.png */; };
+		376E1A3B1D47353E00D62128 /* loadingState270-0003.png in Resources */ = {isa = PBXBuildFile; fileRef = 376E1A2F1D47353E00D62128 /* loadingState270-0003.png */; };
+		376E1A3C1D47353E00D62128 /* loadingState270-0004.png in Resources */ = {isa = PBXBuildFile; fileRef = 376E1A301D47353E00D62128 /* loadingState270-0004.png */; };
+		376E1A3D1D47353E00D62128 /* loadingState270-0005.png in Resources */ = {isa = PBXBuildFile; fileRef = 376E1A311D47353E00D62128 /* loadingState270-0005.png */; };
+		376E1A3E1D47353E00D62128 /* loadingState270-0006.png in Resources */ = {isa = PBXBuildFile; fileRef = 376E1A321D47353E00D62128 /* loadingState270-0006.png */; };
+		376E1A3F1D47353E00D62128 /* loadingState270-0007.png in Resources */ = {isa = PBXBuildFile; fileRef = 376E1A331D47353E00D62128 /* loadingState270-0007.png */; };
+		376E1A401D47353E00D62128 /* loadingState270-0008.png in Resources */ = {isa = PBXBuildFile; fileRef = 376E1A341D47353E00D62128 /* loadingState270-0008.png */; };
+		376E1A411D47353E00D62128 /* loadingState270-0009.png in Resources */ = {isa = PBXBuildFile; fileRef = 376E1A351D47353E00D62128 /* loadingState270-0009.png */; };
+		376E1A481D47359A00D62128 /* loadingState270-00010.png in Resources */ = {isa = PBXBuildFile; fileRef = 376E1A451D47359A00D62128 /* loadingState270-00010.png */; };
+		376E1A491D47359A00D62128 /* loadingState270-00011.png in Resources */ = {isa = PBXBuildFile; fileRef = 376E1A461D47359A00D62128 /* loadingState270-00011.png */; };
+		376E1A4A1D47359A00D62128 /* loadingState270-00012.png in Resources */ = {isa = PBXBuildFile; fileRef = 376E1A471D47359A00D62128 /* loadingState270-00012.png */; };
 		3774CBDB1D3F793600240D43 /* CDBaseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3774CBDA1D3F793600240D43 /* CDBaseObject.m */; };
 		3793E34B1D38EE8B00955777 /* CDTestFontViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3793E34A1D38EE8B00955777 /* CDTestFontViewController.m */; };
 		379D7D411D2F86EA0061F2B6 /* CDMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 379D7D401D2F86EA0061F2B6 /* CDMenuView.m */; };
@@ -110,6 +130,29 @@
 		376C16231D3CAFF6002AA201 /* CDWaveAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDWaveAnimation.m; sourceTree = "<group>"; };
 		376C16251D3CDC6A002AA201 /* CDViewAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDViewAnimation.h; sourceTree = "<group>"; };
 		376C16261D3CDC6A002AA201 /* CDViewAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDViewAnimation.m; sourceTree = "<group>"; };
+		376E1A151D46F28A00D62128 /* CDRippleAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDRippleAnimation.h; sourceTree = "<group>"; };
+		376E1A161D46F28A00D62128 /* CDRippleAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDRippleAnimation.m; sourceTree = "<group>"; };
+		376E1A181D46F8C100D62128 /* CDCubeAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDCubeAnimation.h; sourceTree = "<group>"; };
+		376E1A191D46F8C100D62128 /* CDCubeAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDCubeAnimation.m; sourceTree = "<group>"; };
+		376E1A1B1D46F9D800D62128 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+		376E1A1C1D46F9D800D62128 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
+		376E1A1D1D46F9D800D62128 /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
+		376E1A251D470AA500D62128 /* 0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 0.jpg; sourceTree = "<group>"; };
+		376E1A261D470AA500D62128 /* 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpg; sourceTree = "<group>"; };
+		376E1A291D4733F200D62128 /* CDContinueFrameAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDContinueFrameAnimation.h; sourceTree = "<group>"; };
+		376E1A2A1D4733F200D62128 /* CDContinueFrameAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDContinueFrameAnimation.m; sourceTree = "<group>"; };
+		376E1A2D1D47353E00D62128 /* loadingState270-0001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loadingState270-0001.png"; sourceTree = "<group>"; };
+		376E1A2E1D47353E00D62128 /* loadingState270-0002.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loadingState270-0002.png"; sourceTree = "<group>"; };
+		376E1A2F1D47353E00D62128 /* loadingState270-0003.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loadingState270-0003.png"; sourceTree = "<group>"; };
+		376E1A301D47353E00D62128 /* loadingState270-0004.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loadingState270-0004.png"; sourceTree = "<group>"; };
+		376E1A311D47353E00D62128 /* loadingState270-0005.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loadingState270-0005.png"; sourceTree = "<group>"; };
+		376E1A321D47353E00D62128 /* loadingState270-0006.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loadingState270-0006.png"; sourceTree = "<group>"; };
+		376E1A331D47353E00D62128 /* loadingState270-0007.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loadingState270-0007.png"; sourceTree = "<group>"; };
+		376E1A341D47353E00D62128 /* loadingState270-0008.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loadingState270-0008.png"; sourceTree = "<group>"; };
+		376E1A351D47353E00D62128 /* loadingState270-0009.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loadingState270-0009.png"; sourceTree = "<group>"; };
+		376E1A451D47359A00D62128 /* loadingState270-00010.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loadingState270-00010.png"; sourceTree = "<group>"; };
+		376E1A461D47359A00D62128 /* loadingState270-00011.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loadingState270-00011.png"; sourceTree = "<group>"; };
+		376E1A471D47359A00D62128 /* loadingState270-00012.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loadingState270-00012.png"; sourceTree = "<group>"; };
 		3774CBD91D3F793600240D43 /* CDBaseObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDBaseObject.h; sourceTree = "<group>"; };
 		3774CBDA1D3F793600240D43 /* CDBaseObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDBaseObject.m; sourceTree = "<group>"; };
 		3793E3451D38E8E400955777 /* CDHeaderDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDHeaderDefine.h; sourceTree = "<group>"; };
@@ -379,6 +422,25 @@
 			path = ExampleControllers;
 			sourceTree = "<group>";
 		};
+		376E1A2C1D47353E00D62128 /* ContinueFrame */ = {
+			isa = PBXGroup;
+			children = (
+				376E1A2D1D47353E00D62128 /* loadingState270-0001.png */,
+				376E1A2E1D47353E00D62128 /* loadingState270-0002.png */,
+				376E1A2F1D47353E00D62128 /* loadingState270-0003.png */,
+				376E1A301D47353E00D62128 /* loadingState270-0004.png */,
+				376E1A311D47353E00D62128 /* loadingState270-0005.png */,
+				376E1A321D47353E00D62128 /* loadingState270-0006.png */,
+				376E1A331D47353E00D62128 /* loadingState270-0007.png */,
+				376E1A341D47353E00D62128 /* loadingState270-0008.png */,
+				376E1A351D47353E00D62128 /* loadingState270-0009.png */,
+				376E1A451D47359A00D62128 /* loadingState270-00010.png */,
+				376E1A461D47359A00D62128 /* loadingState270-00011.png */,
+				376E1A471D47359A00D62128 /* loadingState270-00012.png */,
+			);
+			path = ContinueFrame;
+			sourceTree = "<group>";
+		};
 		3793E3461D38EE7500955777 /* iOS字体大全 */ = {
 			isa = PBXGroup;
 			children = (
@@ -542,6 +604,12 @@
 				376C16201D3CAD41002AA201 /* CDFlipAnimation.m */,
 				376C16221D3CAFF6002AA201 /* CDWaveAnimation.h */,
 				376C16231D3CAFF6002AA201 /* CDWaveAnimation.m */,
+				376E1A151D46F28A00D62128 /* CDRippleAnimation.h */,
+				376E1A161D46F28A00D62128 /* CDRippleAnimation.m */,
+				376E1A181D46F8C100D62128 /* CDCubeAnimation.h */,
+				376E1A191D46F8C100D62128 /* CDCubeAnimation.m */,
+				376E1A291D4733F200D62128 /* CDContinueFrameAnimation.h */,
+				376E1A2A1D4733F200D62128 /* CDContinueFrameAnimation.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -549,6 +617,12 @@
 		37DAF8731D333748001BF809 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				376E1A2C1D47353E00D62128 /* ContinueFrame */,
+				376E1A251D470AA500D62128 /* 0.jpg */,
+				376E1A261D470AA500D62128 /* 4.jpg */,
+				376E1A1B1D46F9D800D62128 /* 1.jpg */,
+				376E1A1C1D46F9D800D62128 /* 2.jpg */,
+				376E1A1D1D46F9D800D62128 /* 3.jpg */,
 				376C16251D3CDC6A002AA201 /* CDViewAnimation.h */,
 				376C16261D3CDC6A002AA201 /* CDViewAnimation.m */,
 			);
@@ -653,13 +727,30 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				376E1A481D47359A00D62128 /* loadingState270-00010.png in Resources */,
+				376E1A401D47353E00D62128 /* loadingState270-0008.png in Resources */,
+				376E1A281D470AA500D62128 /* 4.jpg in Resources */,
+				376E1A271D470AA500D62128 /* 0.jpg in Resources */,
+				376E1A4A1D47359A00D62128 /* loadingState270-00012.png in Resources */,
+				376E1A3E1D47353E00D62128 /* loadingState270-0006.png in Resources */,
 				37A5B6311D2DF9D100F09090 /* header_view_image_bg.jpg in Resources */,
+				376E1A411D47353E00D62128 /* loadingState270-0009.png in Resources */,
 				372580241D1E79C7002629B4 /* LaunchScreen.storyboard in Resources */,
+				376E1A3C1D47353E00D62128 /* loadingState270-0004.png in Resources */,
+				376E1A391D47353E00D62128 /* loadingState270-0001.png in Resources */,
+				376E1A3B1D47353E00D62128 /* loadingState270-0003.png in Resources */,
 				37B8EB261D40B4F40062C4B6 /* IMG_2718.PNG in Resources */,
+				376E1A1F1D46F9D800D62128 /* 2.jpg in Resources */,
 				37B8EB251D40B4F40062C4B6 /* IMG_2717.PNG in Resources */,
+				376E1A201D46F9D800D62128 /* 3.jpg in Resources */,
 				37B8EB241D40B4F40062C4B6 /* IMG_2705.JPG in Resources */,
+				376E1A1E1D46F9D800D62128 /* 1.jpg in Resources */,
+				376E1A491D47359A00D62128 /* loadingState270-00011.png in Resources */,
 				37DD7D451D30D6D80053C326 /* test_icon.png in Resources */,
+				376E1A3A1D47353E00D62128 /* loadingState270-0002.png in Resources */,
+				376E1A3D1D47353E00D62128 /* loadingState270-0005.png in Resources */,
 				372580211D1E79C7002629B4 /* Assets.xcassets in Resources */,
+				376E1A3F1D47353E00D62128 /* loadingState270-0007.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -726,6 +817,7 @@
 				372580191D1E79C7002629B4 /* AppDelegate.m in Sources */,
 				37A5B63A1D2E07EB00F09090 /* CDBaseTableViewCell+CDGroupCellCategory.m in Sources */,
 				374FE5A01D34C2E400AD089B /* CDTestAnimationViewController.m in Sources */,
+				376E1A171D46F28A00D62128 /* CDRippleAnimation.m in Sources */,
 				3769F0231D420059008B5083 /* CDTwoTabBarViewController.m in Sources */,
 				3769EFFB1D41F6C3008B5083 /* CDTestTabBarViewController.m in Sources */,
 				37532F0D1D3DD2A1003CFE0C /* CDTestModel.m in Sources */,
@@ -735,6 +827,7 @@
 				372580451D1E86BF002629B4 /* UIView+CDViewCategory.m in Sources */,
 				3793E34B1D38EE8B00955777 /* CDTestFontViewController.m in Sources */,
 				3774CBDB1D3F793600240D43 /* CDBaseObject.m in Sources */,
+				376E1A1A1D46F8C100D62128 /* CDCubeAnimation.m in Sources */,
 				379D7D471D2F91CC0061F2B6 /* CDTestMenuViewController.m in Sources */,
 				3705E92D1D45EFD00028753A /* CDTabBar.m in Sources */,
 				3769F0221D420059008B5083 /* CDThreeTabBarViewController.m in Sources */,
@@ -756,6 +849,7 @@
 				37A5B6301D2DF9D100F09090 /* CExpandHeader.m in Sources */,
 				3705E92A1D45ECF10028753A /* CDCenterViewController.m in Sources */,
 				37A5B64A1D2E444700F09090 /* CDTestCustomGroupController.m in Sources */,
+				376E1A2B1D4733F200D62128 /* CDContinueFrameAnimation.m in Sources */,
 				372580341D1E7B3A002629B4 /* CDCollectionViewFlowLayout.m in Sources */,
 				37A5B6411D2E2C7100F09090 /* UIView+RoundedCorner.m in Sources */,
 			);
