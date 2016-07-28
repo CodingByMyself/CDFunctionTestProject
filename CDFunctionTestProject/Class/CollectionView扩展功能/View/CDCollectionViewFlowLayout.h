@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+UIKIT_EXTERN NSString *const UICollectionElementKindSectionHeaderID;
+UIKIT_EXTERN NSString *const UICollectionElementKindSectionFooterID;
+
 @interface CDCollectionViewFlowLayout : UICollectionViewFlowLayout
 
 /**

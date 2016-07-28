@@ -23,7 +23,7 @@
 		374FE59D1D348CD300AD089B /* CDAutoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 374FE59C1D348CD300AD089B /* CDAutoModel.m */; };
 		374FE5A01D34C2E400AD089B /* CDTestAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 374FE59F1D34C2E400AD089B /* CDTestAnimationViewController.m */; };
 		375112EE1D49A59C00810727 /* CDTestCellLongPressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 375112ED1D49A59C00810727 /* CDTestCellLongPressViewController.m */; };
-		375112F11D49A7D700810727 /* CDLongPressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 375112F01D49A7D700810727 /* CDLongPressCell.m */; };
+		375112F41D49E8B200810727 /* CDTestItemLongPressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 375112F31D49E8B200810727 /* CDTestItemLongPressViewController.m */; };
 		37532F071D3DD0BD003CFE0C /* CDTestBaseModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37532F061D3DD0BD003CFE0C /* CDTestBaseModelViewController.m */; };
 		37532F0D1D3DD2A1003CFE0C /* CDTestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 37532F0C1D3DD2A1003CFE0C /* CDTestModel.m */; };
 		3769EFFB1D41F6C3008B5083 /* CDTestTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3769EFFA1D41F6C3008B5083 /* CDTestTabBarViewController.m */; };
@@ -112,8 +112,8 @@
 		374FE59F1D34C2E400AD089B /* CDTestAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDTestAnimationViewController.m; sourceTree = "<group>"; };
 		375112EC1D49A59C00810727 /* CDTestCellLongPressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDTestCellLongPressViewController.h; sourceTree = "<group>"; };
 		375112ED1D49A59C00810727 /* CDTestCellLongPressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDTestCellLongPressViewController.m; sourceTree = "<group>"; };
-		375112EF1D49A7D700810727 /* CDLongPressCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDLongPressCell.h; sourceTree = "<group>"; };
-		375112F01D49A7D700810727 /* CDLongPressCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDLongPressCell.m; sourceTree = "<group>"; };
+		375112F21D49E8B200810727 /* CDTestItemLongPressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDTestItemLongPressViewController.h; sourceTree = "<group>"; };
+		375112F31D49E8B200810727 /* CDTestItemLongPressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDTestItemLongPressViewController.m; sourceTree = "<group>"; };
 		37532F051D3DD0BD003CFE0C /* CDTestBaseModelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDTestBaseModelViewController.h; sourceTree = "<group>"; };
 		37532F061D3DD0BD003CFE0C /* CDTestBaseModelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDTestBaseModelViewController.m; sourceTree = "<group>"; };
 		37532F0B1D3DD2A1003CFE0C /* CDTestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDTestModel.h; sourceTree = "<group>"; };
@@ -361,6 +361,8 @@
 			children = (
 				375112EC1D49A59C00810727 /* CDTestCellLongPressViewController.h */,
 				375112ED1D49A59C00810727 /* CDTestCellLongPressViewController.m */,
+				375112F21D49E8B200810727 /* CDTestItemLongPressViewController.h */,
+				375112F31D49E8B200810727 /* CDTestItemLongPressViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -368,8 +370,6 @@
 		375112EB1D49A57700810727 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				375112EF1D49A7D700810727 /* CDLongPressCell.h */,
-				375112F01D49A7D700810727 /* CDLongPressCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -843,6 +843,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				375112F41D49E8B200810727 /* CDTestItemLongPressViewController.m in Sources */,
 				376C16271D3CDC6A002AA201 /* CDViewAnimation.m in Sources */,
 				379D7D411D2F86EA0061F2B6 /* CDMenuView.m in Sources */,
 				37A5B6441D2E349400F09090 /* CDTestTableCell.m in Sources */,
@@ -876,7 +877,6 @@
 				376C16211D3CAD41002AA201 /* CDFlipAnimation.m in Sources */,
 				372580311D1E7AE7002629B4 /* CDCollectionViewController.m in Sources */,
 				37B8EB0E1D4065AF0062C4B6 /* CDConstSetup.m in Sources */,
-				375112F11D49A7D700810727 /* CDLongPressCell.m in Sources */,
 				374FE59D1D348CD300AD089B /* CDAutoModel.m in Sources */,
 				37DAF8791D33A287001BF809 /* CDTestAutoLayoutViewController.m in Sources */,
 				3769F0281D421E3B008B5083 /* CDBaseNavigationController.m in Sources */,

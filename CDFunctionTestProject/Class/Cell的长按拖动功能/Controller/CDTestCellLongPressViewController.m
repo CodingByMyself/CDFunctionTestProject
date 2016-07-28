@@ -15,8 +15,6 @@
 }
 @end
 
-#define IS_IOS7_LATER [[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0
-
 @implementation CDTestCellLongPressViewController
 
 #pragma mark - LongPressGesture Method
@@ -53,7 +51,7 @@
             center.y = location.y;
             snapshot.center = center;
             //判断是否移动初始化的cell，indexPath为当前选中的cell sourceIndexPath为“移动”的cell
-            if (indexPath && ![indexPath isEqual:souceIndexPath]) {
+            if (indexPath && ![indexPath isEqual:souceIndexPath] && [indexPath section] == [souceIndexPath section]) {
                 // TODO交换数据，即使重新加载数据位置也不会还原，如果注释这一行 则reload之后数据位置会还原
                 [_dataList exchangeObjectAtIndex:indexPath.row withObjectAtIndex:souceIndexPath.row];
                 [_table moveRowAtIndexPath:souceIndexPath toIndexPath:indexPath]; //交换cell
@@ -85,14 +83,15 @@
 - (UIView *)customSnapShottFromView:(UIView *)view
 {
     UIView *snapshotView;
-    if (IS_IOS7_LATER) {
+    if (IOS_VERSION >= 7.0) {
         snapshotView = [view snapshotViewAfterScreenUpdates:YES];
         snapshotView.layer.masksToBounds = NO;
-        snapshotView.layer.cornerRadius = 5.0f;
+        snapshotView.layer.borderColor = DefineColorRGB(180.0, 180.0, 180.0, 0.6).CGColor;
+        snapshotView.layer.borderWidth = 0.5;
         snapshotView.layer.shadowColor = DefineColorRGB(180.0, 180.0, 180.0, 1.0).CGColor;
         snapshotView.layer.shadowOffset = CGSizeMake(0.0,0.0);
         snapshotView.layer.shadowOpacity = 1.0f;
-        snapshotView.layer.shadowRadius = 2.0f;
+        snapshotView.layer.shadowRadius = 1.5;
     } else {
         UIGraphicsBeginImageContextWithOptions(view.bounds.size, view.opaque, 0.0);
         [view.layer renderInContext:UIGraphicsGetCurrentContext()];
@@ -101,11 +100,12 @@
         snapshotView = [[UIView alloc] initWithFrame:view.bounds];
         [snapshotView setBackgroundColor:[UIColor colorWithPatternImage:snapshot]];
         snapshotView.layer.masksToBounds = NO;
-        snapshotView.layer.cornerRadius = 5.0;
+        snapshotView.layer.borderWidth = 0.5;
+        snapshotView.layer.borderColor = DefineColorRGB(180.0, 180.0, 180.0, 0.6).CGColor;
         snapshotView.layer.shadowColor = DefineColorRGB(180.0, 180.0, 180.0, 1.0).CGColor;
         snapshotView.layer.shadowOffset = CGSizeMake(0.0,0.0);
         snapshotView.layer.shadowOpacity = 1.0f;
-        snapshotView.layer.shadowRadius = 2.0f;
+        snapshotView.layer.shadowRadius = 1.5;
     }
     return snapshotView;
 }

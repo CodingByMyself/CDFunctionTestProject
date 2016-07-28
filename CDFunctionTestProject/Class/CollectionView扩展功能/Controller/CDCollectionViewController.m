@@ -10,10 +10,6 @@
 #import "CDCollectionViewFlowLayout.h"
 
 
-NSString *const UICollectionElementKindSectionHeaderID = @"NewLinerHomeCollectionViewHeaderViewID";
-NSString *const UICollectionElementKindSectionFooterID = @"NewLinerHomeCollectionViewFooterViewID";
-
-
 @interface CDCollectionViewController () <UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,UITableViewDelegate,UITableViewDataSource>
 {
     UICollectionView *_collectionViewTest;

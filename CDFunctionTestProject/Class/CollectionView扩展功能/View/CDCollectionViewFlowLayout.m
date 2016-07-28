@@ -8,6 +8,11 @@
 
 #import "CDCollectionViewFlowLayout.h"
 
+
+NSString *const UICollectionElementKindSectionHeaderID = @"NewLinerHomeCollectionViewHeaderViewID";
+NSString *const UICollectionElementKindSectionFooterID = @"NewLinerHomeCollectionViewFooterViewID";
+
+
 @implementation CDCollectionViewFlowLayout
 
 - (instancetype)init
