@@ -25,12 +25,12 @@
     self.title = @"翻转动画演示";
     self.view.backgroundColor = [UIColor whiteColor];
     
-    //    UIBarButtonItem *flipButton=[[UIBarButtonItem alloc]
-    //                                 initWithTitle:@"翻转"
-    //                                 style:UIBarButtonItemStyleBordered
-    //                                 target:self
-    //                                 action:@selector(startFlipAnimation)];
-    //    self.navigationItem.rightBarButtonItem=flipButton;
+//        UIBarButtonItem *flipButton=[[UIBarButtonItem alloc]
+//                                     initWithTitle:@"翻转"
+//                                     style:UIBarButtonItemStyleBordered
+//                                     target:self
+//                                     action:@selector(startFlipAnimation)];
+//        self.navigationItem.rightBarButtonItem=flipButton;
     
     [self initView];  // 初始化动画相关的view
     

@@ -18,6 +18,7 @@
 #import "CDConstSetup.h"
 #import "CDTestBlurViewController.h"
 #import "CDTestTabBarViewController.h"
+#import "CDTestCellLongPressViewController.h"
 
 @interface CDMainViewController () <UITableViewDelegate,UITableViewDataSource>
 {
@@ -49,7 +50,7 @@
     MTDetailLog(@"%@",ConstCDHTTPMethodGet);
     
     
-    _functionList = @[@"CollectionView 的扩展方法",@"TableView 自定义分组显示",@"CollectionView 菜单功能",@"SDAutoLayout 功能验证",@"View 相关的动画功能",@"iOS 字体大全",@"NSObject模型扩展",@"view的模糊效果",@"TabBarController的功能"];
+    _functionList = @[@"CollectionView 的扩展方法",@"TableView 自定义分组显示",@"CollectionView 菜单功能",@"SDAutoLayout 功能验证",@"View 相关的动画功能",@"iOS 字体大全",@"NSObject模型扩展",@"View的模糊效果",@"Cell的长按拖动",@"TabBarController的功能"];
     
     
     _table = [[UITableView alloc] initWithFrame:self.view.bounds];
@@ -69,6 +70,7 @@
                    [[CDTestFontViewController alloc] init],
                    [[CDTestBaseModelViewController alloc] init],
                    [[CDTestBlurViewController alloc] init],
+                   [[CDTestCellLongPressViewController alloc] init],
                    [[CDTestTabBarViewController alloc] init]
                    ];
     
