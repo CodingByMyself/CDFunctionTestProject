@@ -5,4 +5,5 @@ target "CDFunctionTestProject" do
     pod 'Masonry'
     pod 'SDAutoLayout', '~> 2.1.3'
     pod 'JSONKit-NoWarning', '~> 1.1'
+    pod 'FSCalendar'
 end

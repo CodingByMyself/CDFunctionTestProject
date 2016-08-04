@@ -20,6 +20,11 @@
 		3725803A1D1E7D50002629B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 372580391D1E7D50002629B4 /* Foundation.framework */; };
 		3725803D1D1E7DBA002629B4 /* CDMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3725803C1D1E7DBA002629B4 /* CDMainViewController.m */; };
 		372580451D1E86BF002629B4 /* UIView+CDViewCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 372580441D1E86BF002629B4 /* UIView+CDViewCategory.m */; };
+		374912781D52E02F00D2514F /* CDTestCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 374912771D52E02F00D2514F /* CDTestCalendarViewController.m */; };
+		3749127B1D52E16300D2514F /* CDCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3749127A1D52E16300D2514F /* CDCalendarView.m */; };
+		3749127D1D52F1C800D2514F /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3749127C1D52F1C800D2514F /* LocalAuthentication.framework */; };
+		3749127F1D52F1D600D2514F /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3749127E1D52F1D600D2514F /* CoreFoundation.framework */; };
+		374912821D53113000D2514F /* CDDateHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 374912811D53113000D2514F /* CDDateHelper.m */; };
 		374FE59D1D348CD300AD089B /* CDAutoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 374FE59C1D348CD300AD089B /* CDAutoModel.m */; };
 		374FE5A01D34C2E400AD089B /* CDTestAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 374FE59F1D34C2E400AD089B /* CDTestAnimationViewController.m */; };
 		375112EE1D49A59C00810727 /* CDTestCellLongPressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 375112ED1D49A59C00810727 /* CDTestCellLongPressViewController.m */; };
@@ -106,6 +111,14 @@
 		3725803C1D1E7DBA002629B4 /* CDMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDMainViewController.m; sourceTree = "<group>"; };
 		372580431D1E86BF002629B4 /* UIView+CDViewCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CDViewCategory.h"; sourceTree = "<group>"; };
 		372580441D1E86BF002629B4 /* UIView+CDViewCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CDViewCategory.m"; sourceTree = "<group>"; };
+		374912761D52E02F00D2514F /* CDTestCalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDTestCalendarViewController.h; sourceTree = "<group>"; };
+		374912771D52E02F00D2514F /* CDTestCalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDTestCalendarViewController.m; sourceTree = "<group>"; };
+		374912791D52E16300D2514F /* CDCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDCalendarView.h; sourceTree = "<group>"; };
+		3749127A1D52E16300D2514F /* CDCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDCalendarView.m; sourceTree = "<group>"; };
+		3749127C1D52F1C800D2514F /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
+		3749127E1D52F1D600D2514F /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		374912801D53113000D2514F /* CDDateHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDDateHelper.h; sourceTree = "<group>"; };
+		374912811D53113000D2514F /* CDDateHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDDateHelper.m; sourceTree = "<group>"; };
 		374FE59B1D348CD300AD089B /* CDAutoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDAutoModel.h; sourceTree = "<group>"; };
 		374FE59C1D348CD300AD089B /* CDAutoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDAutoModel.m; sourceTree = "<group>"; };
 		374FE59E1D34C2E400AD089B /* CDTestAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDTestAnimationViewController.h; sourceTree = "<group>"; };
@@ -211,6 +224,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3749127F1D52F1D600D2514F /* CoreFoundation.framework in Frameworks */,
+				3749127D1D52F1C800D2514F /* LocalAuthentication.framework in Frameworks */,
 				3725803A1D1E7D50002629B4 /* Foundation.framework in Frameworks */,
 				372580381D1E7D36002629B4 /* UIKit.framework in Frameworks */,
 				78DBA9475F1CBF735734A38E /* libPods-CDFunctionTestProject.a in Frameworks */,
@@ -267,9 +282,10 @@
 		3725802B1D1E7A33002629B4 /* Class */ = {
 			isa = PBXGroup;
 			children = (
-				375112E91D49A57700810727 /* Cell的长按拖动功能 */,
+				374912701D52DB6A00D2514F /* Calendar日历功能 */,
 				3725803B1D1E7DBA002629B4 /* CDMainViewController.h */,
 				3725803C1D1E7DBA002629B4 /* CDMainViewController.m */,
+				375112E91D49A57700810727 /* Cell的长按拖动功能 */,
 				3769EFEF1D41F6AA008B5083 /* TabBarControllerAndBlur */,
 				37B8EB101D40A9C90062C4B6 /* View高斯模糊 */,
 				37532F011D3DD08D003CFE0C /* NSObject自定义模型基类 */,
@@ -314,6 +330,8 @@
 		372580361D1E7D19002629B4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3749127E1D52F1D600D2514F /* CoreFoundation.framework */,
+				3749127C1D52F1C800D2514F /* LocalAuthentication.framework */,
 				372580391D1E7D50002629B4 /* Foundation.framework */,
 				372580371D1E7D36002629B4 /* UIKit.framework */,
 				F5A388F56147CCBE0E353B4F /* libPods-CDFunctionTestProject.a */,
@@ -336,6 +354,35 @@
 				37B22C601D45B81E007FB197 /* UIImage+CDColorCategory.m */,
 			);
 			path = Libs;
+			sourceTree = "<group>";
+		};
+		374912701D52DB6A00D2514F /* Calendar日历功能 */ = {
+			isa = PBXGroup;
+			children = (
+				374912711D52DB6A00D2514F /* Controller */,
+				374912721D52DB6A00D2514F /* View */,
+			);
+			path = "Calendar日历功能";
+			sourceTree = "<group>";
+		};
+		374912711D52DB6A00D2514F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				374912761D52E02F00D2514F /* CDTestCalendarViewController.h */,
+				374912771D52E02F00D2514F /* CDTestCalendarViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		374912721D52DB6A00D2514F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				374912791D52E16300D2514F /* CDCalendarView.h */,
+				3749127A1D52E16300D2514F /* CDCalendarView.m */,
+				374912801D53113000D2514F /* CDDateHelper.h */,
+				374912811D53113000D2514F /* CDDateHelper.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		374FE59A1D348CBC00AD089B /* Model */ = {
@@ -857,14 +904,17 @@
 				3769EFFB1D41F6C3008B5083 /* CDTestTabBarViewController.m in Sources */,
 				37532F0D1D3DD2A1003CFE0C /* CDTestModel.m in Sources */,
 				37DAF87F1D33A456001BF809 /* CDBaseTableViewCell.m in Sources */,
+				374912821D53113000D2514F /* CDDateHelper.m in Sources */,
 				3725803D1D1E7DBA002629B4 /* CDMainViewController.m in Sources */,
 				37A5B6401D2E2C7100F09090 /* UIImage+RoundedCorner.m in Sources */,
 				372580451D1E86BF002629B4 /* UIView+CDViewCategory.m in Sources */,
+				374912781D52E02F00D2514F /* CDTestCalendarViewController.m in Sources */,
 				3793E34B1D38EE8B00955777 /* CDTestFontViewController.m in Sources */,
 				3774CBDB1D3F793600240D43 /* CDBaseObject.m in Sources */,
 				376E1A1A1D46F8C100D62128 /* CDCubeAnimation.m in Sources */,
 				379D7D471D2F91CC0061F2B6 /* CDTestMenuViewController.m in Sources */,
 				3705E92D1D45EFD00028753A /* CDTabBar.m in Sources */,
+				3749127B1D52E16300D2514F /* CDCalendarView.m in Sources */,
 				375112EE1D49A59C00810727 /* CDTestCellLongPressViewController.m in Sources */,
 				3769F0221D420059008B5083 /* CDThreeTabBarViewController.m in Sources */,
 				37532F071D3DD0BD003CFE0C /* CDTestBaseModelViewController.m in Sources */,
