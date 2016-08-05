@@ -25,6 +25,7 @@
 		3749127D1D52F1C800D2514F /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3749127C1D52F1C800D2514F /* LocalAuthentication.framework */; };
 		3749127F1D52F1D600D2514F /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3749127E1D52F1D600D2514F /* CoreFoundation.framework */; };
 		374912821D53113000D2514F /* CDDateHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 374912811D53113000D2514F /* CDDateHelper.m */; };
+		374912881D533C1600D2514F /* CDTipsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 374912871D533C1600D2514F /* CDTipsView.m */; };
 		374FE59D1D348CD300AD089B /* CDAutoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 374FE59C1D348CD300AD089B /* CDAutoModel.m */; };
 		374FE5A01D34C2E400AD089B /* CDTestAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 374FE59F1D34C2E400AD089B /* CDTestAnimationViewController.m */; };
 		375112EE1D49A59C00810727 /* CDTestCellLongPressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 375112ED1D49A59C00810727 /* CDTestCellLongPressViewController.m */; };
@@ -119,6 +120,8 @@
 		3749127E1D52F1D600D2514F /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		374912801D53113000D2514F /* CDDateHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDDateHelper.h; sourceTree = "<group>"; };
 		374912811D53113000D2514F /* CDDateHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDDateHelper.m; sourceTree = "<group>"; };
+		374912861D533C1600D2514F /* CDTipsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDTipsView.h; sourceTree = "<group>"; };
+		374912871D533C1600D2514F /* CDTipsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDTipsView.m; sourceTree = "<group>"; };
 		374FE59B1D348CD300AD089B /* CDAutoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDAutoModel.h; sourceTree = "<group>"; };
 		374FE59C1D348CD300AD089B /* CDAutoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDAutoModel.m; sourceTree = "<group>"; };
 		374FE59E1D34C2E400AD089B /* CDTestAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDTestAnimationViewController.h; sourceTree = "<group>"; };
@@ -342,6 +345,8 @@
 		3725803E1D1E861F002629B4 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				374912861D533C1600D2514F /* CDTipsView.h */,
+				374912871D533C1600D2514F /* CDTipsView.m */,
 				3705E9341D4608690028753A /* CDBaseViewController.h */,
 				3705E9351D4608690028753A /* CDBaseViewController.m */,
 				37DAF87D1D33A456001BF809 /* CDBaseTableViewCell.h */,
@@ -891,6 +896,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				375112F41D49E8B200810727 /* CDTestItemLongPressViewController.m in Sources */,
+				374912881D533C1600D2514F /* CDTipsView.m in Sources */,
 				376C16271D3CDC6A002AA201 /* CDViewAnimation.m in Sources */,
 				379D7D411D2F86EA0061F2B6 /* CDMenuView.m in Sources */,
 				37A5B6441D2E349400F09090 /* CDTestTableCell.m in Sources */,

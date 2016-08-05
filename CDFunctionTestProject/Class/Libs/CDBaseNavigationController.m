@@ -57,7 +57,7 @@
     shadow.shadowOffset = [[NSValue valueWithUIOffset:UIOffsetZero] CGSizeValue];
     textAttrs[NSShadowAttributeName] = shadow;
     [appearanceNavBar setTitleTextAttributes:textAttrs];
-    [appearanceNavBar setTintColor:[UIColor redColor]];
+    [appearanceNavBar setTintColor:[UIColor darkGrayColor]];
     
     /*** 设置导航栏背景颜色 ***/
     //    [appearanceNavBar setBarTintColor:MTNavigationBarBgTintColorBlack];

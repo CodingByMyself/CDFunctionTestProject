@@ -7,13 +7,9 @@
 //
 
 #import "CDCalendarView.h"
-#import "FSCalendar.h"
-
 
 @interface CDCalendarView() <FSCalendarDataSource, FSCalendarDelegate,UIGestureRecognizerDelegate>
 {
-    FSCalendar *_calendar;
-    
     UITapGestureRecognizer *_tap;
     UIView *_targetView;
 }
@@ -113,8 +109,16 @@ CGFloat const CDCalendarViewHeight = 300.0;
 //  已经选中了某个日期
 - (void)calendar:(FSCalendar *)calendar didSelectDate:(NSDate *)date
 {
-    if ([_delegate respondsToSelector:@selector(mangocityCalendar:didTouchDay:)]) {
-        [_delegate mangocityCalendar:self didTouchDay:date];
+    if ([_delegate respondsToSelector:@selector(mangocityCalendar:didSelectDate:)]) {
+        [_delegate mangocityCalendar:self didSelectDate:date];
+    }
+}
+
+//  已经取消某个日期的选中状态
+- (void)calendar:(FSCalendar *)calendar didDeselectDate:(NSDate *)date
+{
+    if ([_delegate respondsToSelector:@selector(mangocityCalendar:didDeselectDate:)]) {
+        [_delegate mangocityCalendar:self didDeselectDate:date];
     }
 }
 
@@ -146,7 +150,7 @@ CGFloat const CDCalendarViewHeight = 300.0;
 }
 
 
-#pragma mark - public method
+#pragma mark -  - Public Method - -
 - (void)showCalendarWithTargetView:(UIView *)targetView
 {
     [self removeFromSuperview];
@@ -157,7 +161,6 @@ CGFloat const CDCalendarViewHeight = 300.0;
         make.bottom.equalTo(self).offset(CDCalendarViewHeight);
     }];
     [_calendar reloadData];
-    [_calendar selectDate:_calendar.today];
     
     //  添加到目标view中显示
     _targetView = targetView;
@@ -192,6 +195,22 @@ CGFloat const CDCalendarViewHeight = 300.0;
     } completion:^(BOOL finished) {
         [self removeFromSuperview];
     }];
+}
+
+- (void)setSelectedDates:(NSArray *)dateArray
+{
+    for (NSDate *date in dateArray) {
+        [_calendar selectDate:date];
+    }
+    [_calendar reloadData];
+}
+
+- (void)setDeselectedDates:(NSArray *)dateArray
+{
+    for (NSDate *date in dateArray) {
+        [_calendar deselectDate:date];
+    }
+    [_calendar reloadData];
 }
 
 @end
