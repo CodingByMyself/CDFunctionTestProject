@@ -1,16 +1,18 @@
 //
-//  CDCollectionViewController.m
+//  CDSelectedCityController.m
 //  CDFunctionTestProject
 //
-//  Created by Cindy on 16/6/25.
+//  Created by Cindy on 16/8/5.
 //  Copyright © 2016年 Cindy. All rights reserved.
 //
 
-#import "CDCollectionViewController.h"
+#import "CDSelectedCityController.h"
 #import "CDCollectionViewFlowLayout.h"
+#import "CDCityCollectionCell.h"
 
 
-@interface CDCollectionViewController () <UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,UITableViewDelegate,UITableViewDataSource>
+CGFloat const ItemDefaultHeight = 40.0;
+@interface CDSelectedCityController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,UITableViewDelegate,UITableViewDataSource>
 {
     UICollectionView *_collectionViewTest;
     
@@ -20,9 +22,7 @@
 
 @end
 
-
-@implementation CDCollectionViewController
-
+@implementation CDSelectedCityController
 
 #pragma mark - view
 - (void)viewDidLoad {
@@ -67,30 +67,35 @@
         make.top.equalTo(self.view).offset(66.0);
         make.bottom.equalTo(self.view).offset(-2.0);
         make.right.equalTo(self.view).offset(-2.0);
-        make.width.equalTo(@(20.0));
+        make.width.equalTo(@(18.0));
     }];
 }
 
 #pragma mark - UICollection View Delegate
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString * CellIdentifier = @"MyCollectionCellID";
-    [_collectionViewTest registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"MyCollectionCellID"];
-    UICollectionViewCell * cell = (UICollectionViewCell *)[_collectionViewTest dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
+    static NSString * CellIdentifier = @"CDCityCollectionCell";
+    [_collectionViewTest registerClass:[CDCityCollectionCell class] forCellWithReuseIdentifier:CellIdentifier];
+    CDCityCollectionCell * cell = (CDCityCollectionCell *)[_collectionViewTest dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    UILabel *labelDesr = [cell viewWithTag:100];
-    if (labelDesr == nil) {
-        labelDesr = [[UILabel alloc] initWithFrame:cell.bounds];
-        labelDesr.tag = 100;
-        labelDesr.textAlignment = NSTextAlignmentCenter;
-        labelDesr.textColor = [UIColor darkGrayColor];
-        labelDesr.font = [UIFont systemFontOfSize:14.0];
-        [cell addSubview:labelDesr];
-    } else {
-        labelDesr.frame = cell.bounds;
-    }
-    labelDesr.text = [NSString stringWithFormat:@"%zi%zi",[indexPath section],[indexPath row]];
-    cell.backgroundColor = [UIColor yellowColor];
+    NSString *cityName = [NSString stringWithFormat:@"%zi%zi",[indexPath section],[indexPath row]];
+    [cell initWithCityName:cityName atIndexPath:indexPath];
+    
+//    UILabel *labelDesr = [cell viewWithTag:100];
+//    if (labelDesr == nil) {
+//        labelDesr = [[UILabel alloc] initWithFrame:cell.bounds];
+//        labelDesr.tag = 100;
+//        labelDesr.textAlignment = NSTextAlignmentCenter;
+//        labelDesr.textColor = [UIColor darkGrayColor];
+//        labelDesr.font = [UIFont systemFontOfSize:14.0];
+//        [cell addSubview:labelDesr];
+//    } else {
+//        labelDesr.frame = cell.bounds;
+//    }
+//    labelDesr.text = [NSString stringWithFormat:@"%zi%zi",[indexPath section],[indexPath row]];
+    
+//    cell.backgroundColor = [UIColor yellowColor];
+    
     return cell;
 }
 
@@ -107,7 +112,7 @@
     
     CDCollectionViewFlowLayout *collectionViewFlowLayout = (CDCollectionViewFlowLayout *)collectionViewLayout;
     // 设置header或footer的size, 如不设置默认是CGSizeZero
-    CGSize size = section == 0 ? CGSizeZero : CGSizeMake(DefineScreenWidth, 35.0);
+    CGSize size = section == 0 ? CGSizeZero : CGSizeMake(DefineScreenWidth, 20.0);
     collectionViewFlowLayout.headerReferenceSize = size;
     collectionViewFlowLayout.footerReferenceSize = CGSizeZero;  //  不需要显示footer
     
@@ -147,31 +152,21 @@
     switch ([indexPath section]) {
         case 0:
         {
-            size = CGSizeMake(DefineScreenWidth, 120.0);
+            size = CGSizeMake((DefineScreenWidth - 3.0)/4.0, ItemDefaultHeight);
         }
             break;
         case 1:
         {
-            size = CGSizeMake((DefineScreenWidth - 3.0)/4.0, 50.0);
+            size = CGSizeMake((DefineScreenWidth - 3.0)/4.0, ItemDefaultHeight);
         }
             break;
         case 2:
         {
-            size = CGSizeMake(DefineScreenWidth, 100.0);
-        }
-            break;
-        case 3:
-        {
-            size = CGSizeMake(DefineScreenWidth, 50.0);
-        }
-            break;
-        case 4:
-        {
-            size = CGSizeMake((DefineScreenWidth - 3.0)/4.0, (DefineScreenWidth - 3.0)/4.0);
+            size = CGSizeMake((DefineScreenWidth - 3.0)/4.0, ItemDefaultHeight);
         }
             break;
         default:
-            size = CGSizeZero;
+            size = CGSizeMake(DefineScreenWidth, ItemDefaultHeight);
             break;
     }
     
@@ -189,33 +184,23 @@
             break;
         case 1:
         {
-            return 8;
+            return 1;
         }
             break;
-        case 2:
+        case 15:
         {
             return 1;
         }
             break;
-        case 3:
-        {
-            return 6;
-        }
-            break;
-        case 4:
-        {
-            return 4;
-        }
-            break;
         default:
-            return 0;
+            return 10;
             break;
     }
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
-    return 5;
+    return 10;
 }
 
 #pragma mark  Item  Spacing
@@ -242,7 +227,7 @@
     if (label == nil) {
         label = [[UILabel alloc] init];
         label.tag = 100;
-        label.font = [UIFont boldSystemFontOfSize:15.0];
+        label.font = [UIFont boldSystemFontOfSize:13.0];
         label.textColor = [UIColor whiteColor];
         label.textAlignment = NSTextAlignmentCenter;
         [cell addSubview:label];
@@ -276,6 +261,7 @@
 {
     return tableView.cd_height/[_toolbarList count];
 }
+
 
 
 @end

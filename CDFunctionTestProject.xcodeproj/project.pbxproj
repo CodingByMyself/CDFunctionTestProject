@@ -80,6 +80,8 @@
 		37B8EB241D40B4F40062C4B6 /* IMG_2705.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 37B8EB211D40B4F40062C4B6 /* IMG_2705.JPG */; };
 		37B8EB251D40B4F40062C4B6 /* IMG_2717.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 37B8EB221D40B4F40062C4B6 /* IMG_2717.PNG */; };
 		37B8EB261D40B4F40062C4B6 /* IMG_2718.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 37B8EB231D40B4F40062C4B6 /* IMG_2718.PNG */; };
+		37D806021D54936500E18039 /* CDSelectedCityController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D806011D54936500E18039 /* CDSelectedCityController.m */; };
+		37D806081D54961C00E18039 /* CDCityCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D806071D54961C00E18039 /* CDCityCollectionCell.m */; };
 		37DAF8791D33A287001BF809 /* CDTestAutoLayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DAF8781D33A287001BF809 /* CDTestAutoLayoutViewController.m */; };
 		37DAF87C1D33A3F1001BF809 /* CDAutoLayoutTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DAF87B1D33A3F1001BF809 /* CDAutoLayoutTableCell.m */; };
 		37DAF87F1D33A456001BF809 /* CDBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DAF87E1D33A456001BF809 /* CDBaseTableViewCell.m */; };
@@ -210,6 +212,10 @@
 		37B8EB211D40B4F40062C4B6 /* IMG_2705.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_2705.JPG; sourceTree = "<group>"; };
 		37B8EB221D40B4F40062C4B6 /* IMG_2717.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_2717.PNG; sourceTree = "<group>"; };
 		37B8EB231D40B4F40062C4B6 /* IMG_2718.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_2718.PNG; sourceTree = "<group>"; };
+		37D806001D54936500E18039 /* CDSelectedCityController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDSelectedCityController.h; sourceTree = "<group>"; };
+		37D806011D54936500E18039 /* CDSelectedCityController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDSelectedCityController.m; sourceTree = "<group>"; };
+		37D806061D54961C00E18039 /* CDCityCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDCityCollectionCell.h; sourceTree = "<group>"; };
+		37D806071D54961C00E18039 /* CDCityCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDCityCollectionCell.m; sourceTree = "<group>"; };
 		37DAF8771D33A287001BF809 /* CDTestAutoLayoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDTestAutoLayoutViewController.h; sourceTree = "<group>"; };
 		37DAF8781D33A287001BF809 /* CDTestAutoLayoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDTestAutoLayoutViewController.m; sourceTree = "<group>"; };
 		37DAF87A1D33A3F1001BF809 /* CDAutoLayoutTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDAutoLayoutTableCell.h; sourceTree = "<group>"; };
@@ -285,9 +291,10 @@
 		3725802B1D1E7A33002629B4 /* Class */ = {
 			isa = PBXGroup;
 			children = (
-				374912701D52DB6A00D2514F /* Calendar日历功能 */,
+				37D805FD1D54932900E18039 /* CollectionView城市列表 */,
 				3725803B1D1E7DBA002629B4 /* CDMainViewController.h */,
 				3725803C1D1E7DBA002629B4 /* CDMainViewController.m */,
+				374912701D52DB6A00D2514F /* Calendar日历功能 */,
 				375112E91D49A57700810727 /* Cell的长按拖动功能 */,
 				3769EFEF1D41F6AA008B5083 /* TabBarControllerAndBlur */,
 				37B8EB101D40A9C90062C4B6 /* View高斯模糊 */,
@@ -672,6 +679,33 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		37D805FD1D54932900E18039 /* CollectionView城市列表 */ = {
+			isa = PBXGroup;
+			children = (
+				37D805FE1D54932900E18039 /* Controller */,
+				37D805FF1D54932900E18039 /* View */,
+			);
+			path = "CollectionView城市列表";
+			sourceTree = "<group>";
+		};
+		37D805FE1D54932900E18039 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				37D806001D54936500E18039 /* CDSelectedCityController.h */,
+				37D806011D54936500E18039 /* CDSelectedCityController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		37D805FF1D54932900E18039 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				37D806061D54961C00E18039 /* CDCityCollectionCell.h */,
+				37D806071D54961C00E18039 /* CDCityCollectionCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		37DAF8711D333748001BF809 /* View的部分动画功能 */ = {
 			isa = PBXGroup;
 			children = (
@@ -921,10 +955,12 @@
 				379D7D471D2F91CC0061F2B6 /* CDTestMenuViewController.m in Sources */,
 				3705E92D1D45EFD00028753A /* CDTabBar.m in Sources */,
 				3749127B1D52E16300D2514F /* CDCalendarView.m in Sources */,
+				37D806021D54936500E18039 /* CDSelectedCityController.m in Sources */,
 				375112EE1D49A59C00810727 /* CDTestCellLongPressViewController.m in Sources */,
 				3769F0221D420059008B5083 /* CDThreeTabBarViewController.m in Sources */,
 				37532F071D3DD0BD003CFE0C /* CDTestBaseModelViewController.m in Sources */,
 				37B8EB1D1D40B3640062C4B6 /* FXBlurView.m in Sources */,
+				37D806081D54961C00E18039 /* CDCityCollectionCell.m in Sources */,
 				379D7D441D2F88150061F2B6 /* CDMenuCollectionCell.m in Sources */,
 				37DAF87C1D33A3F1001BF809 /* CDAutoLayoutTableCell.m in Sources */,
 				37B8EB201D40B3900062C4B6 /* CDTestBlurViewController.m in Sources */,

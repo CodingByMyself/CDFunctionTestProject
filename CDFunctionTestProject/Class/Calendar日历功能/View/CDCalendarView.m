@@ -67,11 +67,11 @@ CGFloat const CDCalendarViewHeight = 300.0;
     _calendar.appearance.headerTitleColor = [UIColor blackColor];
     _calendar.appearance.headerTitleFont = [UIFont boldSystemFontOfSize:18.0];
     //  显示星期
-    _calendar.appearance.weekdayTextColor = [UIColor blackColor];
-    _calendar.appearance.weekdayFont = DefineFontLaoSangamMN(15.0);
+    _calendar.appearance.weekdayTextColor = [UIColor darkTextColor];
+    _calendar.appearance.weekdayFont = DefineFontLaoSangamMN(16.0);
     //  title文本
     _calendar.appearance.titleVerticalOffset = -1.0;
-    _calendar.appearance.titleDefaultColor = [UIColor darkGrayColor];
+    _calendar.appearance.titleDefaultColor = [UIColor darkTextColor];
     _calendar.appearance.titleFont = DefineFontHelveticaNeue(18.0);
     //   描述文本
     _calendar.appearance.subtitleFont = DefineFontHelveticaNeue(9.0);
@@ -80,6 +80,7 @@ CGFloat const CDCalendarViewHeight = 300.0;
     _calendar.appearance.subtitleSelectionColor = [UIColor whiteColor];
     //  被选中后的背景填充色
     _calendar.appearance.selectionColor = [UIColor orangeColor];
+    [_calendar setShowsPlaceholders:YES];
     [_calendar reloadData];
 }
 
