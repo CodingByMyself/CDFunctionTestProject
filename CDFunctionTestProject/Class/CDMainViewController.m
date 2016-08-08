@@ -21,7 +21,7 @@
 #import "CDTestCellLongPressViewController.h"
 #import "CDTestItemLongPressViewController.h"
 #import "CDTestCalendarViewController.h"
-#import "CDSelectedCityController.h"
+#import "CDTestCitySelectedViewController.h"
 
 @interface CDMainViewController () <UITableViewDelegate,UITableViewDataSource>
 {
@@ -76,7 +76,7 @@
                    [[CDTestCellLongPressViewController alloc] init],
                    [[CDTestItemLongPressViewController alloc] init],
                    [[CDTestCalendarViewController alloc] init],
-                   [[CDSelectedCityController alloc] init],
+                   [[CDTestCitySelectedViewController alloc] init],
                    [[CDTestTabBarViewController alloc] init]
                    ];
     

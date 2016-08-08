@@ -62,6 +62,9 @@
 		376E1A491D47359A00D62128 /* loadingState270-00011.png in Resources */ = {isa = PBXBuildFile; fileRef = 376E1A461D47359A00D62128 /* loadingState270-00011.png */; };
 		376E1A4A1D47359A00D62128 /* loadingState270-00012.png in Resources */ = {isa = PBXBuildFile; fileRef = 376E1A471D47359A00D62128 /* loadingState270-00012.png */; };
 		3774CBDB1D3F793600240D43 /* CDBaseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3774CBDA1D3F793600240D43 /* CDBaseObject.m */; };
+		37863F321D58290900CB2715 /* CDCityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 37863F301D58290800CB2715 /* CDCityModel.m */; };
+		37863F331D58290900CB2715 /* flight-city.plist in Resources */ = {isa = PBXBuildFile; fileRef = 37863F311D58290800CB2715 /* flight-city.plist */; };
+		37863F361D5831BA00CB2715 /* CDTestCitySelectedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37863F351D5831BA00CB2715 /* CDTestCitySelectedViewController.m */; };
 		3793E34B1D38EE8B00955777 /* CDTestFontViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3793E34A1D38EE8B00955777 /* CDTestFontViewController.m */; };
 		379D7D411D2F86EA0061F2B6 /* CDMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 379D7D401D2F86EA0061F2B6 /* CDMenuView.m */; };
 		379D7D441D2F88150061F2B6 /* CDMenuCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 379D7D431D2F88150061F2B6 /* CDMenuCollectionCell.m */; };
@@ -179,6 +182,11 @@
 		376E1A471D47359A00D62128 /* loadingState270-00012.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loadingState270-00012.png"; sourceTree = "<group>"; };
 		3774CBD91D3F793600240D43 /* CDBaseObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDBaseObject.h; sourceTree = "<group>"; };
 		3774CBDA1D3F793600240D43 /* CDBaseObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDBaseObject.m; sourceTree = "<group>"; };
+		37863F2F1D58290800CB2715 /* CDCityModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDCityModel.h; sourceTree = "<group>"; };
+		37863F301D58290800CB2715 /* CDCityModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDCityModel.m; sourceTree = "<group>"; };
+		37863F311D58290800CB2715 /* flight-city.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "flight-city.plist"; sourceTree = "<group>"; };
+		37863F341D5831BA00CB2715 /* CDTestCitySelectedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDTestCitySelectedViewController.h; sourceTree = "<group>"; };
+		37863F351D5831BA00CB2715 /* CDTestCitySelectedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDTestCitySelectedViewController.m; sourceTree = "<group>"; };
 		3793E3451D38E8E400955777 /* CDHeaderDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDHeaderDefine.h; sourceTree = "<group>"; };
 		3793E3491D38EE8B00955777 /* CDTestFontViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDTestFontViewController.h; sourceTree = "<group>"; };
 		3793E34A1D38EE8B00955777 /* CDTestFontViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDTestFontViewController.m; sourceTree = "<group>"; };
@@ -534,6 +542,16 @@
 			path = ContinueFrame;
 			sourceTree = "<group>";
 		};
+		37863F2E1D58290800CB2715 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				37863F2F1D58290800CB2715 /* CDCityModel.h */,
+				37863F301D58290800CB2715 /* CDCityModel.m */,
+				37863F311D58290800CB2715 /* flight-city.plist */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		3793E3461D38EE7500955777 /* iOS字体大全 */ = {
 			isa = PBXGroup;
 			children = (
@@ -684,6 +702,7 @@
 			children = (
 				37D805FE1D54932900E18039 /* Controller */,
 				37D805FF1D54932900E18039 /* View */,
+				37863F2E1D58290800CB2715 /* Model */,
 			);
 			path = "CollectionView城市列表";
 			sourceTree = "<group>";
@@ -691,6 +710,8 @@
 		37D805FE1D54932900E18039 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				37863F341D5831BA00CB2715 /* CDTestCitySelectedViewController.h */,
+				37863F351D5831BA00CB2715 /* CDTestCitySelectedViewController.m */,
 				37D806001D54936500E18039 /* CDSelectedCityController.h */,
 				37D806011D54936500E18039 /* CDSelectedCityController.m */,
 			);
@@ -856,6 +877,7 @@
 				37A5B6311D2DF9D100F09090 /* header_view_image_bg.jpg in Resources */,
 				376E1A411D47353E00D62128 /* loadingState270-0009.png in Resources */,
 				372580241D1E79C7002629B4 /* LaunchScreen.storyboard in Resources */,
+				37863F331D58290900CB2715 /* flight-city.plist in Resources */,
 				376E1A3C1D47353E00D62128 /* loadingState270-0004.png in Resources */,
 				376E1A391D47353E00D62128 /* loadingState270-0001.png in Resources */,
 				376E1A3B1D47353E00D62128 /* loadingState270-0003.png in Resources */,
@@ -930,6 +952,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				375112F41D49E8B200810727 /* CDTestItemLongPressViewController.m in Sources */,
+				37863F321D58290900CB2715 /* CDCityModel.m in Sources */,
 				374912881D533C1600D2514F /* CDTipsView.m in Sources */,
 				376C16271D3CDC6A002AA201 /* CDViewAnimation.m in Sources */,
 				379D7D411D2F86EA0061F2B6 /* CDMenuView.m in Sources */,
@@ -956,6 +979,7 @@
 				3705E92D1D45EFD00028753A /* CDTabBar.m in Sources */,
 				3749127B1D52E16300D2514F /* CDCalendarView.m in Sources */,
 				37D806021D54936500E18039 /* CDSelectedCityController.m in Sources */,
+				37863F361D5831BA00CB2715 /* CDTestCitySelectedViewController.m in Sources */,
 				375112EE1D49A59C00810727 /* CDTestCellLongPressViewController.m in Sources */,
 				3769F0221D420059008B5083 /* CDThreeTabBarViewController.m in Sources */,
 				37532F071D3DD0BD003CFE0C /* CDTestBaseModelViewController.m in Sources */,

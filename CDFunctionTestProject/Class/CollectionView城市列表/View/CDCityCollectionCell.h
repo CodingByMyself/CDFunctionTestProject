@@ -10,6 +10,6 @@
 
 @interface CDCityCollectionCell : UICollectionViewCell
 
-- (void)initWithCityName:(NSString *)cityName atIndexPath:(NSIndexPath *)indexPath;
+- (void)initWithCityName:(NSString *)cityName atIndexPath:(NSIndexPath *)indexPath showBorder:(BOOL)show;
 
 @end
