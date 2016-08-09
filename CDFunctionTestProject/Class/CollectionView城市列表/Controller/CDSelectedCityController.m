@@ -9,13 +9,16 @@
 #import "CDSelectedCityController.h"
 #import "CDCollectionViewFlowLayout.h"
 #import "CDCityCollectionCell.h"
+#import "CDCityModel.h"
 
 
 CGFloat const ItemDefaultHeight = 36.0;
 CGFloat const ToolBarViewWidth = 25.0;
 @interface CDSelectedCityController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,UITableViewDelegate,UITableViewDataSource>
 {
+    UITextField *_fieldViewSerach;
     UICollectionView *_collectionViewTest;
+    UILabel *_labelEmptyResult;
     
     UITableView *_toolbarTable;
     NSArray *_toolbarList;
@@ -37,9 +40,81 @@ CGFloat const ToolBarViewWidth = 25.0;
     return self;
 }
 
+#pragma mark - NSNotification
+- (void)textFieldTextDidChangeNotification:(NSNotification*)notification
+{
+    NSLog(@"%@",_fieldViewSerach.text);
+    NSString *serachString = [_fieldViewSerach.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];  //  去掉前后空格
+    if (serachString.length > 0) {
+        [self showSomeDataWithSerachString:serachString];
+    } else {
+        [self showAllData];
+    }
+}
+
+#pragma mark  keyboard event
+- (void)keyboardWillHide:(NSNotification *)notify
+{
+    [_collectionViewTest mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.bottom.equalTo(self.view);
+    }];
+    [_toolbarTable mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.bottom.equalTo(self.view).offset(-5.0);
+        _toolbarTable.scrollEnabled = NO;
+    }];
+    [UIView animateWithDuration:[[[notify userInfo] objectForKey:UIKeyboardAnimationDurationUserInfoKey] floatValue] animations:^{
+        [self.view layoutIfNeeded];
+    }];
+}
+
+- (void)keyboardWillShow:(NSNotification *)notify
+{
+    NSDictionary *userInfo = [notify userInfo];
+    NSValue *value = [userInfo objectForKey:UIKeyboardFrameEndUserInfoKey];
+    CGRect bounds = [value CGRectValue];
+    [_collectionViewTest mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.bottom.equalTo(self.view).offset(-bounds.size.height);
+    }];
+    [_toolbarTable mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.bottom.equalTo(self.view).offset(-(5.0 + bounds.size.height));
+        _toolbarTable.scrollEnabled = YES;
+    }];
+    [UIView animateWithDuration:[[[notify userInfo] objectForKey:UIKeyboardAnimationDurationUserInfoKey] floatValue] animations:^{
+        [self.view layoutIfNeeded];
+    }];
+}
+
 #pragma mark - data handle
+- (void)showSomeDataWithSerachString:(NSString *)serachString
+{
+    NSMutableArray *tempArray = [[NSMutableArray alloc] init];
+    for (CDCityModel *city in self.allCityList) {
+        if ([self.itemShowCityList containsObject:city.supperKey]) {
+            continue;
+        } else if ([[city.name uppercaseString] rangeOfString:[serachString uppercaseString]].length > 0) {
+            [tempArray addObject:city];
+        } else if ([[city.charCode uppercaseString] rangeOfString:[serachString uppercaseString]].length > 0) {
+            [tempArray addObject:city];
+        } else if ([[city.charCodeAbb uppercaseString] isEqualToString:[serachString uppercaseString]]) {
+            [tempArray addObject:city];
+        }
+    }
+    
+    //  更新数据源
+    _toolbarList = [NSArray arrayWithObject:@"搜索结果："];
+    _citysGroupDictionary = @{@"搜索结果：" : tempArray};
+    _toolbarTable.hidden = YES;  //  搜索模式不显示侧边导航条
+    [_collectionViewTest reloadData];
+    if ([tempArray count] == 0) {
+        [self showEmptyLabel];
+    } else {
+        [_labelEmptyResult removeFromSuperview];
+    }
+}
+
 - (void)showAllData
 {
+    [_labelEmptyResult removeFromSuperview];
     NSMutableArray *tempSectionArray = [NSMutableArray new];
     NSMutableDictionary *tempCityGroupDictionary = [NSMutableDictionary new];
     for (CDCityModel *city in self.allCityList) {
@@ -64,8 +139,10 @@ CGFloat const ToolBarViewWidth = 25.0;
     [temp addObjectsFromArray:[tempSectionArray sortedArrayUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"" ascending:YES]]]];
     _toolbarList = [NSArray arrayWithArray:temp];
     _citysGroupDictionary = [NSDictionary dictionaryWithDictionary:tempCityGroupDictionary];
+    _toolbarTable.hidden = NO;
     [_collectionViewTest reloadData];
     [_toolbarTable reloadData];
+    
 }
 
 #pragma mark - view
@@ -75,14 +152,64 @@ CGFloat const ToolBarViewWidth = 25.0;
     self.title = @"选择城市";
     self.view.backgroundColor = [UIColor whiteColor];
     
+    //  初始化ui视图
     [self initView];
-    
+     //  默认显示全部数据
     [self showAllData];
-    
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textFieldTextDidChangeNotification:) name:UITextFieldTextDidChangeNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UITextFieldTextDidChangeNotification object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillHideNotification object:nil];
+}
+
+#pragma mark
 - (void)initView
 {
+    UIView *headSerachView = [[UIView alloc] init];
+    headSerachView.backgroundColor = DefineColorRGB(233.0, 233.0, 233.0, 1.0);
+    [self.view addSubview:headSerachView];
+    [headSerachView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.view).offset(64.0);
+        make.left.equalTo(self.view);
+        make.right.equalTo(self.view);
+        make.height.equalTo(@(45.0));
+    }];
+    
+    UIView *view = [[UIView alloc] init];
+    [headSerachView addSubview:view];
+    view.layer.cornerRadius = 4.0f;
+    view.backgroundColor = [UIColor whiteColor];
+    [view mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(view.superview).offset(7.0);
+        make.left.equalTo(view.superview).offset(15.0);
+        make.right.equalTo(view.superview).offset(-15.0);
+        make.bottom.equalTo(view.superview).offset(-7.0);
+    }];
+    
+    _fieldViewSerach = [[UITextField alloc] init];
+    _fieldViewSerach.placeholder = @"输入城市名（如北京）";
+    _fieldViewSerach.borderStyle = UITextBorderStyleNone;
+    _fieldViewSerach.textColor = [UIColor darkGrayColor];
+    _fieldViewSerach.font = [UIFont systemFontOfSize:14.0];
+    [view addSubview:_fieldViewSerach];
+    [_fieldViewSerach mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(_fieldViewSerach.superview).offset(5.0);
+        make.left.equalTo(_fieldViewSerach.superview).offset(10.0);
+        make.right.equalTo(_fieldViewSerach.superview).offset(-10.0);
+        make.bottom.equalTo(_fieldViewSerach.superview).offset(-5.0);
+    }];
+    
+    
     //  初始化装载控件
     CDCollectionViewFlowLayout *flowLayout= [[CDCollectionViewFlowLayout alloc]init];
     flowLayout.scrollDirection = UICollectionViewScrollDirectionVertical;
@@ -91,11 +218,12 @@ CGFloat const ToolBarViewWidth = 25.0;
     _collectionViewTest.collectionViewLayout = flowLayout;
     _collectionViewTest = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:flowLayout];
     _collectionViewTest.backgroundColor = [UIColor whiteColor];
+    _collectionViewTest.alwaysBounceVertical = YES;
     _collectionViewTest.delegate = self;
     _collectionViewTest.dataSource = self;
     [self.view addSubview:_collectionViewTest];
     [_collectionViewTest mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.view);
+        make.top.equalTo(headSerachView.mas_bottom);
         make.left.equalTo(self.view);
         make.right.equalTo(self.view);
         make.bottom.equalTo(self.view);
@@ -107,14 +235,33 @@ CGFloat const ToolBarViewWidth = 25.0;
     _toolbarTable.delegate = self;
     _toolbarTable.dataSource = self;
     _toolbarTable.scrollEnabled = NO;
+    _toolbarTable.showsVerticalScrollIndicator = NO;
     [_toolbarTable setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     _toolbarTable.backgroundColor = DefineColorRGB(0, 0, 0, 0.05);
     _toolbarTable.layer.cornerRadius = 5.0;
     [self.view addSubview:_toolbarTable];    [_toolbarTable mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.view).offset(70.0);
+        make.top.equalTo(headSerachView.mas_bottom).offset(5.0);
         make.bottom.equalTo(self.view).offset(-5.0);
-        make.right.equalTo(self.view).offset(-1.0);
+        make.right.equalTo(self.view).offset(0.0);
         make.width.equalTo(@(ToolBarViewWidth));
+    }];
+}
+
+- (void)showEmptyLabel
+{
+    if (_labelEmptyResult == nil) {
+        _labelEmptyResult = [[UILabel alloc] init];
+        _labelEmptyResult.text = @"没有找到匹配的城市哦~";
+        _labelEmptyResult.textColor = [UIColor lightGrayColor];
+        _labelEmptyResult.textAlignment = NSTextAlignmentCenter;
+    }
+    [_labelEmptyResult removeFromSuperview];
+    [self.view addSubview:_labelEmptyResult];
+    [_labelEmptyResult mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(_labelEmptyResult.superview);
+        make.right.equalTo(_labelEmptyResult.superview);
+        make.top.equalTo(_labelEmptyResult.superview).offset(120.0);
+        make.height.equalTo(@(30.0));
     }];
 }
 
@@ -272,6 +419,9 @@ CGFloat const ToolBarViewWidth = 25.0;
 {
     
     [_collectionViewTest scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:indexPath.row] atScrollPosition:UICollectionViewScrollPositionTop animated:YES];
+    //  为避免header view 视图遮挡所以需要在此基础上再偏移20个像素
+    CGPoint offset = _collectionViewTest.contentOffset;
+    [_collectionViewTest setContentOffset:CGPointMake(0, offset.y - 20.0)];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -282,9 +432,8 @@ CGFloat const ToolBarViewWidth = 25.0;
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 
 {
-    return tableView.cd_height/[_toolbarList count];
+    return (DefineScreenHeight - 64.0 - 5.0*2)/[_toolbarList count];
 }
-
 
 
 @end
