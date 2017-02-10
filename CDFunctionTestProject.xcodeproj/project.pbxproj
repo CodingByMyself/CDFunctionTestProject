@@ -30,6 +30,7 @@
 		374FE5A01D34C2E400AD089B /* CDTestAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 374FE59F1D34C2E400AD089B /* CDTestAnimationViewController.m */; };
 		375112EE1D49A59C00810727 /* CDTestCellLongPressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 375112ED1D49A59C00810727 /* CDTestCellLongPressViewController.m */; };
 		375112F41D49E8B200810727 /* CDTestItemLongPressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 375112F31D49E8B200810727 /* CDTestItemLongPressViewController.m */; };
+		3752A98F1E4DAD5D0011243C /* animation_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 3752A98E1E4DAD5D0011243C /* animation_bg.png */; };
 		37532F071D3DD0BD003CFE0C /* CDTestBaseModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37532F061D3DD0BD003CFE0C /* CDTestBaseModelViewController.m */; };
 		37532F0D1D3DD2A1003CFE0C /* CDTestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 37532F0C1D3DD2A1003CFE0C /* CDTestModel.m */; };
 		3769EFFB1D41F6C3008B5083 /* CDTestTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3769EFFA1D41F6C3008B5083 /* CDTestTabBarViewController.m */; };
@@ -135,6 +136,7 @@
 		375112ED1D49A59C00810727 /* CDTestCellLongPressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDTestCellLongPressViewController.m; sourceTree = "<group>"; };
 		375112F21D49E8B200810727 /* CDTestItemLongPressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDTestItemLongPressViewController.h; sourceTree = "<group>"; };
 		375112F31D49E8B200810727 /* CDTestItemLongPressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDTestItemLongPressViewController.m; sourceTree = "<group>"; };
+		3752A98E1E4DAD5D0011243C /* animation_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = animation_bg.png; sourceTree = "<group>"; };
 		37532F051D3DD0BD003CFE0C /* CDTestBaseModelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDTestBaseModelViewController.h; sourceTree = "<group>"; };
 		37532F061D3DD0BD003CFE0C /* CDTestBaseModelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDTestBaseModelViewController.m; sourceTree = "<group>"; };
 		37532F0B1D3DD2A1003CFE0C /* CDTestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDTestModel.h; sourceTree = "<group>"; };
@@ -759,6 +761,7 @@
 			isa = PBXGroup;
 			children = (
 				376E1A2C1D47353E00D62128 /* ContinueFrame */,
+				3752A98E1E4DAD5D0011243C /* animation_bg.png */,
 				376E1A251D470AA500D62128 /* 0.jpg */,
 				376E1A261D470AA500D62128 /* 4.jpg */,
 				376E1A1B1D46F9D800D62128 /* 1.jpg */,
@@ -841,7 +844,7 @@
 				TargetAttributes = {
 					372580101D1E79C7002629B4 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = HAVW69XLUJ;
+						DevelopmentTeam = Q2292425WF;
 					};
 				};
 			};
@@ -873,6 +876,7 @@
 				376E1A281D470AA500D62128 /* 4.jpg in Resources */,
 				376E1A271D470AA500D62128 /* 0.jpg in Resources */,
 				376E1A4A1D47359A00D62128 /* loadingState270-00012.png in Resources */,
+				3752A98F1E4DAD5D0011243C /* animation_bg.png in Resources */,
 				376E1A3E1D47353E00D62128 /* loadingState270-0006.png in Resources */,
 				37A5B6311D2DF9D100F09090 /* header_view_image_bg.jpg in Resources */,
 				376E1A411D47353E00D62128 /* loadingState270-0009.png in Resources */,
@@ -1109,9 +1113,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = Q2292425WF;
 				GCC_PREFIX_HEADER = CDFunctionTestProject/PrefixHeader.pch;
 				INFOPLIST_FILE = CDFunctionTestProject/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ByMyself.CDFunctionTestProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1124,9 +1129,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = Q2292425WF;
 				GCC_PREFIX_HEADER = CDFunctionTestProject/PrefixHeader.pch;
 				INFOPLIST_FILE = CDFunctionTestProject/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ByMyself.CDFunctionTestProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";

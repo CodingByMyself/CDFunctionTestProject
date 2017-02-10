@@ -24,17 +24,17 @@
 {
     //  初始化目标view
     _viewTarget = [[CDViewAnimation alloc] init];
-    _viewTarget.backgroundColor = DefineColorRGB(64.0, 185.0, 216.0, 1.0);
+    _viewTarget.backgroundColor = [UIColor orangeColor];
     _viewTarget.clipsToBounds = YES;
     [self.view addSubview:_viewTarget];
     [_viewTarget mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.equalTo(_viewTarget.superview).offset(-50.0);
+        make.bottom.equalTo(_viewTarget.superview).offset(-80.0);
         make.height.equalTo(@(120.0));
         make.width.equalTo(@(120.0));
-        make.centerX.equalTo(@(0));
+        make.centerX.equalTo(self.view);
     }];
     [self.view layoutIfNeeded];
-    [_viewTarget stratWaveAnimationWithBody:YES];
+    [_viewTarget stratWaveAnimationWithOriginSize:CGSizeMake(120, 120)];
 }
 
 #pragma mark - view
@@ -42,9 +42,15 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = @"波动画演示";
-    self.view.backgroundColor = DefineColorRGB(18.0, 17.0, 35.0, 1.0);
     
-//    [self initAnimationView];
+    UIImageView *imageViewBg = [[UIImageView alloc] init];
+    imageViewBg.image = [UIImage imageNamed:@"animation_bg"];
+    [self.view addSubview:imageViewBg];
+    [imageViewBg mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view);
+    }];
+    
+    
     [self initTargetView];
 }
 

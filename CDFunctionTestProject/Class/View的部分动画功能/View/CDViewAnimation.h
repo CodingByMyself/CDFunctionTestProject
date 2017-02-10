@@ -13,6 +13,10 @@
 - (void)startFlipAnimation:(CGFloat)animation onSubviewOne:(UIView *)subviewFirst subviewTwo:(UIView *)subviewSeconde;
 
 - (void)stratWaveAnimationWithBody:(BOOL)body;
+
+- (void)stratWaveAnimationWithOriginSize:(CGSize)size;
+
+
 - (void)stopWaveAnimation;
 
 @end

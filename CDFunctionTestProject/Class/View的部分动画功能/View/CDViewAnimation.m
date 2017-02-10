@@ -11,12 +11,13 @@
 
 NSInteger const AniamtionViewNum = 6;
 CGFloat const AniamtionDuration = 6.0;
-CGFloat const AniamtionScaleValue = 3.5;
+CGFloat const AniamtionScaleValue = 3.0;
 
 
 @interface CDViewAnimation ()
 {
-    UIView *_viewAnimation[AniamtionViewNum];
+//    UIView *_viewAnimation[AniamtionViewNum];
+    UIView *_lastViewAnimation;
     BOOL _stopAnimation;
     NSInteger _index;
     NSTimer *_timerRefresh;
@@ -48,43 +49,19 @@ CGFloat const AniamtionScaleValue = 3.5;
 
 
 #pragma mark - 波浪动画
-- (void)stratWaveAnimationWithBody:(BOOL)body
+- (void)stratWaveAnimationWithOriginSize:(CGSize)size
 {
     [self stopWaveAnimation];
-    [self.superview layoutIfNeeded];
-    [self layoutIfNeeded];
-    self.layer.cornerRadius = self.bounds.size.width/2.0;
-    
     _stopAnimation = YES;
-    
-    //  初始化波浪效果的view
-    for (NSInteger i = 0; i < AniamtionViewNum ; i ++) {
-        _viewAnimation[i] = [[UIView alloc] init];
-        _viewAnimation[_index].transform = CGAffineTransformIdentity;
-        _viewAnimation[i].clipsToBounds = YES;
-        [self.superview addSubview:_viewAnimation[i]];
-        [_viewAnimation[i] mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(self.mas_top);
-            make.bottom.equalTo(self.mas_bottom);
-            make.left.equalTo(self.mas_left);
-            make.right.equalTo(self.mas_right);
-        }];
-        [_viewAnimation[i] layoutIfNeeded];
-        [self.superview layoutIfNeeded];
-        
-        //  设置波浪的效果
-        CGFloat radius = _viewAnimation[i].bounds.size.width/2.0;
-        if (body) {
-            [_viewAnimation[i] jm_setCornerRadius:radius withBorderColor:DefineColorRGB(64.0, 185.0, 216.0, 1.0) borderWidth:1.0 backgroundColor:[UIColor clearColor] backgroundImage:nil contentMode:UIViewContentModeScaleToFill];
-        } else {
-            _viewAnimation[i].alpha = 0.4;
-            [_viewAnimation[i] jm_setCornerRadius:radius withBackgroundColor:DefineColorRGB(64.0, 185.0, 216.0, 1.0)];
-        }
-    }
+    self.layer.cornerRadius = self.bounds.size.width/2.0;
     
     //  开始循环动画
     [_timerRefresh invalidate];
-    _timerRefresh = [NSTimer scheduledTimerWithTimeInterval:AniamtionDuration/(AniamtionViewNum - 1) target:self selector:@selector(refreshOutCircleRadius:) userInfo:[NSNumber numberWithBool:body] repeats:YES];
+    NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
+    [dict setObject:[NSNumber numberWithFloat:size.height] forKey:@"height"];
+    [dict setObject:[NSNumber numberWithFloat:size.width] forKey:@"width"];
+    
+    _timerRefresh = [NSTimer scheduledTimerWithTimeInterval:AniamtionDuration/6 target:self selector:@selector(refresh:) userInfo:dict repeats:YES];
     [_timerRefresh fire];
     
 }
@@ -93,34 +70,42 @@ CGFloat const AniamtionScaleValue = 3.5;
 {
     [_timerRefresh invalidate];
     _stopAnimation = YES;
-    for (NSInteger i = 0; i < AniamtionViewNum ; i ++) {
-        [_viewAnimation[i] removeFromSuperview];
-    }
+    [_lastViewAnimation removeFromSuperview];
 }
 
-- (void)refreshOutCircleRadius:(NSTimer *)timer
+- (void)refresh:(NSTimer *)timer
 {
-    BOOL body = [[timer userInfo] boolValue];
+    CGFloat width = [[[timer userInfo] objectForKey:@"width"] floatValue];
+    CGFloat height = [[[timer userInfo] objectForKey:@"height"] floatValue];
+    NSLog(@"(%f , %f)",width,height);
+    //  初始化波浪效果的view
+    __block UIView *viewAnimation = [[UIView alloc] init];
+    viewAnimation.transform = CGAffineTransformIdentity;
+    viewAnimation.clipsToBounds = YES;
+    viewAnimation.alpha = 0.2;
+    viewAnimation.backgroundColor = [UIColor whiteColor];
+    viewAnimation.bounds = CGRectMake(0, 0, width, height);
+    viewAnimation.center = CGPointMake(self.cd_x+self.cd_width/2.0,self.cd_y+self.cd_height/2.0);
+    [self.superview addSubview:viewAnimation];
+    _lastViewAnimation = viewAnimation;
+    [self.superview bringSubviewToFront:self];
+    
+    //  设置波浪的效果
+    viewAnimation.layer.cornerRadius = width/2.0;
+    
+    // 开始动画
     [UIView animateWithDuration:AniamtionDuration animations: ^{
         CGAffineTransform scaleUpAnimationOut = CGAffineTransformMakeScale(AniamtionScaleValue, AniamtionScaleValue);
-        _viewAnimation[_index].transform = scaleUpAnimationOut;
-        _viewAnimation[_index].alpha = 0.0;
-    } completion: ^(BOOL finished) {
-        _viewAnimation[_index].transform = CGAffineTransformIdentity;
-        if (body) {
-            _viewAnimation[_index].alpha = 1.0;
-        } else {
-            _viewAnimation[_index].alpha = 0.4;
-        }
+        viewAnimation.transform = scaleUpAnimationOut;
         
+        viewAnimation.alpha = 0;
+    } completion: ^(BOOL finished) {
+        viewAnimation.transform = CGAffineTransformIdentity;
+        [viewAnimation removeFromSuperview];
         if (_stopAnimation == NO) {
             [_timerRefresh invalidate];
         }
     }];
-    
-    if (++_index >= AniamtionViewNum) {
-        _index = 0;
-    }
 }
 
 
