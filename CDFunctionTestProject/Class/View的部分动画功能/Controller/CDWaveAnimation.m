@@ -50,8 +50,18 @@
         make.edges.equalTo(self.view);
     }];
     
-    
+
     [self initTargetView];
+    
+    UILabel *label = [[UILabel alloc] init];
+    label.text = @"扫 描";
+    label.textAlignment = NSTextAlignmentCenter;
+    label.textColor = [UIColor whiteColor];
+    label.font = [UIFont boldSystemFontOfSize:28];
+    [_viewTarget addSubview:label];
+    [label mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(_viewTarget);
+    }];
 }
 
 
