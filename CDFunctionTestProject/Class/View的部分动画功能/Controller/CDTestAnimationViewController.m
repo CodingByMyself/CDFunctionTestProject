@@ -12,6 +12,7 @@
 #import "CDRippleAnimation.h"
 #import "CDCubeAnimation.h"
 #import "CDContinueFrameAnimation.h"
+#import "CDBounceAnimation.h"
 
 
 
@@ -31,13 +32,14 @@
     self.title = @"动画列表";
     self.view.backgroundColor = [UIColor whiteColor];
 
-    _animtionList = @[@"翻转动画",@"波浪动画",@"涟漪动画",@"转场系列动画",@"逐帧动画"];
+    _animtionList = @[@"翻转动画",@"波浪动画",@"涟漪动画",@"转场系列动画",@"逐帧动画",@"弹跳动画"];
     _classList = @[
                    [[CDFlipAnimation alloc] init] ,
                    [[CDWaveAnimation alloc] init],
                    [[CDRippleAnimation alloc] init],
                    [[CDCubeAnimation alloc] init],
-                   [[CDContinueFrameAnimation alloc] init]
+                   [[CDContinueFrameAnimation alloc] init],
+                   [[CDBounceAnimation alloc] init]
                    ];
     _tableAnimation = [[UITableView alloc] initWithFrame:self.view.bounds];
     _tableAnimation.delegate = self;

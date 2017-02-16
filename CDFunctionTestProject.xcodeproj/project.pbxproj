@@ -33,6 +33,9 @@
 		3752A98F1E4DAD5D0011243C /* animation_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 3752A98E1E4DAD5D0011243C /* animation_bg.png */; };
 		37532F071D3DD0BD003CFE0C /* CDTestBaseModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37532F061D3DD0BD003CFE0C /* CDTestBaseModelViewController.m */; };
 		37532F0D1D3DD2A1003CFE0C /* CDTestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 37532F0C1D3DD2A1003CFE0C /* CDTestModel.m */; };
+		3755D80A1E55390A00534D24 /* CDBounceAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3755D8091E55390A00534D24 /* CDBounceAnimation.m */; };
+		3755D80D1E553D4600534D24 /* punch_ok@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3755D80B1E553D4600534D24 /* punch_ok@2x.png */; };
+		3755D80E1E553D4600534D24 /* punch_ok@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3755D80C1E553D4600534D24 /* punch_ok@3x.png */; };
 		3769EFFB1D41F6C3008B5083 /* CDTestTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3769EFFA1D41F6C3008B5083 /* CDTestTabBarViewController.m */; };
 		3769F0201D420059008B5083 /* CDFourTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3769F0181D420059008B5083 /* CDFourTabBarViewController.m */; };
 		3769F0211D420059008B5083 /* CDOneTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3769F01A1D420059008B5083 /* CDOneTabBarViewController.m */; };
@@ -141,6 +144,10 @@
 		37532F061D3DD0BD003CFE0C /* CDTestBaseModelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDTestBaseModelViewController.m; sourceTree = "<group>"; };
 		37532F0B1D3DD2A1003CFE0C /* CDTestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDTestModel.h; sourceTree = "<group>"; };
 		37532F0C1D3DD2A1003CFE0C /* CDTestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDTestModel.m; sourceTree = "<group>"; };
+		3755D8081E55390A00534D24 /* CDBounceAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDBounceAnimation.h; sourceTree = "<group>"; };
+		3755D8091E55390A00534D24 /* CDBounceAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDBounceAnimation.m; sourceTree = "<group>"; };
+		3755D80B1E553D4600534D24 /* punch_ok@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "punch_ok@2x.png"; sourceTree = "<group>"; };
+		3755D80C1E553D4600534D24 /* punch_ok@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "punch_ok@3x.png"; sourceTree = "<group>"; };
 		3769EFF91D41F6C3008B5083 /* CDTestTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDTestTabBarViewController.h; sourceTree = "<group>"; };
 		3769EFFA1D41F6C3008B5083 /* CDTestTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDTestTabBarViewController.m; sourceTree = "<group>"; };
 		3769F0171D420059008B5083 /* CDFourTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDFourTabBarViewController.h; sourceTree = "<group>"; };
@@ -753,6 +760,8 @@
 				376E1A191D46F8C100D62128 /* CDCubeAnimation.m */,
 				376E1A291D4733F200D62128 /* CDContinueFrameAnimation.h */,
 				376E1A2A1D4733F200D62128 /* CDContinueFrameAnimation.m */,
+				3755D8081E55390A00534D24 /* CDBounceAnimation.h */,
+				3755D8091E55390A00534D24 /* CDBounceAnimation.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -761,6 +770,8 @@
 			isa = PBXGroup;
 			children = (
 				376E1A2C1D47353E00D62128 /* ContinueFrame */,
+				3755D80B1E553D4600534D24 /* punch_ok@2x.png */,
+				3755D80C1E553D4600534D24 /* punch_ok@3x.png */,
 				3752A98E1E4DAD5D0011243C /* animation_bg.png */,
 				376E1A251D470AA500D62128 /* 0.jpg */,
 				376E1A261D470AA500D62128 /* 4.jpg */,
@@ -880,8 +891,10 @@
 				376E1A3E1D47353E00D62128 /* loadingState270-0006.png in Resources */,
 				37A5B6311D2DF9D100F09090 /* header_view_image_bg.jpg in Resources */,
 				376E1A411D47353E00D62128 /* loadingState270-0009.png in Resources */,
+				3755D80D1E553D4600534D24 /* punch_ok@2x.png in Resources */,
 				372580241D1E79C7002629B4 /* LaunchScreen.storyboard in Resources */,
 				37863F331D58290900CB2715 /* flight-city.plist in Resources */,
+				3755D80E1E553D4600534D24 /* punch_ok@3x.png in Resources */,
 				376E1A3C1D47353E00D62128 /* loadingState270-0004.png in Resources */,
 				376E1A391D47353E00D62128 /* loadingState270-0001.png in Resources */,
 				376E1A3B1D47353E00D62128 /* loadingState270-0003.png in Resources */,
@@ -968,6 +981,7 @@
 				374FE5A01D34C2E400AD089B /* CDTestAnimationViewController.m in Sources */,
 				376E1A171D46F28A00D62128 /* CDRippleAnimation.m in Sources */,
 				3769F0231D420059008B5083 /* CDTwoTabBarViewController.m in Sources */,
+				3755D80A1E55390A00534D24 /* CDBounceAnimation.m in Sources */,
 				3769EFFB1D41F6C3008B5083 /* CDTestTabBarViewController.m in Sources */,
 				37532F0D1D3DD2A1003CFE0C /* CDTestModel.m in Sources */,
 				37DAF87F1D33A456001BF809 /* CDBaseTableViewCell.m in Sources */,
