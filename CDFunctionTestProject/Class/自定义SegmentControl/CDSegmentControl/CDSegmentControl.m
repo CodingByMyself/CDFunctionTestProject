@@ -10,7 +10,6 @@
 
 
 
-#pragma mark
 @interface CDSegmentControl () <UICollectionViewDelegate,UICollectionViewDataSource,CDMenuItemDelegate>
 @property (nonatomic,strong) UICollectionView *collectionViewMenu;
 @end

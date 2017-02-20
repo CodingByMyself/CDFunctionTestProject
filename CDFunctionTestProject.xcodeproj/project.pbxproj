@@ -98,6 +98,12 @@
 		37EBD3D31E5AD75800B848F0 /* very_good_deselect_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 37EBD3D11E5AD75800B848F0 /* very_good_deselect_icon.png */; };
 		37EBD3D41E5AD75800B848F0 /* very_good_select_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 37EBD3D21E5AD75800B848F0 /* very_good_select_icon.png */; };
 		37EBD3D71E5AD7BA00B848F0 /* CDTestSegmentControlVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EBD3D61E5AD7BA00B848F0 /* CDTestSegmentControlVC.m */; };
+		37EBD3DC1E5AEF4300B848F0 /* CDBannerCarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EBD3DB1E5AEF4300B848F0 /* CDBannerCarouselView.m */; };
+		37EBD3DF1E5AF07700B848F0 /* CDBannerItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EBD3DE1E5AF07700B848F0 /* CDBannerItemCell.m */; };
+		37EBD3E21E5AF59100B848F0 /* CDTestBannerViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EBD3E11E5AF59100B848F0 /* CDTestBannerViewVC.m */; };
+		37EBD3E71E5AF6DD00B848F0 /* h1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 37EBD3E41E5AF6DD00B848F0 /* h1.jpg */; };
+		37EBD3EC1E5AF72D00B848F0 /* h2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 37EBD3EA1E5AF72D00B848F0 /* h2.jpg */; };
+		37EBD3ED1E5AF72D00B848F0 /* h3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 37EBD3EB1E5AF72D00B848F0 /* h3.jpg */; };
 		78DBA9475F1CBF735734A38E /* libPods-CDFunctionTestProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F5A388F56147CCBE0E353B4F /* libPods-CDFunctionTestProject.a */; };
 /* End PBXBuildFile section */
 
@@ -253,6 +259,15 @@
 		37EBD3D21E5AD75800B848F0 /* very_good_select_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = very_good_select_icon.png; sourceTree = "<group>"; };
 		37EBD3D51E5AD7BA00B848F0 /* CDTestSegmentControlVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDTestSegmentControlVC.h; sourceTree = "<group>"; };
 		37EBD3D61E5AD7BA00B848F0 /* CDTestSegmentControlVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDTestSegmentControlVC.m; sourceTree = "<group>"; };
+		37EBD3DA1E5AEF4300B848F0 /* CDBannerCarouselView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDBannerCarouselView.h; sourceTree = "<group>"; };
+		37EBD3DB1E5AEF4300B848F0 /* CDBannerCarouselView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDBannerCarouselView.m; sourceTree = "<group>"; };
+		37EBD3DD1E5AF07700B848F0 /* CDBannerItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDBannerItemCell.h; sourceTree = "<group>"; };
+		37EBD3DE1E5AF07700B848F0 /* CDBannerItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDBannerItemCell.m; sourceTree = "<group>"; };
+		37EBD3E01E5AF59100B848F0 /* CDTestBannerViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDTestBannerViewVC.h; sourceTree = "<group>"; };
+		37EBD3E11E5AF59100B848F0 /* CDTestBannerViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDTestBannerViewVC.m; sourceTree = "<group>"; };
+		37EBD3E41E5AF6DD00B848F0 /* h1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = h1.jpg; sourceTree = "<group>"; };
+		37EBD3EA1E5AF72D00B848F0 /* h2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = h2.jpg; sourceTree = "<group>"; };
+		37EBD3EB1E5AF72D00B848F0 /* h3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = h3.jpg; sourceTree = "<group>"; };
 		4BB1CEF029DE4E2CCD40335A /* Pods-CDFunctionTestProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CDFunctionTestProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CDFunctionTestProject/Pods-CDFunctionTestProject.debug.xcconfig"; sourceTree = "<group>"; };
 		F5A388F56147CCBE0E353B4F /* libPods-CDFunctionTestProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CDFunctionTestProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBDEFD3E84FF096BD97BEDF0 /* Pods-CDFunctionTestProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CDFunctionTestProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-CDFunctionTestProject/Pods-CDFunctionTestProject.release.xcconfig"; sourceTree = "<group>"; };
@@ -321,9 +336,10 @@
 		3725802B1D1E7A33002629B4 /* Class */ = {
 			isa = PBXGroup;
 			children = (
-				37EBD3C81E5AD67300B848F0 /* 自定义SegmentControl */,
+				37EBD3D81E5AEE1800B848F0 /* 图片（海报）轮播控件 */,
 				3725803B1D1E7DBA002629B4 /* CDMainViewController.h */,
 				3725803C1D1E7DBA002629B4 /* CDMainViewController.m */,
+				37EBD3C81E5AD67300B848F0 /* 自定义SegmentControl */,
 				37D805FD1D54932900E18039 /* CollectionView城市列表 */,
 				374912701D52DB6A00D2514F /* Calendar日历功能 */,
 				375112E91D49A57700810727 /* Cell的长按拖动功能 */,
@@ -857,6 +873,38 @@
 			path = resource;
 			sourceTree = "<group>";
 		};
+		37EBD3D81E5AEE1800B848F0 /* 图片（海报）轮播控件 */ = {
+			isa = PBXGroup;
+			children = (
+				37EBD3E31E5AF6DD00B848F0 /* Resource */,
+				37EBD3D91E5AEF1000B848F0 /* CDBannerCarouselView */,
+				37EBD3E01E5AF59100B848F0 /* CDTestBannerViewVC.h */,
+				37EBD3E11E5AF59100B848F0 /* CDTestBannerViewVC.m */,
+			);
+			path = "图片（海报）轮播控件";
+			sourceTree = "<group>";
+		};
+		37EBD3D91E5AEF1000B848F0 /* CDBannerCarouselView */ = {
+			isa = PBXGroup;
+			children = (
+				37EBD3DA1E5AEF4300B848F0 /* CDBannerCarouselView.h */,
+				37EBD3DB1E5AEF4300B848F0 /* CDBannerCarouselView.m */,
+				37EBD3DD1E5AF07700B848F0 /* CDBannerItemCell.h */,
+				37EBD3DE1E5AF07700B848F0 /* CDBannerItemCell.m */,
+			);
+			path = CDBannerCarouselView;
+			sourceTree = "<group>";
+		};
+		37EBD3E31E5AF6DD00B848F0 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				37EBD3EA1E5AF72D00B848F0 /* h2.jpg */,
+				37EBD3EB1E5AF72D00B848F0 /* h3.jpg */,
+				37EBD3E41E5AF6DD00B848F0 /* h1.jpg */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		6DC3792397AC50F4A1342E91 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -932,6 +980,7 @@
 				376E1A281D470AA500D62128 /* 4.jpg in Resources */,
 				376E1A271D470AA500D62128 /* 0.jpg in Resources */,
 				376E1A4A1D47359A00D62128 /* loadingState270-00012.png in Resources */,
+				37EBD3ED1E5AF72D00B848F0 /* h3.jpg in Resources */,
 				37EBD3D31E5AD75800B848F0 /* very_good_deselect_icon.png in Resources */,
 				3752A98F1E4DAD5D0011243C /* animation_bg.png in Resources */,
 				376E1A3E1D47353E00D62128 /* loadingState270-0006.png in Resources */,
@@ -942,10 +991,12 @@
 				372580241D1E79C7002629B4 /* LaunchScreen.storyboard in Resources */,
 				37863F331D58290900CB2715 /* flight-city.plist in Resources */,
 				3755D80E1E553D4600534D24 /* punch_ok@3x.png in Resources */,
+				37EBD3EC1E5AF72D00B848F0 /* h2.jpg in Resources */,
 				376E1A3C1D47353E00D62128 /* loadingState270-0004.png in Resources */,
 				376E1A391D47353E00D62128 /* loadingState270-0001.png in Resources */,
 				376E1A3B1D47353E00D62128 /* loadingState270-0003.png in Resources */,
 				37B8EB261D40B4F40062C4B6 /* IMG_2718.PNG in Resources */,
+				37EBD3E71E5AF6DD00B848F0 /* h1.jpg in Resources */,
 				376E1A1F1D46F9D800D62128 /* 2.jpg in Resources */,
 				37B8EB251D40B4F40062C4B6 /* IMG_2717.PNG in Resources */,
 				376E1A201D46F9D800D62128 /* 3.jpg in Resources */,
@@ -1022,6 +1073,8 @@
 				379D7D411D2F86EA0061F2B6 /* CDMenuView.m in Sources */,
 				37A5B6441D2E349400F09090 /* CDTestTableCell.m in Sources */,
 				376C16241D3CAFF6002AA201 /* CDWaveAnimation.m in Sources */,
+				37EBD3DC1E5AEF4300B848F0 /* CDBannerCarouselView.m in Sources */,
+				37EBD3E21E5AF59100B848F0 /* CDTestBannerViewVC.m in Sources */,
 				37B22C611D45B81E007FB197 /* UIImage+CDColorCategory.m in Sources */,
 				37EBD3CF1E5AD6A600B848F0 /* CDSegmentControl.m in Sources */,
 				372580191D1E79C7002629B4 /* AppDelegate.m in Sources */,
@@ -1063,6 +1116,7 @@
 				374FE59D1D348CD300AD089B /* CDAutoModel.m in Sources */,
 				37DAF8791D33A287001BF809 /* CDTestAutoLayoutViewController.m in Sources */,
 				3769F0281D421E3B008B5083 /* CDBaseNavigationController.m in Sources */,
+				37EBD3DF1E5AF07700B848F0 /* CDBannerItemCell.m in Sources */,
 				372580161D1E79C7002629B4 /* main.m in Sources */,
 				3769F0201D420059008B5083 /* CDFourTabBarViewController.m in Sources */,
 				37A5B6301D2DF9D100F09090 /* CExpandHeader.m in Sources */,
