@@ -93,6 +93,11 @@
 		37DAF87C1D33A3F1001BF809 /* CDAutoLayoutTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DAF87B1D33A3F1001BF809 /* CDAutoLayoutTableCell.m */; };
 		37DAF87F1D33A456001BF809 /* CDBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DAF87E1D33A456001BF809 /* CDBaseTableViewCell.m */; };
 		37DD7D451D30D6D80053C326 /* test_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 37DD7D441D30D6D80053C326 /* test_icon.png */; };
+		37EBD3CE1E5AD6A600B848F0 /* CDMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EBD3CB1E5AD6A600B848F0 /* CDMenuItem.m */; };
+		37EBD3CF1E5AD6A600B848F0 /* CDSegmentControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EBD3CD1E5AD6A600B848F0 /* CDSegmentControl.m */; };
+		37EBD3D31E5AD75800B848F0 /* very_good_deselect_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 37EBD3D11E5AD75800B848F0 /* very_good_deselect_icon.png */; };
+		37EBD3D41E5AD75800B848F0 /* very_good_select_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 37EBD3D21E5AD75800B848F0 /* very_good_select_icon.png */; };
+		37EBD3D71E5AD7BA00B848F0 /* CDTestSegmentControlVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EBD3D61E5AD7BA00B848F0 /* CDTestSegmentControlVC.m */; };
 		78DBA9475F1CBF735734A38E /* libPods-CDFunctionTestProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F5A388F56147CCBE0E353B4F /* libPods-CDFunctionTestProject.a */; };
 /* End PBXBuildFile section */
 
@@ -240,6 +245,14 @@
 		37DAF87D1D33A456001BF809 /* CDBaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDBaseTableViewCell.h; sourceTree = "<group>"; };
 		37DAF87E1D33A456001BF809 /* CDBaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDBaseTableViewCell.m; sourceTree = "<group>"; };
 		37DD7D441D30D6D80053C326 /* test_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test_icon.png; sourceTree = "<group>"; };
+		37EBD3CA1E5AD6A600B848F0 /* CDMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDMenuItem.h; sourceTree = "<group>"; };
+		37EBD3CB1E5AD6A600B848F0 /* CDMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDMenuItem.m; sourceTree = "<group>"; };
+		37EBD3CC1E5AD6A600B848F0 /* CDSegmentControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDSegmentControl.h; sourceTree = "<group>"; };
+		37EBD3CD1E5AD6A600B848F0 /* CDSegmentControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDSegmentControl.m; sourceTree = "<group>"; };
+		37EBD3D11E5AD75800B848F0 /* very_good_deselect_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = very_good_deselect_icon.png; sourceTree = "<group>"; };
+		37EBD3D21E5AD75800B848F0 /* very_good_select_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = very_good_select_icon.png; sourceTree = "<group>"; };
+		37EBD3D51E5AD7BA00B848F0 /* CDTestSegmentControlVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDTestSegmentControlVC.h; sourceTree = "<group>"; };
+		37EBD3D61E5AD7BA00B848F0 /* CDTestSegmentControlVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDTestSegmentControlVC.m; sourceTree = "<group>"; };
 		4BB1CEF029DE4E2CCD40335A /* Pods-CDFunctionTestProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CDFunctionTestProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CDFunctionTestProject/Pods-CDFunctionTestProject.debug.xcconfig"; sourceTree = "<group>"; };
 		F5A388F56147CCBE0E353B4F /* libPods-CDFunctionTestProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CDFunctionTestProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBDEFD3E84FF096BD97BEDF0 /* Pods-CDFunctionTestProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CDFunctionTestProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-CDFunctionTestProject/Pods-CDFunctionTestProject.release.xcconfig"; sourceTree = "<group>"; };
@@ -308,9 +321,10 @@
 		3725802B1D1E7A33002629B4 /* Class */ = {
 			isa = PBXGroup;
 			children = (
-				37D805FD1D54932900E18039 /* CollectionView城市列表 */,
+				37EBD3C81E5AD67300B848F0 /* 自定义SegmentControl */,
 				3725803B1D1E7DBA002629B4 /* CDMainViewController.h */,
 				3725803C1D1E7DBA002629B4 /* CDMainViewController.m */,
+				37D805FD1D54932900E18039 /* CollectionView城市列表 */,
 				374912701D52DB6A00D2514F /* Calendar日历功能 */,
 				375112E91D49A57700810727 /* Cell的长按拖动功能 */,
 				3769EFEF1D41F6AA008B5083 /* TabBarControllerAndBlur */,
@@ -812,6 +826,37 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		37EBD3C81E5AD67300B848F0 /* 自定义SegmentControl */ = {
+			isa = PBXGroup;
+			children = (
+				37EBD3D51E5AD7BA00B848F0 /* CDTestSegmentControlVC.h */,
+				37EBD3D61E5AD7BA00B848F0 /* CDTestSegmentControlVC.m */,
+				37EBD3D01E5AD75800B848F0 /* resource */,
+				37EBD3C91E5AD6A600B848F0 /* CDSegmentControl */,
+			);
+			path = "自定义SegmentControl";
+			sourceTree = "<group>";
+		};
+		37EBD3C91E5AD6A600B848F0 /* CDSegmentControl */ = {
+			isa = PBXGroup;
+			children = (
+				37EBD3CC1E5AD6A600B848F0 /* CDSegmentControl.h */,
+				37EBD3CD1E5AD6A600B848F0 /* CDSegmentControl.m */,
+				37EBD3CA1E5AD6A600B848F0 /* CDMenuItem.h */,
+				37EBD3CB1E5AD6A600B848F0 /* CDMenuItem.m */,
+			);
+			path = CDSegmentControl;
+			sourceTree = "<group>";
+		};
+		37EBD3D01E5AD75800B848F0 /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				37EBD3D11E5AD75800B848F0 /* very_good_deselect_icon.png */,
+				37EBD3D21E5AD75800B848F0 /* very_good_select_icon.png */,
+			);
+			path = resource;
+			sourceTree = "<group>";
+		};
 		6DC3792397AC50F4A1342E91 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -887,9 +932,11 @@
 				376E1A281D470AA500D62128 /* 4.jpg in Resources */,
 				376E1A271D470AA500D62128 /* 0.jpg in Resources */,
 				376E1A4A1D47359A00D62128 /* loadingState270-00012.png in Resources */,
+				37EBD3D31E5AD75800B848F0 /* very_good_deselect_icon.png in Resources */,
 				3752A98F1E4DAD5D0011243C /* animation_bg.png in Resources */,
 				376E1A3E1D47353E00D62128 /* loadingState270-0006.png in Resources */,
 				37A5B6311D2DF9D100F09090 /* header_view_image_bg.jpg in Resources */,
+				37EBD3D41E5AD75800B848F0 /* very_good_select_icon.png in Resources */,
 				376E1A411D47353E00D62128 /* loadingState270-0009.png in Resources */,
 				3755D80D1E553D4600534D24 /* punch_ok@2x.png in Resources */,
 				372580241D1E79C7002629B4 /* LaunchScreen.storyboard in Resources */,
@@ -976,6 +1023,7 @@
 				37A5B6441D2E349400F09090 /* CDTestTableCell.m in Sources */,
 				376C16241D3CAFF6002AA201 /* CDWaveAnimation.m in Sources */,
 				37B22C611D45B81E007FB197 /* UIImage+CDColorCategory.m in Sources */,
+				37EBD3CF1E5AD6A600B848F0 /* CDSegmentControl.m in Sources */,
 				372580191D1E79C7002629B4 /* AppDelegate.m in Sources */,
 				37A5B63A1D2E07EB00F09090 /* CDBaseTableViewCell+CDGroupCellCategory.m in Sources */,
 				374FE5A01D34C2E400AD089B /* CDTestAnimationViewController.m in Sources */,
@@ -999,6 +1047,7 @@
 				37D806021D54936500E18039 /* CDSelectedCityController.m in Sources */,
 				37863F361D5831BA00CB2715 /* CDTestCitySelectedViewController.m in Sources */,
 				375112EE1D49A59C00810727 /* CDTestCellLongPressViewController.m in Sources */,
+				37EBD3CE1E5AD6A600B848F0 /* CDMenuItem.m in Sources */,
 				3769F0221D420059008B5083 /* CDThreeTabBarViewController.m in Sources */,
 				37532F071D3DD0BD003CFE0C /* CDTestBaseModelViewController.m in Sources */,
 				37B8EB1D1D40B3640062C4B6 /* FXBlurView.m in Sources */,
@@ -1022,6 +1071,7 @@
 				376E1A2B1D4733F200D62128 /* CDContinueFrameAnimation.m in Sources */,
 				372580341D1E7B3A002629B4 /* CDCollectionViewFlowLayout.m in Sources */,
 				37A5B6411D2E2C7100F09090 /* UIView+RoundedCorner.m in Sources */,
+				37EBD3D71E5AD7BA00B848F0 /* CDTestSegmentControlVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

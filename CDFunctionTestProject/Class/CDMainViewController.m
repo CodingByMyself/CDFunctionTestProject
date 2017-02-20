@@ -22,6 +22,7 @@
 #import "CDTestItemLongPressViewController.h"
 #import "CDTestCalendarViewController.h"
 #import "CDTestCitySelectedViewController.h"
+#import "CDTestSegmentControlVC.h"
 
 @interface CDMainViewController () <UITableViewDelegate,UITableViewDataSource>
 {
@@ -53,7 +54,7 @@
     MTDetailLog(@"%@",ConstCDHTTPMethodGet);
     
     
-    _functionList = @[@"CollectionView 的扩展方法",@"TableView 自定义分组显示",@"CollectionView 菜单功能",@"SDAutoLayout 功能验证",@"View 相关的动画功能",@"iOS 字体大全",@"NSObject模型扩展",@"View的模糊效果",@"Cell的长按拖动",@"Item的长按拖动",@"Calendar日历选择功能",@"CollectionView城市列表",@"TabBarController的功能"];
+    _functionList = @[@"CollectionView 的扩展方法",@"TableView 自定义分组显示",@"CollectionView 菜单功能",@"SDAutoLayout 功能验证",@"View 相关的动画功能",@"iOS 字体大全",@"NSObject模型扩展",@"View的模糊效果",@"Cell的长按拖动",@"Item的长按拖动",@"Calendar日历选择功能",@"CollectionView城市列表",@"自定义SegmentControl",@"TabBarController的功能"];
     
     
     _table = [[UITableView alloc] initWithFrame:self.view.bounds];
@@ -77,6 +78,7 @@
                    [[CDTestItemLongPressViewController alloc] init],
                    [[CDTestCalendarViewController alloc] init],
                    [[CDTestCitySelectedViewController alloc] init],
+                   [[CDTestSegmentControlVC alloc] init],
                    [[CDTestTabBarViewController alloc] init]
                    ];
     
