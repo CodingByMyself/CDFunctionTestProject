@@ -74,6 +74,12 @@
 		379D7D441D2F88150061F2B6 /* CDMenuCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 379D7D431D2F88150061F2B6 /* CDMenuCollectionCell.m */; };
 		379D7D471D2F91CC0061F2B6 /* CDTestMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 379D7D461D2F91CC0061F2B6 /* CDTestMenuViewController.m */; };
 		37A18E9B1E5BCB73007FAB55 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 37A18E9A1E5BCB73007FAB55 /* placeholder.png */; };
+		37A18EA51E5BD266007FAB55 /* TAAbstractDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A18E9E1E5BD266007FAB55 /* TAAbstractDotView.m */; };
+		37A18EA61E5BD266007FAB55 /* TAAnimatedDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A18EA01E5BD266007FAB55 /* TAAnimatedDotView.m */; };
+		37A18EA71E5BD266007FAB55 /* TADotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A18EA21E5BD266007FAB55 /* TADotView.m */; };
+		37A18EA81E5BD266007FAB55 /* TAPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A18EA41E5BD266007FAB55 /* TAPageControl.m */; };
+		37A18EAB1E5BD32C007FAB55 /* dotActive.png in Resources */ = {isa = PBXBuildFile; fileRef = 37A18EA91E5BD32C007FAB55 /* dotActive.png */; };
+		37A18EAC1E5BD32C007FAB55 /* dotInactive.png in Resources */ = {isa = PBXBuildFile; fileRef = 37A18EAA1E5BD32C007FAB55 /* dotInactive.png */; };
 		37A5B6301D2DF9D100F09090 /* CExpandHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A5B62E1D2DF9D100F09090 /* CExpandHeader.m */; };
 		37A5B6311D2DF9D100F09090 /* header_view_image_bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 37A5B62F1D2DF9D100F09090 /* header_view_image_bg.jpg */; };
 		37A5B63A1D2E07EB00F09090 /* CDBaseTableViewCell+CDGroupCellCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A5B6391D2E07EB00F09090 /* CDBaseTableViewCell+CDGroupCellCategory.m */; };
@@ -218,6 +224,16 @@
 		379D7D451D2F91CC0061F2B6 /* CDTestMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDTestMenuViewController.h; sourceTree = "<group>"; };
 		379D7D461D2F91CC0061F2B6 /* CDTestMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDTestMenuViewController.m; sourceTree = "<group>"; };
 		37A18E9A1E5BCB73007FAB55 /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
+		37A18E9D1E5BD266007FAB55 /* TAAbstractDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAbstractDotView.h; sourceTree = "<group>"; };
+		37A18E9E1E5BD266007FAB55 /* TAAbstractDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAAbstractDotView.m; sourceTree = "<group>"; };
+		37A18E9F1E5BD266007FAB55 /* TAAnimatedDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAnimatedDotView.h; sourceTree = "<group>"; };
+		37A18EA01E5BD266007FAB55 /* TAAnimatedDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAAnimatedDotView.m; sourceTree = "<group>"; };
+		37A18EA11E5BD266007FAB55 /* TADotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TADotView.h; sourceTree = "<group>"; };
+		37A18EA21E5BD266007FAB55 /* TADotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TADotView.m; sourceTree = "<group>"; };
+		37A18EA31E5BD266007FAB55 /* TAPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAPageControl.h; sourceTree = "<group>"; };
+		37A18EA41E5BD266007FAB55 /* TAPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAPageControl.m; sourceTree = "<group>"; };
+		37A18EA91E5BD32C007FAB55 /* dotActive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dotActive.png; sourceTree = "<group>"; };
+		37A18EAA1E5BD32C007FAB55 /* dotInactive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dotInactive.png; sourceTree = "<group>"; };
 		37A5B62D1D2DF9D100F09090 /* CExpandHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CExpandHeader.h; sourceTree = "<group>"; };
 		37A5B62E1D2DF9D100F09090 /* CExpandHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CExpandHeader.m; sourceTree = "<group>"; };
 		37A5B62F1D2DF9D100F09090 /* header_view_image_bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = header_view_image_bg.jpg; sourceTree = "<group>"; };
@@ -648,6 +664,21 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		37A18E9C1E5BD266007FAB55 /* TAPageControl */ = {
+			isa = PBXGroup;
+			children = (
+				37A18E9D1E5BD266007FAB55 /* TAAbstractDotView.h */,
+				37A18E9E1E5BD266007FAB55 /* TAAbstractDotView.m */,
+				37A18E9F1E5BD266007FAB55 /* TAAnimatedDotView.h */,
+				37A18EA01E5BD266007FAB55 /* TAAnimatedDotView.m */,
+				37A18EA11E5BD266007FAB55 /* TADotView.h */,
+				37A18EA21E5BD266007FAB55 /* TADotView.m */,
+				37A18EA31E5BD266007FAB55 /* TAPageControl.h */,
+				37A18EA41E5BD266007FAB55 /* TAPageControl.m */,
+			);
+			path = TAPageControl;
+			sourceTree = "<group>";
+		};
 		37A5B6281D2DF9D100F09090 /* TableView自定义扩展 */ = {
 			isa = PBXGroup;
 			children = (
@@ -889,6 +920,7 @@
 		37EBD3D91E5AEF1000B848F0 /* CDBannerCarouselView */ = {
 			isa = PBXGroup;
 			children = (
+				37A18E9C1E5BD266007FAB55 /* TAPageControl */,
 				37EBD3DA1E5AEF4300B848F0 /* CDBannerCarouselView.h */,
 				37EBD3DB1E5AEF4300B848F0 /* CDBannerCarouselView.m */,
 				37EBD3DD1E5AF07700B848F0 /* CDBannerItemCell.h */,
@@ -900,6 +932,8 @@
 		37EBD3E31E5AF6DD00B848F0 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				37A18EA91E5BD32C007FAB55 /* dotActive.png */,
+				37A18EAA1E5BD32C007FAB55 /* dotInactive.png */,
 				37A18E9A1E5BCB73007FAB55 /* placeholder.png */,
 				37EBD3EA1E5AF72D00B848F0 /* h2.jpg */,
 				37EBD3EB1E5AF72D00B848F0 /* h3.jpg */,
@@ -986,7 +1020,9 @@
 				37EBD3ED1E5AF72D00B848F0 /* h3.jpg in Resources */,
 				37EBD3D31E5AD75800B848F0 /* very_good_deselect_icon.png in Resources */,
 				3752A98F1E4DAD5D0011243C /* animation_bg.png in Resources */,
+				37A18EAC1E5BD32C007FAB55 /* dotInactive.png in Resources */,
 				376E1A3E1D47353E00D62128 /* loadingState270-0006.png in Resources */,
+				37A18EAB1E5BD32C007FAB55 /* dotActive.png in Resources */,
 				37A5B6311D2DF9D100F09090 /* header_view_image_bg.jpg in Resources */,
 				37EBD3D41E5AD75800B848F0 /* very_good_select_icon.png in Resources */,
 				376E1A411D47353E00D62128 /* loadingState270-0009.png in Resources */,
@@ -1071,6 +1107,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				375112F41D49E8B200810727 /* CDTestItemLongPressViewController.m in Sources */,
+				37A18EA71E5BD266007FAB55 /* TADotView.m in Sources */,
 				37863F321D58290900CB2715 /* CDCityModel.m in Sources */,
 				374912881D533C1600D2514F /* CDTipsView.m in Sources */,
 				376C16271D3CDC6A002AA201 /* CDViewAnimation.m in Sources */,
@@ -1088,6 +1125,7 @@
 				3769F0231D420059008B5083 /* CDTwoTabBarViewController.m in Sources */,
 				3755D80A1E55390A00534D24 /* CDBounceAnimation.m in Sources */,
 				3769EFFB1D41F6C3008B5083 /* CDTestTabBarViewController.m in Sources */,
+				37A18EA61E5BD266007FAB55 /* TAAnimatedDotView.m in Sources */,
 				37532F0D1D3DD2A1003CFE0C /* CDTestModel.m in Sources */,
 				37DAF87F1D33A456001BF809 /* CDBaseTableViewCell.m in Sources */,
 				374912821D53113000D2514F /* CDDateHelper.m in Sources */,
@@ -1097,6 +1135,7 @@
 				374912781D52E02F00D2514F /* CDTestCalendarViewController.m in Sources */,
 				3793E34B1D38EE8B00955777 /* CDTestFontViewController.m in Sources */,
 				3774CBDB1D3F793600240D43 /* CDBaseObject.m in Sources */,
+				37A18EA81E5BD266007FAB55 /* TAPageControl.m in Sources */,
 				376E1A1A1D46F8C100D62128 /* CDCubeAnimation.m in Sources */,
 				379D7D471D2F91CC0061F2B6 /* CDTestMenuViewController.m in Sources */,
 				3705E92D1D45EFD00028753A /* CDTabBar.m in Sources */,
@@ -1115,6 +1154,7 @@
 				3769F0211D420059008B5083 /* CDOneTabBarViewController.m in Sources */,
 				3705E9361D4608690028753A /* CDBaseViewController.m in Sources */,
 				376C16211D3CAD41002AA201 /* CDFlipAnimation.m in Sources */,
+				37A18EA51E5BD266007FAB55 /* TAAbstractDotView.m in Sources */,
 				372580311D1E7AE7002629B4 /* CDCollectionViewController.m in Sources */,
 				37B8EB0E1D4065AF0062C4B6 /* CDConstSetup.m in Sources */,
 				374FE59D1D348CD300AD089B /* CDAutoModel.m in Sources */,

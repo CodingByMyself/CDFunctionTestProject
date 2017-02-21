@@ -22,14 +22,20 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.automaticallyAdjustsScrollViewInsets = NO;
     
-    self.bannerView.backgroundColor = [UIColor yellowColor];
+    
     [self.bannerView reload];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.bannerView adjustWhenControllerViewWillAppera];
 }
 
 #pragma mark - CDBannerView Delegate
 - (NSInteger)numberOfBannerItemOnBannerView:(CDBannerCarouselView *)bannerView
 {
-    return 7;
+    return 3;
 }
 
 - (UIImage *)bannerView:(CDBannerCarouselView *)bannerView itemImageAtIndex:(NSInteger)index
@@ -37,17 +43,31 @@
     return [UIImage imageNamed:[[NSString alloc] initWithFormat:@"h%zi.jpg",(index%3)+1]];
 }
 
+// banner已经滚动至某个索引项
+- (void)bannerView:(CDBannerCarouselView *)bannerView didScrollToIndex:(NSInteger)index
+{
+    NSLog(@"bannerView didScrollToIndex : %zi",index);
+}
+
+// banner已经点击选中了某个索引项
+- (void)bannerView:(CDBannerCarouselView *)bannerView didSelectedIndex:(NSInteger)index
+{
+    NSLog(@"bannerView didSelectedIndex : %zi",index);
+}
+
 #pragma mark 
 - (CDBannerCarouselView *)bannerView
 {
     if (_bannerView == nil) {
         _bannerView = [[CDBannerCarouselView alloc] initBannerViewDefaultPlaceholderImage:nil WithDelegate:self];
+        self.bannerView.backgroundColor = [UIColor groupTableViewBackgroundColor];
+        self.bannerView.pageControlAliment = CDBannerCarouselViewPageContolAlimentRight;
         [self.view addSubview:_bannerView];
         [_bannerView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.view);
             make.right.equalTo(self.view);
             make.centerY.equalTo(self.view);
-            make.height.equalTo(@200);
+            make.height.equalTo(@150);
         }];
     }
     return _bannerView;
