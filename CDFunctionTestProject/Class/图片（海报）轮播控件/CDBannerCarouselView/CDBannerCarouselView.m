@@ -11,6 +11,9 @@
 
 
 @interface CDBannerCarouselView () <UICollectionViewDelegate,UICollectionViewDataSource>
+{
+    UIImage *_placeholderImage;
+}
 @property (nonatomic,weak) id<CDBannerCarouselViewDelegate> delegate;
 @property (nonatomic,strong) UICollectionView *collectionViewBanner;
 @end
@@ -18,10 +21,11 @@
 @implementation CDBannerCarouselView
 
 #pragma mark - Init Method
-- (instancetype)initBannerViewWithDelegate:(id<CDBannerCarouselViewDelegate>)delegate
+- (instancetype)initBannerViewDefaultPlaceholderImage:(UIImage *)placeholderImage WithDelegate:(id<CDBannerCarouselViewDelegate>)delegate
 {
     self = [super init];
     if (self) {
+        _placeholderImage = [placeholderImage isKindOfClass:[UIImage class]] ? placeholderImage :[UIImage imageNamed:@"placeholder"]; // 设置默认占位符
         self.delegate = delegate;
         [self setup];
     }
@@ -31,6 +35,7 @@
 - (void)setup
 {
     self.backgroundColor = [UIColor yellowColor];
+    self.bannerContentMode = UIViewContentModeScaleToFill;
     self.collectionViewBanner.delegate = self;
     self.collectionViewBanner.dataSource = self;
 }
@@ -49,14 +54,13 @@
     
     UIImage *image;
     if ([_delegate respondsToSelector:@selector(bannerView:itemImageAtIndex:)]) {
-        image = [_delegate bannerView:self itemImageAtIndex:indexPath.row];
+//        image = [_delegate bannerView:self itemImageAtIndex:indexPath.row];
     }
-    if ([image isKindOfClass:[UIImage class]] == NO) {
-        image = [UIImage imageNamed:@""];
-    }
+    image = [image isKindOfClass:[UIImage class]] ? image : _placeholderImage;
     
-    [cell setBannerImage:image];
-    NSLog(@"image = %@\nsection = %zi , item = %zi   show  !",image,[indexPath section],[indexPath row]);
+    cell.imageViewBanner.image = image;
+    cell.imageViewBanner.contentMode = self.bannerContentMode;
+    
     return cell;
 }
 

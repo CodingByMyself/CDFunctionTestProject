@@ -18,9 +18,11 @@
 
 @interface CDBannerCarouselView : UIView
 
+// default is UIViewContentModeScaleToFill
+@property(nonatomic,assign) UIViewContentMode bannerContentMode;
 
 #pragma mark - Init Method
-- (instancetype)initBannerViewWithDelegate:(id<CDBannerCarouselViewDelegate>)delegate;
+- (instancetype)initBannerViewDefaultPlaceholderImage:(UIImage *)placeholderImage WithDelegate:(id<CDBannerCarouselViewDelegate>)delegate;
 - (void)reload;
 
 @end

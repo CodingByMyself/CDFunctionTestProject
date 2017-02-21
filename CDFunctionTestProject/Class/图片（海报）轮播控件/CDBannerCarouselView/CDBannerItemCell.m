@@ -11,12 +11,12 @@
 
 
 @interface CDBannerItemCell ()
-@property (nonatomic,strong) UIImageView *imageViewBanner;
+
 @end
 
 
 @implementation CDBannerItemCell
-
+@synthesize imageViewBanner = _imageViewBanner;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -33,12 +33,6 @@
 - (void)updateItemViewLayout
 {
     
-}
-
-#pragma mark - Private method
-- (void)setBannerImage:(UIImage *)image
-{
-    self.imageViewBanner.image = image;
 }
 
 #pragma mark - Getter Method

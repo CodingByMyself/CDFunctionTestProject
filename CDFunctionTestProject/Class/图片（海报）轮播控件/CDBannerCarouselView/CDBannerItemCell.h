@@ -10,8 +10,6 @@
 
 @interface CDBannerItemCell : UICollectionViewCell
 
-
-#pragma mark - Private method
-- (void)setBannerImage:(UIImage *)image;
+@property (nonatomic,strong,readonly) UIImageView *imageViewBanner;
 
 @end

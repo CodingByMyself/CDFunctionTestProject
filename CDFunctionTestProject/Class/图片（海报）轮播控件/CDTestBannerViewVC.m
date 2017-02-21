@@ -41,7 +41,7 @@
 - (CDBannerCarouselView *)bannerView
 {
     if (_bannerView == nil) {
-        _bannerView = [[CDBannerCarouselView alloc] initBannerViewWithDelegate:self];
+        _bannerView = [[CDBannerCarouselView alloc] initBannerViewDefaultPlaceholderImage:nil WithDelegate:self];
         [self.view addSubview:_bannerView];
         [_bannerView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.view);
