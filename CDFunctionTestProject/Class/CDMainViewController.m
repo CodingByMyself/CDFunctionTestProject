@@ -24,6 +24,8 @@
 #import "CDTestCitySelectedViewController.h"
 #import "CDTestSegmentControlVC.h"
 #import "CDTestBannerViewVC.h"
+#import "CDTestFaceInputViewController.h"
+#import "CDTestKeywordsArrayVC.h"
 
 @interface CDMainViewController () <UITableViewDelegate,UITableViewDataSource>
 {
@@ -55,7 +57,7 @@
     MTDetailLog(@"%@",ConstCDHTTPMethodGet);
     
     
-    _functionList = @[@"CollectionView 的扩展方法",@"TableView 自定义分组显示",@"CollectionView 菜单功能",@"SDAutoLayout 功能验证",@"View 相关的动画功能",@"iOS 字体大全",@"NSObject模型扩展",@"View的模糊效果",@"Cell的长按拖动",@"Item的长按拖动",@"Calendar日历选择功能",@"CollectionView城市列表",@"自定义SegmentControl",@"广告（图片）轮播控件",@"TabBarController的功能"];
+    _functionList = @[@"CollectionView 的扩展方法",@"TableView 自定义分组显示",@"CollectionView 菜单功能",@"SDAutoLayout 功能验证",@"View 相关的动画功能",@"iOS 字体大全",@"NSObject模型扩展",@"View的模糊效果",@"Cell的长按拖动",@"Item的长按拖动",@"Calendar日历选择功能",@"CollectionView城市列表",@"自定义SegmentControl",@"广告（图片）轮播控件",@"表情输入和显示",@"关键字item排版",@"TabBarController的功能"];
     
     
     _table = [[UITableView alloc] initWithFrame:self.view.bounds];
@@ -81,6 +83,8 @@
                    [[CDTestCitySelectedViewController alloc] init],
                    [[CDTestSegmentControlVC alloc] init],
                    [[CDTestBannerViewVC alloc] init],
+                   [[CDTestFaceInputViewController alloc] init],
+                   [[CDTestKeywordsArrayVC alloc] init],
                    [[CDTestTabBarViewController alloc] init]
                    ];
     

@@ -33,6 +33,8 @@
 {
     [super viewDidLoad];
     self.automaticallyAdjustsScrollViewInsets = NO;
+    self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
+    
     
     _viewNavigation = [[FXBlurView alloc] initWithFrame:CGRectMake(0, 0, DefineScreenWidth, CDNavigationBarHeight)];
     _viewNavigation.dynamic = YES;
