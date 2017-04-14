@@ -21,6 +21,15 @@
 		3725803A1D1E7D50002629B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 372580391D1E7D50002629B4 /* Foundation.framework */; };
 		3725803D1D1E7DBA002629B4 /* CDMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3725803C1D1E7DBA002629B4 /* CDMainViewController.m */; };
 		372580451D1E86BF002629B4 /* UIView+CDViewCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 372580441D1E86BF002629B4 /* UIView+CDViewCategory.m */; };
+		373450581E9F0EDF00CAB3EF /* RECDPreviewDocumentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 373450571E9F0EDF00CAB3EF /* RECDPreviewDocumentManager.m */; };
+		3734505B1E9F10B200CAB3EF /* CDTestPreviewDocumentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3734505A1E9F10B200CAB3EF /* CDTestPreviewDocumentVC.m */; };
+		3734505D1E9F29CF00CAB3EF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3734505C1E9F29CF00CAB3EF /* CoreGraphics.framework */; };
+		373450651E9F2AEC00CAB3EF /* ArcGIS for iOS 2.3开发教程-基础版.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 3734505F1E9F2AEC00CAB3EF /* ArcGIS for iOS 2.3开发教程-基础版.pdf */; };
+		373450661E9F2AEC00CAB3EF /* P020161215544593630508.xls in Resources */ = {isa = PBXBuildFile; fileRef = 373450601E9F2AEC00CAB3EF /* P020161215544593630508.xls */; };
+		373450671E9F2AEC00CAB3EF /* sample.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 373450611E9F2AEC00CAB3EF /* sample.pdf */; };
+		373450681E9F2AEC00CAB3EF /* starteam管理权限一览表.xls in Resources */ = {isa = PBXBuildFile; fileRef = 373450621E9F2AEC00CAB3EF /* starteam管理权限一览表.xls */; };
+		373450691E9F2AEC00CAB3EF /* 信息安全知识20150720.ppt in Resources */ = {isa = PBXBuildFile; fileRef = 373450631E9F2AEC00CAB3EF /* 信息安全知识20150720.ppt */; };
+		3734506A1E9F2AEC00CAB3EF /* 自我简介-陈娣.docx in Resources */ = {isa = PBXBuildFile; fileRef = 373450641E9F2AEC00CAB3EF /* 自我简介-陈娣.docx */; };
 		374912781D52E02F00D2514F /* CDTestCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 374912771D52E02F00D2514F /* CDTestCalendarViewController.m */; };
 		3749127B1D52E16300D2514F /* CDCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3749127A1D52E16300D2514F /* CDCalendarView.m */; };
 		3749127D1D52F1C800D2514F /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3749127C1D52F1C800D2514F /* LocalAuthentication.framework */; };
@@ -239,6 +248,17 @@
 		3725803C1D1E7DBA002629B4 /* CDMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDMainViewController.m; sourceTree = "<group>"; };
 		372580431D1E86BF002629B4 /* UIView+CDViewCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CDViewCategory.h"; sourceTree = "<group>"; };
 		372580441D1E86BF002629B4 /* UIView+CDViewCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CDViewCategory.m"; sourceTree = "<group>"; };
+		373450561E9F0EDF00CAB3EF /* RECDPreviewDocumentManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RECDPreviewDocumentManager.h; sourceTree = "<group>"; };
+		373450571E9F0EDF00CAB3EF /* RECDPreviewDocumentManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RECDPreviewDocumentManager.m; sourceTree = "<group>"; };
+		373450591E9F10B200CAB3EF /* CDTestPreviewDocumentVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDTestPreviewDocumentVC.h; sourceTree = "<group>"; };
+		3734505A1E9F10B200CAB3EF /* CDTestPreviewDocumentVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDTestPreviewDocumentVC.m; sourceTree = "<group>"; };
+		3734505C1E9F29CF00CAB3EF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3734505F1E9F2AEC00CAB3EF /* ArcGIS for iOS 2.3开发教程-基础版.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "ArcGIS for iOS 2.3开发教程-基础版.pdf"; sourceTree = "<group>"; };
+		373450601E9F2AEC00CAB3EF /* P020161215544593630508.xls */ = {isa = PBXFileReference; lastKnownFileType = file; path = P020161215544593630508.xls; sourceTree = "<group>"; };
+		373450611E9F2AEC00CAB3EF /* sample.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = sample.pdf; sourceTree = "<group>"; };
+		373450621E9F2AEC00CAB3EF /* starteam管理权限一览表.xls */ = {isa = PBXFileReference; lastKnownFileType = file; path = "starteam管理权限一览表.xls"; sourceTree = "<group>"; };
+		373450631E9F2AEC00CAB3EF /* 信息安全知识20150720.ppt */ = {isa = PBXFileReference; lastKnownFileType = file; path = "信息安全知识20150720.ppt"; sourceTree = "<group>"; };
+		373450641E9F2AEC00CAB3EF /* 自我简介-陈娣.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "自我简介-陈娣.docx"; sourceTree = "<group>"; };
 		374912761D52E02F00D2514F /* CDTestCalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDTestCalendarViewController.h; sourceTree = "<group>"; };
 		374912771D52E02F00D2514F /* CDTestCalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDTestCalendarViewController.m; sourceTree = "<group>"; };
 		374912791D52E16300D2514F /* CDCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDCalendarView.h; sourceTree = "<group>"; };
@@ -500,6 +520,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3734505D1E9F29CF00CAB3EF /* CoreGraphics.framework in Frameworks */,
 				371AB4A01E7BB38C009C8D23 /* MobileCoreServices.framework in Frameworks */,
 				3749127F1D52F1D600D2514F /* CoreFoundation.framework in Frameworks */,
 				3749127D1D52F1C800D2514F /* LocalAuthentication.framework in Frameworks */,
@@ -512,6 +533,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		371B9D8D1E9C783800BF9B2B /* 朋友圈帖子排版 */ = {
+			isa = PBXGroup;
+			children = (
+				371B9D8E1E9C7D8100BF9B2B /* View&Cell */,
+			);
+			path = "朋友圈帖子排版";
+			sourceTree = "<group>";
+		};
+		371B9D8E1E9C7D8100BF9B2B /* View&Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View&Cell";
+			sourceTree = "<group>";
+		};
 		372580081D1E79C7002629B4 = {
 			isa = PBXGroup;
 			children = (
@@ -559,9 +595,11 @@
 		3725802B1D1E7A33002629B4 /* Class */ = {
 			isa = PBXGroup;
 			children = (
-				3780D29C1E80B7CF00521D46 /* 关键字item排版 */,
+				373450551E9F0AAA00CAB3EF /* 浏览文档 */,
+				371B9D8D1E9C783800BF9B2B /* 朋友圈帖子排版 */,
 				3725803B1D1E7DBA002629B4 /* CDMainViewController.h */,
 				3725803C1D1E7DBA002629B4 /* CDMainViewController.m */,
+				3780D29C1E80B7CF00521D46 /* 关键字item排版 */,
 				37E2248E1E710948004E3615 /* 表情输入和显示 */,
 				37EBD3D81E5AEE1800B848F0 /* 图片（海报）轮播控件 */,
 				37EBD3C81E5AD67300B848F0 /* 自定义SegmentControl */,
@@ -612,6 +650,7 @@
 		372580361D1E7D19002629B4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3734505C1E9F29CF00CAB3EF /* CoreGraphics.framework */,
 				371AB49F1E7BB38C009C8D23 /* MobileCoreServices.framework */,
 				3749127E1D52F1D600D2514F /* CoreFoundation.framework */,
 				3749127C1D52F1C800D2514F /* LocalAuthentication.framework */,
@@ -639,6 +678,31 @@
 				37B22C601D45B81E007FB197 /* UIImage+CDColorCategory.m */,
 			);
 			path = Libs;
+			sourceTree = "<group>";
+		};
+		373450551E9F0AAA00CAB3EF /* 浏览文档 */ = {
+			isa = PBXGroup;
+			children = (
+				3734505E1E9F2AEC00CAB3EF /* Resource */,
+				373450591E9F10B200CAB3EF /* CDTestPreviewDocumentVC.h */,
+				3734505A1E9F10B200CAB3EF /* CDTestPreviewDocumentVC.m */,
+				373450561E9F0EDF00CAB3EF /* RECDPreviewDocumentManager.h */,
+				373450571E9F0EDF00CAB3EF /* RECDPreviewDocumentManager.m */,
+			);
+			path = "浏览文档";
+			sourceTree = "<group>";
+		};
+		3734505E1E9F2AEC00CAB3EF /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				3734505F1E9F2AEC00CAB3EF /* ArcGIS for iOS 2.3开发教程-基础版.pdf */,
+				373450601E9F2AEC00CAB3EF /* P020161215544593630508.xls */,
+				373450611E9F2AEC00CAB3EF /* sample.pdf */,
+				373450621E9F2AEC00CAB3EF /* starteam管理权限一览表.xls */,
+				373450631E9F2AEC00CAB3EF /* 信息安全知识20150720.ppt */,
+				373450641E9F2AEC00CAB3EF /* 自我简介-陈娣.docx */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 		374912701D52DB6A00D2514F /* Calendar日历功能 */ = {
@@ -1370,6 +1434,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3734506A1E9F2AEC00CAB3EF /* 自我简介-陈娣.docx in Resources */,
 				37E225671E711E77004E3615 /* 075.png in Resources */,
 				37E225371E711E76004E3615 /* 045.png in Resources */,
 				37E225341E711E76004E3615 /* 042.png in Resources */,
@@ -1385,6 +1450,7 @@
 				37E2259A1E7129D1004E3615 /* face_emoj_string.txt in Resources */,
 				37E2253B1E711E76004E3615 /* 049.png in Resources */,
 				37E225531E711E77004E3615 /* 065.png in Resources */,
+				373450651E9F2AEC00CAB3EF /* ArcGIS for iOS 2.3开发教程-基础版.pdf in Resources */,
 				37E225121E711E76004E3615 /* 008.png in Resources */,
 				37E2250C1E711E76004E3615 /* 002.png in Resources */,
 				376E1A481D47359A00D62128 /* loadingState270-00010.png in Resources */,
@@ -1400,6 +1466,7 @@
 				37E225231E711E76004E3615 /* 025.png in Resources */,
 				37E225361E711E76004E3615 /* 044.png in Resources */,
 				376E1A281D470AA500D62128 /* 4.jpg in Resources */,
+				373450681E9F2AEC00CAB3EF /* starteam管理权限一览表.xls in Resources */,
 				376E1A271D470AA500D62128 /* 0.jpg in Resources */,
 				37E225221E711E76004E3615 /* 024.png in Resources */,
 				37E2250E1E711E76004E3615 /* 004.png in Resources */,
@@ -1417,6 +1484,7 @@
 				37E225571E711E77004E3615 /* 067.png in Resources */,
 				37E225411E711E76004E3615 /* 056.png in Resources */,
 				37E2257B1E711E77004E3615 /* 085.png in Resources */,
+				373450691E9F2AEC00CAB3EF /* 信息安全知识20150720.ppt in Resources */,
 				37E225171E711E76004E3615 /* 013.png in Resources */,
 				37E225471E711E76004E3615 /* 059.png in Resources */,
 				376E1A3E1D47353E00D62128 /* loadingState270-0006.png in Resources */,
@@ -1471,9 +1539,11 @@
 				376E1A1F1D46F9D800D62128 /* 2.jpg in Resources */,
 				37E2251B1E711E76004E3615 /* 017.png in Resources */,
 				37E225971E7128F7004E3615 /* 089.png in Resources */,
+				373450671E9F2AEC00CAB3EF /* sample.pdf in Resources */,
 				37E225791E711E77004E3615 /* 084.png in Resources */,
 				37B8EB251D40B4F40062C4B6 /* IMG_2717.PNG in Resources */,
 				37E225431E711E76004E3615 /* 057.png in Resources */,
+				373450661E9F2AEC00CAB3EF /* P020161215544593630508.xls in Resources */,
 				37E2256D1E711E77004E3615 /* 078.png in Resources */,
 				37E225491E711E76004E3615 /* 060.png in Resources */,
 				376E1A201D46F9D800D62128 /* 3.jpg in Resources */,
@@ -1561,6 +1631,7 @@
 				37A18EA71E5BD266007FAB55 /* TADotView.m in Sources */,
 				37863F321D58290900CB2715 /* CDCityModel.m in Sources */,
 				374912881D533C1600D2514F /* CDTipsView.m in Sources */,
+				373450581E9F0EDF00CAB3EF /* RECDPreviewDocumentManager.m in Sources */,
 				376C16271D3CDC6A002AA201 /* CDViewAnimation.m in Sources */,
 				37E2259F1E7135E1004E3615 /* CDSinglePageCollectionCell.m in Sources */,
 				37E225861E712496004E3615 /* EmojiTextAttachment.m in Sources */,
@@ -1592,6 +1663,7 @@
 				3774CBDB1D3F793600240D43 /* CDBaseObject.m in Sources */,
 				37A18EA81E5BD266007FAB55 /* TAPageControl.m in Sources */,
 				376E1A1A1D46F8C100D62128 /* CDCubeAnimation.m in Sources */,
+				3734505B1E9F10B200CAB3EF /* CDTestPreviewDocumentVC.m in Sources */,
 				379D7D471D2F91CC0061F2B6 /* CDTestMenuViewController.m in Sources */,
 				3705E92D1D45EFD00028753A /* CDTabBar.m in Sources */,
 				3749127B1D52E16300D2514F /* CDCalendarView.m in Sources */,

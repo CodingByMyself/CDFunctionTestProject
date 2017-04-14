@@ -21,6 +21,10 @@
 #define  CDNavigationBarHeight  64.0f
 #define  CDNavigationBarOffset  20.0f
 
+
+
+
+
 /**
  *  关于日志输出的宏定义
  */
@@ -50,6 +54,11 @@
 #endif
 
 
+
+
+
+
+
 /**
  *  判断是真机还是模拟器
  */
@@ -60,6 +69,9 @@
         //iPhone Simulator
         #define  DefineTureDevice  0   //  模拟器
 #endif
+
+
+
 
 
 /**
@@ -77,6 +89,10 @@
  *  @return UIColor的一个实例
  */
 #define DefineColorHEX(hexValue) [UIColor colorWithRed:((float)((hexValue & 0xFF0000) >> 16))/255.0 green:((float)((hexValue & 0xFF00) >> 8))/255.0 blue:((float)(hexValue & 0xFF))/255.0 alpha:1.0]  // rgb颜色转换（16进制->10进制）
+
+
+
+
 
 
 
@@ -100,6 +116,7 @@
  */
 #define DefineScreenWidth  ((([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortrait) || ([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortraitUpsideDown)) ? [[UIScreen mainScreen] bounds].size.width : [[UIScreen mainScreen] bounds].size.height)
 #define DefineScreenHeight  ((([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortrait) || ([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortraitUpsideDown)) ? [[UIScreen mainScreen] bounds].size.height : [[UIScreen mainScreen] bounds].size.width)
+
 // 判断手机型号
 #define  iPhone6P   (DefineScreenHeight == 736.0)
 #define  iPhone6    (DefineScreenHeight == 667.0)
@@ -111,6 +128,8 @@
 #define IOS_VERSION [[[UIDevice currentDevice] systemVersion] floatValue]
 
 
+// 获取沙盒可读可写的根目录全路径
+#define DEFINE_LOCATION_DOCUMENT_ROOT_PATH [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)objectAtIndex:0]
 
 
 
