@@ -8,16 +8,9 @@
 
 #import "CDBaseTableViewCell.h"
 
-@interface CDBaseTableViewCell()
-{
-    
-}
-@end
-
 @implementation CDBaseTableViewCell
 @synthesize baseViewBg = _baseViewBg;
 @synthesize baseLabelTitle = _baseLabelTitle;
-
 
 
 #pragma mark - Public init method
@@ -113,6 +106,7 @@
 {
     //  空实现，子类可以重载该方法来自定义初始化代码 ,并且子类的重载方法中加上 [super setup];
 }
+
 
 
 

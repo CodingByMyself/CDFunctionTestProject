@@ -1,8 +1,8 @@
 PODS:
-  - FSCalendar (2.2.0)
+  - FSCalendar (2.7.4)
   - JSONKit-NoWarning (1.2)
-  - Masonry (1.0.1)
-  - SDAutoLayout (2.1.4)
+  - Masonry (1.0.2)
+  - SDAutoLayout (2.1.8)
 
 DEPENDENCIES:
   - FSCalendar
@@ -11,11 +11,11 @@ DEPENDENCIES:
   - SDAutoLayout (~> 2.1.3)
 
 SPEC CHECKSUMS:
-  FSCalendar: 766367b91bcf2829c492c5ac50a58652c6df4ee8
+  FSCalendar: e95995a746acae531c4a7dd636b8393233125ec5
   JSONKit-NoWarning: 3d27e6f9e6846ecf741e8c64dcadd7d5aa7193cb
-  Masonry: a1a931a0d08870ed8ae415a2ea5ea68ebcac77df
-  SDAutoLayout: 1b2926b193a63287f473dae426ed07861e21e271
+  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  SDAutoLayout: 5a4b48d6b8a5172ae8d088d2879e40dd795e6251
 
-PODFILE CHECKSUM: 75abaf104f03a49268052b923df0a9d4e648db0d
+PODFILE CHECKSUM: 9f28d6d7f175d30b809bab58baa9fd37037688dc
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.1.1

@@ -6,4 +6,10 @@ target "CDFunctionTestProject" do
     pod 'SDAutoLayout', '~> 2.1.3'
     pod 'JSONKit-NoWarning', '~> 1.1'
     pod 'FSCalendar'
+    
+#    pod 'SDWebImage'
+#    pod 'SDWebImage', '~>3.8'
+#    pod 'SDCycleScrollView','~> 1.64'
+    
+    
 end
