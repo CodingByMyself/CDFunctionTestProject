@@ -9,6 +9,9 @@
 #import "CDTestBBSViewController.h"
 #import "CDAddBBSViewController.h"
 
+#import "CDRefresh.h"
+#import "CTPRefreshHeader.h"
+
 @interface CDTestBBSViewController () <UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong) UITableView *tableViewBBS;
 @property (nonatomic,strong) NSArray *datas;
@@ -33,12 +36,43 @@
     [rightButton addTarget:self action:@selector(navigationAdd:) forControlEvents:UIControlEventTouchUpInside | UIControlEventTouchUpOutside];// 监听按钮点击
     self.navigationItem.rightBarButtonItems = @[[[UIBarButtonItem alloc] initWithCustomView:rightButton]];
     
+    
+    self.tableViewBBS.mj_header =  [CTPRefreshHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadHeaderData)];
+    
+    CDRefreshAutoNormalFooter *footer = [CDRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadFooterData)];
+    [footer setTitle:@"上拉加载更多" forState:CDRefreshStateIdle];
+    [footer setTitle:@"正在加载数据" forState:CDRefreshStateRefreshing];
+    [footer setTitle:@"数据加载完毕" forState:CDRefreshStateNoMoreData];
+    
+    self.tableViewBBS.mj_footer = footer;
+    
+    
+    // 如果确定数据已经加载完毕，则显示加载完成的提示文字
+    [footer setState:CDRefreshStateNoMoreData];
+    
 }
 
 - (void)navigationAdd:(UIButton *)button
 {
     CDAddBBSViewController *addVC = [[CDAddBBSViewController alloc] init];
     [self.navigationController pushViewController:addVC animated:YES];
+}
+
+
+#pragma mark 
+- (void)loadHeaderData
+{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.tableViewBBS.mj_header endRefreshing];
+    });
+    
+}
+
+- (void)loadFooterData
+{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.tableViewBBS.mj_footer endRefreshing];
+    });
 }
 
 #pragma mark - TableView Delegate Method
@@ -60,7 +94,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 10;
+    return 4;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView

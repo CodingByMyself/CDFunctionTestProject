@@ -1,0 +1,16 @@
+"CDRefreshHeaderIdleText" = "下拉可以刷新";
+"CDRefreshHeaderPullingText" = "鬆開立即刷新";
+"CDRefreshHeaderRefreshingText" = "正在刷新數據中...";
+
+"CDRefreshAutoFooterIdleText" = "點擊或上拉加載更多";
+"CDRefreshAutoFooterRefreshingText" = "正在加載更多的數據...";
+"CDRefreshAutoFooterNoMoreDataText" = "已經全部加載完畢";
+
+"CDRefreshBackFooterIdleText" = "上拉可以加載更多";
+"CDRefreshBackFooterPullingText" = "鬆開立即加載更多";
+"CDRefreshBackFooterRefreshingText" = "正在加載更多的數據...";
+"CDRefreshBackFooterNoMoreDataText" = "已經全部加載完畢";
+
+"CDRefreshHeaderLastTimeText" = "最後更新：";
+"CDRefreshHeaderDateTodayText" = "今天";
+"CDRefreshHeaderNoneLastDateText" = "無記錄";

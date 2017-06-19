@@ -98,6 +98,29 @@
 		37A18EA81E5BD266007FAB55 /* TAPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A18EA41E5BD266007FAB55 /* TAPageControl.m */; };
 		37A18EAB1E5BD32C007FAB55 /* dotActive.png in Resources */ = {isa = PBXBuildFile; fileRef = 37A18EA91E5BD32C007FAB55 /* dotActive.png */; };
 		37A18EAC1E5BD32C007FAB55 /* dotInactive.png in Resources */ = {isa = PBXBuildFile; fileRef = 37A18EAA1E5BD32C007FAB55 /* dotInactive.png */; };
+		37A2BDCA1EF14C1A00E0BB54 /* CDRefreshConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A2BDC91EF14C1A00E0BB54 /* CDRefreshConst.m */; };
+		37A2BDCE1EF14CB500E0BB54 /* UIScrollView+CDRefreshExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A2BDCD1EF14CB500E0BB54 /* UIScrollView+CDRefreshExtension.m */; };
+		37A2BDD11EF14D7800E0BB54 /* UIScrollView+CDRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A2BDD01EF14D7800E0BB54 /* UIScrollView+CDRefresh.m */; };
+		37A2BDD51EF14E7200E0BB54 /* CDRefreshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A2BDD41EF14E7200E0BB54 /* CDRefreshComponent.m */; };
+		37A2BDD81EF14F3000E0BB54 /* UIView+CDRefreshExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A2BDD71EF14F3000E0BB54 /* UIView+CDRefreshExtension.m */; };
+		37A2BDDB1EF14F7800E0BB54 /* NSBundle+CDRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A2BDDA1EF14F7800E0BB54 /* NSBundle+CDRefresh.m */; };
+		37A2BDDE1EF1520F00E0BB54 /* CDRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A2BDDD1EF1520F00E0BB54 /* CDRefreshHeader.m */; };
+		37A2BDE11EF1528800E0BB54 /* CDRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A2BDE01EF1528800E0BB54 /* CDRefreshFooter.m */; };
+		37A2BDE41EF152D800E0BB54 /* CDRefreshBackFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A2BDE31EF152D800E0BB54 /* CDRefreshBackFooter.m */; };
+		37A2BDE71EF1530500E0BB54 /* CDRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A2BDE61EF1530500E0BB54 /* CDRefreshAutoFooter.m */; };
+		37A2BDEF1EF153AC00E0BB54 /* CDRefreshStateHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A2BDEE1EF153AC00E0BB54 /* CDRefreshStateHeader.m */; };
+		37A2BDF21EF153FF00E0BB54 /* CDRefreshNormalHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A2BDF11EF153FF00E0BB54 /* CDRefreshNormalHeader.m */; };
+		37A2BDF51EF1543900E0BB54 /* CDRefreshGifHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A2BDF41EF1543900E0BB54 /* CDRefreshGifHeader.m */; };
+		37A2BDF81EF1548D00E0BB54 /* CDRefreshBackStateFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A2BDF71EF1548D00E0BB54 /* CDRefreshBackStateFooter.m */; };
+		37A2BDFB1EF154CB00E0BB54 /* CDRefreshBackNormalFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A2BDFA1EF154CB00E0BB54 /* CDRefreshBackNormalFooter.m */; };
+		37A2BDFE1EF1551600E0BB54 /* CDRefreshBackGifFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A2BDFD1EF1551600E0BB54 /* CDRefreshBackGifFooter.m */; };
+		37A2BE011EF1555200E0BB54 /* CDRefreshAutoStateFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A2BE001EF1555200E0BB54 /* CDRefreshAutoStateFooter.m */; };
+		37A2BE041EF1559000E0BB54 /* CDRefreshAutoNormalFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A2BE031EF1559000E0BB54 /* CDRefreshAutoNormalFooter.m */; };
+		37A2BE071EF155C200E0BB54 /* CDRefreshAutoGifFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A2BE061EF155C200E0BB54 /* CDRefreshAutoGifFooter.m */; };
+		37A2BE091EF1561100E0BB54 /* CDRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 37A2BE081EF1561100E0BB54 /* CDRefresh.bundle */; };
+		37A2BE0D1EF1615500E0BB54 /* CTPRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A2BE0C1EF1615500E0BB54 /* CTPRefreshHeader.m */; };
+		37A2BE111EF163AE00E0BB54 /* refresh_eim_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37A2BE0F1EF163AE00E0BB54 /* refresh_eim_logo@2x.png */; };
+		37A2BE121EF163AE00E0BB54 /* refresh_eim_logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37A2BE101EF163AE00E0BB54 /* refresh_eim_logo@3x.png */; };
 		37A5B6301D2DF9D100F09090 /* CExpandHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A5B62E1D2DF9D100F09090 /* CExpandHeader.m */; };
 		37A5B6311D2DF9D100F09090 /* header_view_image_bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 37A5B62F1D2DF9D100F09090 /* header_view_image_bg.jpg */; };
 		37A5B63A1D2E07EB00F09090 /* CDBaseTableViewCell+CDGroupCellCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A5B6391D2E07EB00F09090 /* CDBaseTableViewCell+CDGroupCellCategory.m */; };
@@ -377,6 +400,50 @@
 		37A18EA41E5BD266007FAB55 /* TAPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAPageControl.m; sourceTree = "<group>"; };
 		37A18EA91E5BD32C007FAB55 /* dotActive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dotActive.png; sourceTree = "<group>"; };
 		37A18EAA1E5BD32C007FAB55 /* dotInactive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dotInactive.png; sourceTree = "<group>"; };
+		37A2BDC71EF14BDF00E0BB54 /* CDRefresh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDRefresh.h; sourceTree = "<group>"; };
+		37A2BDC81EF14C0000E0BB54 /* CDRefreshConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDRefreshConst.h; sourceTree = "<group>"; };
+		37A2BDC91EF14C1A00E0BB54 /* CDRefreshConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDRefreshConst.m; sourceTree = "<group>"; };
+		37A2BDCC1EF14CB500E0BB54 /* UIScrollView+CDRefreshExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+CDRefreshExtension.h"; sourceTree = "<group>"; };
+		37A2BDCD1EF14CB500E0BB54 /* UIScrollView+CDRefreshExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+CDRefreshExtension.m"; sourceTree = "<group>"; };
+		37A2BDCF1EF14D7800E0BB54 /* UIScrollView+CDRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+CDRefresh.h"; sourceTree = "<group>"; };
+		37A2BDD01EF14D7800E0BB54 /* UIScrollView+CDRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+CDRefresh.m"; sourceTree = "<group>"; };
+		37A2BDD31EF14E7200E0BB54 /* CDRefreshComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDRefreshComponent.h; sourceTree = "<group>"; };
+		37A2BDD41EF14E7200E0BB54 /* CDRefreshComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDRefreshComponent.m; sourceTree = "<group>"; };
+		37A2BDD61EF14F3000E0BB54 /* UIView+CDRefreshExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CDRefreshExtension.h"; sourceTree = "<group>"; };
+		37A2BDD71EF14F3000E0BB54 /* UIView+CDRefreshExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CDRefreshExtension.m"; sourceTree = "<group>"; };
+		37A2BDD91EF14F7800E0BB54 /* NSBundle+CDRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+CDRefresh.h"; sourceTree = "<group>"; };
+		37A2BDDA1EF14F7800E0BB54 /* NSBundle+CDRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+CDRefresh.m"; sourceTree = "<group>"; };
+		37A2BDDC1EF1520F00E0BB54 /* CDRefreshHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDRefreshHeader.h; sourceTree = "<group>"; };
+		37A2BDDD1EF1520F00E0BB54 /* CDRefreshHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDRefreshHeader.m; sourceTree = "<group>"; };
+		37A2BDDF1EF1528800E0BB54 /* CDRefreshFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDRefreshFooter.h; sourceTree = "<group>"; };
+		37A2BDE01EF1528800E0BB54 /* CDRefreshFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDRefreshFooter.m; sourceTree = "<group>"; };
+		37A2BDE21EF152D800E0BB54 /* CDRefreshBackFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDRefreshBackFooter.h; sourceTree = "<group>"; };
+		37A2BDE31EF152D800E0BB54 /* CDRefreshBackFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDRefreshBackFooter.m; sourceTree = "<group>"; };
+		37A2BDE51EF1530500E0BB54 /* CDRefreshAutoFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDRefreshAutoFooter.h; sourceTree = "<group>"; };
+		37A2BDE61EF1530500E0BB54 /* CDRefreshAutoFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDRefreshAutoFooter.m; sourceTree = "<group>"; };
+		37A2BDED1EF153AC00E0BB54 /* CDRefreshStateHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDRefreshStateHeader.h; sourceTree = "<group>"; };
+		37A2BDEE1EF153AC00E0BB54 /* CDRefreshStateHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDRefreshStateHeader.m; sourceTree = "<group>"; };
+		37A2BDF01EF153FF00E0BB54 /* CDRefreshNormalHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDRefreshNormalHeader.h; sourceTree = "<group>"; };
+		37A2BDF11EF153FF00E0BB54 /* CDRefreshNormalHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDRefreshNormalHeader.m; sourceTree = "<group>"; };
+		37A2BDF31EF1543900E0BB54 /* CDRefreshGifHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDRefreshGifHeader.h; sourceTree = "<group>"; };
+		37A2BDF41EF1543900E0BB54 /* CDRefreshGifHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDRefreshGifHeader.m; sourceTree = "<group>"; };
+		37A2BDF61EF1548D00E0BB54 /* CDRefreshBackStateFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDRefreshBackStateFooter.h; sourceTree = "<group>"; };
+		37A2BDF71EF1548D00E0BB54 /* CDRefreshBackStateFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDRefreshBackStateFooter.m; sourceTree = "<group>"; };
+		37A2BDF91EF154CB00E0BB54 /* CDRefreshBackNormalFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDRefreshBackNormalFooter.h; sourceTree = "<group>"; };
+		37A2BDFA1EF154CB00E0BB54 /* CDRefreshBackNormalFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDRefreshBackNormalFooter.m; sourceTree = "<group>"; };
+		37A2BDFC1EF1551600E0BB54 /* CDRefreshBackGifFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDRefreshBackGifFooter.h; sourceTree = "<group>"; };
+		37A2BDFD1EF1551600E0BB54 /* CDRefreshBackGifFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDRefreshBackGifFooter.m; sourceTree = "<group>"; };
+		37A2BDFF1EF1555200E0BB54 /* CDRefreshAutoStateFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDRefreshAutoStateFooter.h; sourceTree = "<group>"; };
+		37A2BE001EF1555200E0BB54 /* CDRefreshAutoStateFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDRefreshAutoStateFooter.m; sourceTree = "<group>"; };
+		37A2BE021EF1559000E0BB54 /* CDRefreshAutoNormalFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDRefreshAutoNormalFooter.h; sourceTree = "<group>"; };
+		37A2BE031EF1559000E0BB54 /* CDRefreshAutoNormalFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDRefreshAutoNormalFooter.m; sourceTree = "<group>"; };
+		37A2BE051EF155C200E0BB54 /* CDRefreshAutoGifFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDRefreshAutoGifFooter.h; sourceTree = "<group>"; };
+		37A2BE061EF155C200E0BB54 /* CDRefreshAutoGifFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDRefreshAutoGifFooter.m; sourceTree = "<group>"; };
+		37A2BE081EF1561100E0BB54 /* CDRefresh.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CDRefresh.bundle; sourceTree = "<group>"; };
+		37A2BE0B1EF1615500E0BB54 /* CTPRefreshHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTPRefreshHeader.h; sourceTree = "<group>"; };
+		37A2BE0C1EF1615500E0BB54 /* CTPRefreshHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTPRefreshHeader.m; sourceTree = "<group>"; };
+		37A2BE0F1EF163AE00E0BB54 /* refresh_eim_logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "refresh_eim_logo@2x.png"; sourceTree = "<group>"; };
+		37A2BE101EF163AE00E0BB54 /* refresh_eim_logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "refresh_eim_logo@3x.png"; sourceTree = "<group>"; };
 		37A5B62D1D2DF9D100F09090 /* CExpandHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CExpandHeader.h; sourceTree = "<group>"; };
 		37A5B62E1D2DF9D100F09090 /* CExpandHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CExpandHeader.m; sourceTree = "<group>"; };
 		37A5B62F1D2DF9D100F09090 /* header_view_image_bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = header_view_image_bg.jpg; sourceTree = "<group>"; };
@@ -697,6 +764,9 @@
 		3725803E1D1E861F002629B4 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				37A2BE0B1EF1615500E0BB54 /* CTPRefreshHeader.h */,
+				37A2BE0C1EF1615500E0BB54 /* CTPRefreshHeader.m */,
+				37A2BDC61EF14B9500E0BB54 /* CDRefresh */,
 				3795E6901EC99B340009A1D5 /* RTLabel.h */,
 				3795E6911EC99B340009A1D5 /* RTLabel.m */,
 				37EC20341EBC71D100171DC6 /* RECDCollectionViewLinkFlowLayout.h */,
@@ -1014,6 +1084,103 @@
 				37A18EA41E5BD266007FAB55 /* TAPageControl.m */,
 			);
 			path = TAPageControl;
+			sourceTree = "<group>";
+		};
+		37A2BDC61EF14B9500E0BB54 /* CDRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				37A2BE0F1EF163AE00E0BB54 /* refresh_eim_logo@2x.png */,
+				37A2BE101EF163AE00E0BB54 /* refresh_eim_logo@3x.png */,
+				37A2BE081EF1561100E0BB54 /* CDRefresh.bundle */,
+				37A2BDE81EF1535500E0BB54 /* CustomClass */,
+				37A2BDD21EF14E4100E0BB54 /* BaseClass */,
+				37A2BDC71EF14BDF00E0BB54 /* CDRefresh.h */,
+				37A2BDC81EF14C0000E0BB54 /* CDRefreshConst.h */,
+				37A2BDC91EF14C1A00E0BB54 /* CDRefreshConst.m */,
+				37A2BDCC1EF14CB500E0BB54 /* UIScrollView+CDRefreshExtension.h */,
+				37A2BDCD1EF14CB500E0BB54 /* UIScrollView+CDRefreshExtension.m */,
+				37A2BDCF1EF14D7800E0BB54 /* UIScrollView+CDRefresh.h */,
+				37A2BDD01EF14D7800E0BB54 /* UIScrollView+CDRefresh.m */,
+				37A2BDD61EF14F3000E0BB54 /* UIView+CDRefreshExtension.h */,
+				37A2BDD71EF14F3000E0BB54 /* UIView+CDRefreshExtension.m */,
+				37A2BDD91EF14F7800E0BB54 /* NSBundle+CDRefresh.h */,
+				37A2BDDA1EF14F7800E0BB54 /* NSBundle+CDRefresh.m */,
+			);
+			path = CDRefresh;
+			sourceTree = "<group>";
+		};
+		37A2BDD21EF14E4100E0BB54 /* BaseClass */ = {
+			isa = PBXGroup;
+			children = (
+				37A2BDD31EF14E7200E0BB54 /* CDRefreshComponent.h */,
+				37A2BDD41EF14E7200E0BB54 /* CDRefreshComponent.m */,
+				37A2BDDC1EF1520F00E0BB54 /* CDRefreshHeader.h */,
+				37A2BDDD1EF1520F00E0BB54 /* CDRefreshHeader.m */,
+				37A2BDDF1EF1528800E0BB54 /* CDRefreshFooter.h */,
+				37A2BDE01EF1528800E0BB54 /* CDRefreshFooter.m */,
+				37A2BDE21EF152D800E0BB54 /* CDRefreshBackFooter.h */,
+				37A2BDE31EF152D800E0BB54 /* CDRefreshBackFooter.m */,
+				37A2BDE51EF1530500E0BB54 /* CDRefreshAutoFooter.h */,
+				37A2BDE61EF1530500E0BB54 /* CDRefreshAutoFooter.m */,
+			);
+			path = BaseClass;
+			sourceTree = "<group>";
+		};
+		37A2BDE81EF1535500E0BB54 /* CustomClass */ = {
+			isa = PBXGroup;
+			children = (
+				37A2BDE91EF1538A00E0BB54 /* Footer */,
+				37A2BDEC1EF1538A00E0BB54 /* Header */,
+			);
+			path = CustomClass;
+			sourceTree = "<group>";
+		};
+		37A2BDE91EF1538A00E0BB54 /* Footer */ = {
+			isa = PBXGroup;
+			children = (
+				37A2BDEA1EF1538A00E0BB54 /* Auto */,
+				37A2BDEB1EF1538A00E0BB54 /* Back */,
+			);
+			path = Footer;
+			sourceTree = "<group>";
+		};
+		37A2BDEA1EF1538A00E0BB54 /* Auto */ = {
+			isa = PBXGroup;
+			children = (
+				37A2BDFF1EF1555200E0BB54 /* CDRefreshAutoStateFooter.h */,
+				37A2BE001EF1555200E0BB54 /* CDRefreshAutoStateFooter.m */,
+				37A2BE021EF1559000E0BB54 /* CDRefreshAutoNormalFooter.h */,
+				37A2BE031EF1559000E0BB54 /* CDRefreshAutoNormalFooter.m */,
+				37A2BE051EF155C200E0BB54 /* CDRefreshAutoGifFooter.h */,
+				37A2BE061EF155C200E0BB54 /* CDRefreshAutoGifFooter.m */,
+			);
+			path = Auto;
+			sourceTree = "<group>";
+		};
+		37A2BDEB1EF1538A00E0BB54 /* Back */ = {
+			isa = PBXGroup;
+			children = (
+				37A2BDF61EF1548D00E0BB54 /* CDRefreshBackStateFooter.h */,
+				37A2BDF71EF1548D00E0BB54 /* CDRefreshBackStateFooter.m */,
+				37A2BDF91EF154CB00E0BB54 /* CDRefreshBackNormalFooter.h */,
+				37A2BDFA1EF154CB00E0BB54 /* CDRefreshBackNormalFooter.m */,
+				37A2BDFC1EF1551600E0BB54 /* CDRefreshBackGifFooter.h */,
+				37A2BDFD1EF1551600E0BB54 /* CDRefreshBackGifFooter.m */,
+			);
+			path = Back;
+			sourceTree = "<group>";
+		};
+		37A2BDEC1EF1538A00E0BB54 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				37A2BDED1EF153AC00E0BB54 /* CDRefreshStateHeader.h */,
+				37A2BDEE1EF153AC00E0BB54 /* CDRefreshStateHeader.m */,
+				37A2BDF01EF153FF00E0BB54 /* CDRefreshNormalHeader.h */,
+				37A2BDF11EF153FF00E0BB54 /* CDRefreshNormalHeader.m */,
+				37A2BDF31EF1543900E0BB54 /* CDRefreshGifHeader.h */,
+				37A2BDF41EF1543900E0BB54 /* CDRefreshGifHeader.m */,
+			);
+			path = Header;
 			sourceTree = "<group>";
 		};
 		37A5B6281D2DF9D100F09090 /* TableView自定义扩展 */ = {
@@ -1571,12 +1738,14 @@
 				37E2251D1E711E76004E3615 /* 019.png in Resources */,
 				37E225451E711E76004E3615 /* 058.png in Resources */,
 				37A18E9B1E5BCB73007FAB55 /* placeholder.png in Resources */,
+				37A2BE111EF163AE00E0BB54 /* refresh_eim_logo@2x.png in Resources */,
 				37E2251E1E711E76004E3615 /* 020.png in Resources */,
 				37E225911E7128F7004E3615 /* 051.png in Resources */,
 				376E1A3B1D47353E00D62128 /* loadingState270-0003.png in Resources */,
 				37E225711E711E77004E3615 /* 080.png in Resources */,
 				37B8EB261D40B4F40062C4B6 /* IMG_2718.PNG in Resources */,
 				37E225331E711E76004E3615 /* 041.png in Resources */,
+				37A2BE121EF163AE00E0BB54 /* refresh_eim_logo@3x.png in Resources */,
 				37E2252A1E711E76004E3615 /* 032.png in Resources */,
 				37E225611E711E77004E3615 /* 072.png in Resources */,
 				37EBD3E71E5AF6DD00B848F0 /* h1.jpg in Resources */,
@@ -1606,6 +1775,7 @@
 				37E225201E711E76004E3615 /* 022.png in Resources */,
 				37E2255F1E711E77004E3615 /* 071.png in Resources */,
 				37DD7D451D30D6D80053C326 /* test_icon.png in Resources */,
+				37A2BE091EF1561100E0BB54 /* CDRefresh.bundle in Resources */,
 				37E2250F1E711E76004E3615 /* 005.png in Resources */,
 				37E225251E711E76004E3615 /* 027.png in Resources */,
 				376E1A3A1D47353E00D62128 /* loadingState270-0002.png in Resources */,
@@ -1673,6 +1843,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37A2BDE71EF1530500E0BB54 /* CDRefreshAutoFooter.m in Sources */,
 				375112F41D49E8B200810727 /* CDTestItemLongPressViewController.m in Sources */,
 				3780D2A31E80B8E300521D46 /* CDTestKeywordsArrayVC.m in Sources */,
 				37A18EA71E5BD266007FAB55 /* TADotView.m in Sources */,
@@ -1695,32 +1866,45 @@
 				37A5B63A1D2E07EB00F09090 /* CDBaseTableViewCell+CDGroupCellCategory.m in Sources */,
 				374FE5A01D34C2E400AD089B /* CDTestAnimationViewController.m in Sources */,
 				376E1A171D46F28A00D62128 /* CDRippleAnimation.m in Sources */,
+				37A2BDFE1EF1551600E0BB54 /* CDRefreshBackGifFooter.m in Sources */,
 				3769F0231D420059008B5083 /* CDTwoTabBarViewController.m in Sources */,
 				3780D2A01E80B8B900521D46 /* CDKeywordsArrayView.m in Sources */,
 				3755D80A1E55390A00534D24 /* CDBounceAnimation.m in Sources */,
+				37A2BE041EF1559000E0BB54 /* CDRefreshAutoNormalFooter.m in Sources */,
 				3769EFFB1D41F6C3008B5083 /* CDTestTabBarViewController.m in Sources */,
+				37A2BE071EF155C200E0BB54 /* CDRefreshAutoGifFooter.m in Sources */,
 				37A18EA61E5BD266007FAB55 /* TAAnimatedDotView.m in Sources */,
 				37532F0D1D3DD2A1003CFE0C /* CDTestModel.m in Sources */,
 				37DAF87F1D33A456001BF809 /* CDBaseTableViewCell.m in Sources */,
 				3756FB841EC16B5C0075F12D /* CDMomentsItemCell.m in Sources */,
+				37A2BDEF1EF153AC00E0BB54 /* CDRefreshStateHeader.m in Sources */,
 				374912821D53113000D2514F /* CDDateHelper.m in Sources */,
+				37A2BDDB1EF14F7800E0BB54 /* NSBundle+CDRefresh.m in Sources */,
 				3725803D1D1E7DBA002629B4 /* CDMainViewController.m in Sources */,
 				37A5B6401D2E2C7100F09090 /* UIImage+RoundedCorner.m in Sources */,
 				3795E6921EC99B340009A1D5 /* RTLabel.m in Sources */,
+				37A2BDFB1EF154CB00E0BB54 /* CDRefreshBackNormalFooter.m in Sources */,
 				372580451D1E86BF002629B4 /* UIView+CDViewCategory.m in Sources */,
 				374912781D52E02F00D2514F /* CDTestCalendarViewController.m in Sources */,
 				3793E34B1D38EE8B00955777 /* CDTestFontViewController.m in Sources */,
+				37A2BDE11EF1528800E0BB54 /* CDRefreshFooter.m in Sources */,
 				3774CBDB1D3F793600240D43 /* CDBaseObject.m in Sources */,
 				37A18EA81E5BD266007FAB55 /* TAPageControl.m in Sources */,
 				376E1A1A1D46F8C100D62128 /* CDCubeAnimation.m in Sources */,
+				37A2BDD11EF14D7800E0BB54 /* UIScrollView+CDRefresh.m in Sources */,
+				37A2BDD81EF14F3000E0BB54 /* UIView+CDRefreshExtension.m in Sources */,
 				37EC20361EBC71D100171DC6 /* RECDCollectionViewLinkFlowLayout.m in Sources */,
 				3734505B1E9F10B200CAB3EF /* CDTestPreviewDocumentVC.m in Sources */,
+				37A2BDF51EF1543900E0BB54 /* CDRefreshGifHeader.m in Sources */,
 				379D7D471D2F91CC0061F2B6 /* CDTestMenuViewController.m in Sources */,
+				37A2BE011EF1555200E0BB54 /* CDRefreshAutoStateFooter.m in Sources */,
 				3705E92D1D45EFD00028753A /* CDTabBar.m in Sources */,
 				3749127B1D52E16300D2514F /* CDCalendarView.m in Sources */,
 				37D806021D54936500E18039 /* CDSelectedCityController.m in Sources */,
 				37863F361D5831BA00CB2715 /* CDTestCitySelectedViewController.m in Sources */,
+				37A2BDD51EF14E7200E0BB54 /* CDRefreshComponent.m in Sources */,
 				375112EE1D49A59C00810727 /* CDTestCellLongPressViewController.m in Sources */,
+				37A2BE0D1EF1615500E0BB54 /* CTPRefreshHeader.m in Sources */,
 				37EBD3CE1E5AD6A600B848F0 /* CDMenuItem.m in Sources */,
 				3769F0221D420059008B5083 /* CDThreeTabBarViewController.m in Sources */,
 				37532F071D3DD0BD003CFE0C /* CDTestBaseModelViewController.m in Sources */,
@@ -1728,7 +1912,10 @@
 				37D806081D54961C00E18039 /* CDCityCollectionCell.m in Sources */,
 				379D7D441D2F88150061F2B6 /* CDMenuCollectionCell.m in Sources */,
 				37DAF87C1D33A3F1001BF809 /* CDAutoLayoutTableCell.m in Sources */,
+				37A2BDDE1EF1520F00E0BB54 /* CDRefreshHeader.m in Sources */,
+				37A2BDF81EF1548D00E0BB54 /* CDRefreshBackStateFooter.m in Sources */,
 				37B8EB201D40B3900062C4B6 /* CDTestBlurViewController.m in Sources */,
+				37A2BDCA1EF14C1A00E0BB54 /* CDRefreshConst.m in Sources */,
 				3769F0211D420059008B5083 /* CDOneTabBarViewController.m in Sources */,
 				3705E9361D4608690028753A /* CDBaseViewController.m in Sources */,
 				376C16211D3CAD41002AA201 /* CDFlipAnimation.m in Sources */,
@@ -1736,14 +1923,17 @@
 				372580311D1E7AE7002629B4 /* CDCollectionViewController.m in Sources */,
 				37B8EB0E1D4065AF0062C4B6 /* CDConstSetup.m in Sources */,
 				374FE59D1D348CD300AD089B /* CDAutoModel.m in Sources */,
+				37A2BDE41EF152D800E0BB54 /* CDRefreshBackFooter.m in Sources */,
 				37DAF8791D33A287001BF809 /* CDTestAutoLayoutViewController.m in Sources */,
 				3769F0281D421E3B008B5083 /* CDBaseNavigationController.m in Sources */,
 				37EBD3DF1E5AF07700B848F0 /* CDBannerItemCell.m in Sources */,
 				372580161D1E79C7002629B4 /* main.m in Sources */,
+				37A2BDF21EF153FF00E0BB54 /* CDRefreshNormalHeader.m in Sources */,
 				3769F0201D420059008B5083 /* CDFourTabBarViewController.m in Sources */,
 				3778F91E1EBC61BB003FB618 /* CDTestBBSViewController.m in Sources */,
 				37EC20321EBC715200171DC6 /* CDPictureSelectedCell.m in Sources */,
 				37A5B6301D2DF9D100F09090 /* CExpandHeader.m in Sources */,
+				37A2BDCE1EF14CB500E0BB54 /* UIScrollView+CDRefreshExtension.m in Sources */,
 				3705E92A1D45ECF10028753A /* CDCenterViewController.m in Sources */,
 				3778F9211EBC63E5003FB618 /* CDAddBBSViewController.m in Sources */,
 				37A5B64A1D2E444700F09090 /* CDTestCustomGroupController.m in Sources */,
