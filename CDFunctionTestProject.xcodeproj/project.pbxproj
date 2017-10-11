@@ -250,6 +250,7 @@
 		37EBD3ED1E5AF72D00B848F0 /* h3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 37EBD3EB1E5AF72D00B848F0 /* h3.jpg */; };
 		37EC20321EBC715200171DC6 /* CDPictureSelectedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EC20311EBC715200171DC6 /* CDPictureSelectedCell.m */; };
 		37EC20361EBC71D100171DC6 /* RECDCollectionViewLinkFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EC20351EBC71D100171DC6 /* RECDCollectionViewLinkFlowLayout.m */; };
+		37EF48071F330BAB007372F1 /* CDTestAutoHeightCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EF48061F330BAB007372F1 /* CDTestAutoHeightCell.m */; };
 		78DBA9475F1CBF735734A38E /* libPods-CDFunctionTestProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F5A388F56147CCBE0E353B4F /* libPods-CDFunctionTestProject.a */; };
 /* End PBXBuildFile section */
 
@@ -600,6 +601,8 @@
 		37EC20311EBC715200171DC6 /* CDPictureSelectedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDPictureSelectedCell.m; sourceTree = "<group>"; };
 		37EC20341EBC71D100171DC6 /* RECDCollectionViewLinkFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RECDCollectionViewLinkFlowLayout.h; sourceTree = "<group>"; };
 		37EC20351EBC71D100171DC6 /* RECDCollectionViewLinkFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RECDCollectionViewLinkFlowLayout.m; sourceTree = "<group>"; };
+		37EF48051F330BAB007372F1 /* CDTestAutoHeightCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDTestAutoHeightCell.h; sourceTree = "<group>"; };
+		37EF48061F330BAB007372F1 /* CDTestAutoHeightCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDTestAutoHeightCell.m; sourceTree = "<group>"; };
 		4BB1CEF029DE4E2CCD40335A /* Pods-CDFunctionTestProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CDFunctionTestProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CDFunctionTestProject/Pods-CDFunctionTestProject.debug.xcconfig"; sourceTree = "<group>"; };
 		F5A388F56147CCBE0E353B4F /* libPods-CDFunctionTestProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CDFunctionTestProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBDEFD3E84FF096BD97BEDF0 /* Pods-CDFunctionTestProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CDFunctionTestProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-CDFunctionTestProject/Pods-CDFunctionTestProject.release.xcconfig"; sourceTree = "<group>"; };
@@ -638,6 +641,8 @@
 		371B9D8E1E9C7D8100BF9B2B /* View&Cell */ = {
 			isa = PBXGroup;
 			children = (
+				37EF48051F330BAB007372F1 /* CDTestAutoHeightCell.h */,
+				37EF48061F330BAB007372F1 /* CDTestAutoHeightCell.m */,
 				3756FB811EC16AFA0075F12D /* ItemCells */,
 				375BBE1D1EC053C600D7DE41 /* follow_add_icon.png */,
 				3778F9221EBC64C5003FB618 /* CDAddInputTextCell.h */,
@@ -1797,13 +1802,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CDFunctionTestProject-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		941D5E644A24EB5AC422CBDC /* [CP] Copy Pods Resources */ = {
@@ -1812,9 +1820,18 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CDFunctionTestProject/Pods-CDFunctionTestProject-resources.sh",
+				"${PODS_ROOT}/CTPUILibrary/CTPUILibrary/CDCreateBoundle.bundle",
+				"${PODS_ROOT}/NIMKit/NIMKit/Resources/NIMKitEmoticon.bundle",
+				"${PODS_ROOT}/NIMKit/NIMKit/Resources/NIMKitResource.bundle",
+				"${PODS_ROOT}/NIMKit/NIMKit/Resources/NIMKitSettings.bundle",
+				"${PODS_ROOT}/NIMSDK/NIMAVChat/Resources/NMCVideoFilter.bundle",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
+				"${PODS_ROOT}/TZImagePickerController/TZImagePickerController/TZImagePickerController/TZImagePickerController.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1873,6 +1890,7 @@
 				37A2BE041EF1559000E0BB54 /* CDRefreshAutoNormalFooter.m in Sources */,
 				3769EFFB1D41F6C3008B5083 /* CDTestTabBarViewController.m in Sources */,
 				37A2BE071EF155C200E0BB54 /* CDRefreshAutoGifFooter.m in Sources */,
+				37EF48071F330BAB007372F1 /* CDTestAutoHeightCell.m in Sources */,
 				37A18EA61E5BD266007FAB55 /* TAAnimatedDotView.m in Sources */,
 				37532F0D1D3DD2A1003CFE0C /* CDTestModel.m in Sources */,
 				37DAF87F1D33A456001BF809 /* CDBaseTableViewCell.m in Sources */,

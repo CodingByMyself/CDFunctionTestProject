@@ -27,4 +27,6 @@
 #import "JSONKit.h"
 
 
+#import "NSString+NIMKit.h"
+
 #endif /* PrefixHeader_pch */

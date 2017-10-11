@@ -1,29 +1,81 @@
 PODS:
-  - FSCalendar (2.7.7)
+  - CTPUILibrary (1.0):
+    - Masonry
+    - YYWebImage
+  - FLEX (2.4.0)
+  - FSCalendar (2.7.9)
   - JSONKit-NoWarning (1.2)
+  - M80AttributedLabel (1.6.3)
   - Masonry (1.0.2)
-  - SDAutoLayout (2.1.8)
+  - NIMKit/Core (1.7.0):
+    - M80AttributedLabel (~> 1.6.3)
+    - SDWebImage (~> 3.8.2)
+    - SVProgressHUD (~> 2.0.3)
+    - Toast (~> 3.0)
+    - TZImagePickerController (~> 1.7.7)
+  - NIMKit/Full (1.7.0):
+    - NIMKit/Core
+    - NIMSDK (~> 4.0.0)
+  - NIMSDK (4.0.0)
+  - SDAutoLayout (2.1.9)
+  - SDWebImage (3.8.2):
+    - SDWebImage/Core (= 3.8.2)
+  - SDWebImage/Core (3.8.2)
+  - SVProgressHUD (2.0.4)
+  - Toast (3.1.0)
+  - TZImagePickerController (1.7.9)
+  - UITableView+FDTemplateLayoutCell (1.6)
+  - YYCache (1.0.4)
   - YYImage (1.0.4):
     - YYImage/Core (= 1.0.4)
   - YYImage/Core (1.0.4)
   - YYImage/WebP (1.0.4):
     - YYImage/Core
+  - YYWebImage (1.0.5):
+    - YYCache
+    - YYImage
 
 DEPENDENCIES:
-  - FSCalendar
+  - CTPUILibrary (from `http://10.10.15.98/comtopios/CTPUILibrary.git`, branch `develop`)
+  - FLEX (~> 2.0)
+  - FSCalendar (~> 2.7.7)
   - JSONKit-NoWarning (~> 1.1)
   - Masonry
+  - NIMKit/Full
   - SDAutoLayout (~> 2.1.3)
+  - UITableView+FDTemplateLayoutCell (~> 1.6)
   - YYImage
   - YYImage/WebP
 
+EXTERNAL SOURCES:
+  CTPUILibrary:
+    :branch: develop
+    :git: http://10.10.15.98/comtopios/CTPUILibrary.git
+
+CHECKOUT OPTIONS:
+  CTPUILibrary:
+    :commit: 67925594c90fe9a6698580d0e0a58ee631e54613
+    :git: http://10.10.15.98/comtopios/CTPUILibrary.git
+
 SPEC CHECKSUMS:
-  FSCalendar: 8bda3534e8590b87124af9a236887314e0359a27
+  CTPUILibrary: ca713f512579e93a6b85081ac2f6f57206e53617
+  FLEX: bd1a39e55b56bb413b6f1b34b3c10a0dc44ef079
+  FSCalendar: a04b09f16f811bc92e82f3cf852a15225233b9d5
   JSONKit-NoWarning: 3d27e6f9e6846ecf741e8c64dcadd7d5aa7193cb
+  M80AttributedLabel: d06543195d3e451d2ea62ad76d04aa9cea7661d4
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
-  SDAutoLayout: 5a4b48d6b8a5172ae8d088d2879e40dd795e6251
+  NIMKit: 4a6fa323ef9f385938a1b773be22a20fef4e3653
+  NIMSDK: f919c8315c0d5775f8a0a84ce7c5ef12060b025d
+  SDAutoLayout: 6b6f4db0d009dfc46cef14ef710dbb164e86616c
+  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
+  SVProgressHUD: bfde85ed6c573ea802b9cb37894ed9b629034f1b
+  Toast: 14a93686d6c8bfe2727afd342414e35660a8a1f3
+  TZImagePickerController: 0a8ff228d287ebdd7d485e8c42a2a932894f1fba
+  UITableView+FDTemplateLayoutCell: 5c949b4a5059c404b442926c0e80f81d10a2d66f
+  YYCache: 8105b6638f5e849296c71f331ff83891a4942952
   YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
+  YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: fa21c745ed37f84ffb7d7ebe8d6562eed11d74b5
+PODFILE CHECKSUM: b64c14c24c11865931b4716509318d12bfdfe8ac
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.3.1

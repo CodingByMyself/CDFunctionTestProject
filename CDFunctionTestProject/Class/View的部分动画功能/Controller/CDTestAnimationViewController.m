@@ -15,7 +15,6 @@
 #import "CDBounceAnimation.h"
 
 
-
 @interface CDTestAnimationViewController () <UITableViewDelegate,UITableViewDataSource>
 {
     UITableView *_tableAnimation;
@@ -45,6 +44,8 @@
     _tableAnimation.delegate = self;
     _tableAnimation.dataSource = self;
     [self.view addSubview:_tableAnimation];
+    
+    []
     
 }
 
