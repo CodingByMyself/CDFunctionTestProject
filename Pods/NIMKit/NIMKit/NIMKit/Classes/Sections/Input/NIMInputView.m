@@ -162,6 +162,7 @@
     if (!_toolBar)
     {
         _toolBar = [[NIMInputToolBar alloc] initWithFrame:CGRectMake(0, 0, self.nim_width, 0)];
+        
         [self addSubview:_toolBar];
         
         //设置placeholder
@@ -276,7 +277,7 @@
     NSDictionary *userInfo = notification.userInfo;
     CGRect endFrame   = [userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
     CGRect beginFrame = [userInfo[UIKeyboardFrameBeginUserInfoKey] CGRectValue];
-    self.keyBoardFrameTop = endFrame.origin.y;
+    self.keyBoardFrameTop = self.superview.nim_height - endFrame.size.height;
     [self willShowKeyboardFromFrame:beginFrame toFrame:endFrame];
 }
 
@@ -484,7 +485,8 @@
                 });
             }
                 break;
-            case NIMSessionTypeP2P:{
+            case NIMSessionTypeP2P:
+            case NIMSessionTypeChatroom:{
                 if (([self.inputConfig respondsToSelector:@selector(enableRobot)] && self.inputConfig.enableRobot) || [NIMSDK sharedSDK].isUsingDemoAppKey)
                 {
                     NIMContactRobotSelectConfig *config = [[NIMContactRobotSelectConfig alloc] init];

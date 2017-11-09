@@ -170,6 +170,11 @@
     [self refresh];
 }
 
+- (void)allMessagesRead
+{
+    _recentSessions = [[NIMSDK sharedSDK].conversationManager.allRecentSessions mutableCopy];
+    [self refresh];
+}
 
 #pragma mark - NIMLoginManagerDelegate
 - (void)onLogin:(NIMLoginStep)step
@@ -293,10 +298,22 @@
         default:
             text = @"[未知消息]";
     }
-    if (lastMessage.session.sessionType == NIMSessionTypeP2P || lastMessage.messageType == NIMMessageTypeTip) {
+    if (lastMessage.session.sessionType == NIMSessionTypeP2P || lastMessage.messageType == NIMMessageTypeTip)
+    {
         return text;
-    }else{
-        NSString *nickName = [NIMKitUtil showNick:lastMessage.from inSession:lastMessage.session];
+    }
+    else
+    {
+        NSString *from = lastMessage.from;
+        if (lastMessage.messageType == NIMMessageTypeRobot)
+        {
+            NIMRobotObject *object = (NIMRobotObject *)lastMessage.messageObject;
+            if (object.isFromRobot)
+            {
+                from = object.robotId;
+            }
+        }
+        NSString *nickName = [NIMKitUtil showNick:from inSession:lastMessage.session];
         return nickName.length ? [nickName stringByAppendingFormat:@" : %@",text] : @"";
     }
 }

@@ -9,7 +9,7 @@
 #import "CDBannerCarouselView.h"
 #import "CDBannerItemCell.h"
 #import "TAPageControl.h"
-
+#import "UIImage+CTPUILibrary.h"
 NSInteger const NumberOfItemsInSection = 10000;
 
 @interface CDBannerCarouselView () <UICollectionViewDelegate,UICollectionViewDataSource,TAPageControlDelegate>
@@ -33,7 +33,7 @@ NSInteger const NumberOfItemsInSection = 10000;
 {
     self = [super init];
     if (self) {
-        _placeholderImage = [placeholderImage isKindOfClass:[UIImage class]] ? placeholderImage :[UIImage imageNamed:@"CDCreateBoundle.bundle/placeholder"]; // 设置默认占位符
+        _placeholderImage = [placeholderImage isKindOfClass:[UIImage class]] ? placeholderImage :[UIImage myBundleImageNamed:@"placeholder"]; // 设置默认占位符
         self.delegate = delegate;
         [self setup];
     }
@@ -139,7 +139,7 @@ NSInteger const NumberOfItemsInSection = 10000;
     imageView.tag = 1;
     NSArray *cells = [self.collectionViewBanner visibleCells];
     for (CDBannerItemCell *cell in cells) {
-        [cell setup];
+        cell.enableZoom = self.enableZoom;
     }
 }
 
@@ -174,10 +174,11 @@ NSInteger const NumberOfItemsInSection = 10000;
         cell.imageViewBanner.tag = 1;
         cell.imageViewBanner.image = image;
         cell.imageViewBanner.contentMode = self.bannerContentMode;
-        cell.enableZoom = self.enableZoom;
+        
     }
     
-    [cell setup];
+    //    [cell setup];
+    cell.enableZoom = self.enableZoom;
     
     return cell;
 }
@@ -377,7 +378,7 @@ NSInteger const NumberOfItemsInSection = 10000;
         _collectionViewBanner.directionalLockEnabled = YES;
         _collectionViewBanner.pagingEnabled = YES;
         _collectionViewBanner.bounces = YES;
-//        _collectionViewBanner.alwaysBounceVertical = NO; // 不允许垂直方向
+        //        _collectionViewBanner.alwaysBounceVertical = NO; // 不允许垂直方向
         _collectionViewBanner.showsVerticalScrollIndicator = NO;
         _collectionViewBanner.showsHorizontalScrollIndicator = NO;
         [self addSubview:_collectionViewBanner];
@@ -398,8 +399,8 @@ NSInteger const NumberOfItemsInSection = 10000;
         _pageControl = [[TAPageControl alloc] init];
 //        _pageControl.backgroundColor = [UIColor greenColor];
         // Custom dot view with image
-        _pageControl.dotImage = [UIImage imageNamed:@"CDCreateBoundle.bundle/dotInactive"];
-        _pageControl.currentDotImage = [UIImage imageNamed:@"CDCreateBoundle.bundle/dotActive"];
+        _pageControl.dotImage = [UIImage myBundleImageNamed:@"dotInactive"];
+        _pageControl.currentDotImage = [UIImage myBundleImageNamed:@"dotActive"];
         _pageControl.dotSize = CGSizeMake(12.0, 12.0);
         [self addSubview:_pageControl];
         [_pageControl mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -414,3 +415,4 @@ NSInteger const NumberOfItemsInSection = 10000;
 }
 
 @end
+

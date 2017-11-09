@@ -12,11 +12,29 @@
 
 
 
-NSString *ALERT_MENU_TITLE_KEY = @"alert_menu_title_key";
-NSString *ALERT_MENU_TYPE_KEY = @"alert_menu_type_key";
+@implementation CDAlertMenuModel
+- (NSString *)menuName
+{
+    if (_menuName.length > 0) {
+        return _menuName;
+    } else {
+        return @"";
+    }
+}
+
+- (instancetype)initWithMenuType:(CDLinkAlertMenuTypes)type andMenuName:(NSString *)name
+{
+    self = [super init];
+    if (self) {
+        self.menuName = name;
+        self.menuType = type;
+    }
+    return self;
+}
+@end
 
 
-
+#pragma mark -
 @interface CDLinkLabel()
 
 @property (nonatomic, retain) NSLayoutManager *layoutManager;
@@ -471,7 +489,7 @@ NSString *ALERT_MENU_TYPE_KEY = @"alert_menu_type_key";
     
     // 修改了部分源码
     //可以识别url的正则表达式
-    NSString *regulaStr = @"((http[s]{0,1}|ftp)://[a-zA-Z0-9\\.\\-]+\\.([a-zA-Z0-9]{2,4})(:\\d+)?(/[a-zA-Z0-9\\.\\-~!@#$%^&*+?:_/=<>]*)?)|(www.[a-zA-Z0-9\\.\\-]+\\.([a-zA-Z]{2,4})(:\\d+)?(/[a-zA-Z0-9\\.\\-~!@#$%^&*+?:_/=<>]*)?)";
+    NSString *regulaStr = @"((http[s]{0,1}|ftp)://[a-zA-Z0-9\\.\\-]+\\.([a-zA-Z0-9]{2,4})(:\\d+)?(/[a-zA-Z0-9\\.\\-~!@#$%^&*+?:_/=]*)?)|(www.[a-zA-Z0-9\\.\\-]+\\.([a-zA-Z]{2,4})(:\\d+)?(/[a-zA-Z0-9\\.\\-~!@#$%^&*+?:_/=<>]*)?)";
     NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:regulaStr options:NSRegularExpressionCaseInsensitive error:&error];
     NSArray *matches = [regex matchesInString:plainText options:0 range:NSMakeRange(0, [plainText length])];
     
@@ -733,10 +751,10 @@ NSString *ALERT_MENU_TYPE_KEY = @"alert_menu_type_key";
         if ([self.alertMenuDelegate respondsToSelector:@selector(alertMenuListOnLongPressLinkLabel:)]) {
             NSArray *menus = [self.alertMenuDelegate alertMenuListOnLongPressLinkLabel:self];
             if (menus.count > 0) {
-                for (NSDictionary *menuDict in menus) {
+                for (CDAlertMenuModel *menuDict in menus) {
                     UIMenuItem *item;
-                    NSString *title = menuDict[ALERT_MENU_TITLE_KEY];
-                    switch ([menuDict[ALERT_MENU_TYPE_KEY] integerValue]) {
+                    NSString *title = menuDict.menuName;
+                    switch (menuDict.menuType) {
                         case CDLinkAlertMenuTypeCopy:
                             item = [[UIMenuItem alloc] initWithTitle:title action:@selector(copyEvent:)];
                             break;

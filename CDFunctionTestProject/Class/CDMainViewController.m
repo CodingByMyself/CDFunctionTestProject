@@ -7,6 +7,8 @@
 //
 
 #import "CDMainViewController.h"
+#import "CDBaseNavigationController.h"
+
 #import "CDCollectionViewController.h"
 #import "CDTestCustomGroupController.h"
 #import "CDTestMenuViewController.h"
@@ -121,7 +123,8 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if ([_classList count] > [indexPath row]) {
         if ([_classList count] - 1 == [indexPath row]) {
-            [self presentViewController:_classList[indexPath.row] animated:YES completion:nil];
+            
+            [self presentViewController:[[CDBaseNavigationController alloc] initWithRootViewController:_classList[indexPath.row]] animated:YES completion:nil];
         } else {
             [self.navigationController pushViewController:_classList[indexPath.row] animated:YES];
         }

@@ -22,6 +22,8 @@
 #import "NIMKitUtil.h"
 #import "NIMTeamSwitchTableViewCell.h"
 #import "NIMAvatarImageView.h"
+#import "NIMKitProgressHUD.h"
+#import "NIMTeamNotifyUpdateViewController.h"
 
 
 #pragma mark - Team Header View
@@ -306,9 +308,9 @@
     
     NIMTeamCardRowItem *teamNotify = [[NIMTeamCardRowItem alloc] init];
     teamNotify.title  = @"消息提醒";
-    teamNotify.switchOn = [self.team notifyForNewMsg];
+    teamNotify.action = @selector(updateTeamNotify);
     teamNotify.rowHeight = 50.f;
-    teamNotify.type   = TeamCardRowItemTypeSwitch;
+    teamNotify.type   = TeamCardRowItemTypeCommon;
 
     NIMTeamCardRowItem *itemQuit = [[NIMTeamCardRowItem alloc] init];
     itemQuit.title = @"退出高级群";
@@ -568,6 +570,12 @@
     _updateTeamNickAlertView = [[UIAlertView alloc] initWithTitle:@"" message:@"修改群昵称" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确认", nil];
     _updateTeamNickAlertView.alertViewStyle = UIAlertViewStylePlainTextInput;
     [_updateTeamNickAlertView show];
+}
+
+- (void)updateTeamNotify
+{
+    NIMTeamNotifyUpdateViewController *vc = [[NIMTeamNotifyUpdateViewController alloc] initTeam:self.team];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)updateTeamIntro{
@@ -1053,9 +1061,9 @@
     BOOL success = data && [data writeToFile:filePath atomically:YES];
     __weak typeof(self) wself = self;
     if (success) {
-        [SVProgressHUD show];
+        [NIMKitProgressHUD show];
         [[NIMSDK sharedSDK].resourceManager upload:filePath progress:nil completion:^(NSString *urlString, NSError *error) {
-            [SVProgressHUD dismiss];
+            [NIMKitProgressHUD dismiss];
             if (!error && wself) {
                 [[NIMSDK sharedSDK].teamManager updateTeamAvatar:urlString teamId:wself.team.teamId completion:^(NSError *error) {
                     if (!error) {

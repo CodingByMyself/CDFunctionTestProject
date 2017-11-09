@@ -99,12 +99,15 @@
     //一定是机器人下行消息
     [self recycleAllSubViews:self];
     NIMKitRobotTemplate *template = [[NIMKit sharedKit].robotTemplateParser robotTemplate:data.message];
-    NSAssert([template.version isEqualToString:@"0.1"], @"robot template version incompatible!");
+    if (![template.version isEqualToString:@"0.1"])
+    {
+        NSLog(@"robot template version incompatible!");
+    }
     for (NIMKitRobotTemplateLayout *layout in template.items)
     {
         for (NIMKitRobotTemplateItem *item in layout.items)
         {
-            [self applyItem:item inView:self insets:data.contentViewInsets];
+            [self applyItem:item inView:self];
         }
     }
     
@@ -114,9 +117,7 @@
 
 - (void)applyItem:(NIMKitRobotTemplateItem *)item
            inView:(UIView *)view
-           insets:(UIEdgeInsets)insets
 {
-    CGFloat width = view.nim_width - insets.left - insets.right;
     switch (item.itemType) {
         case NIMKitRobotTemplateItemTypeText:
         {
@@ -128,8 +129,6 @@
                 label.textAlignment = kCTTextAlignmentCenter;
                 label.textColor = NIMKit_UIColorFromRGB(0x248DFA);
             }
-            CGSize size = [label sizeThatFits:CGSizeMake(width, CGFLOAT_MAX)];
-            label.nim_size = CGSizeMake(size.width, size.height);
             [view addSubview:label];
         }
             break;
@@ -148,8 +147,7 @@
         case NIMKitRobotTemplateItemTypeLinkURL:
         case NIMKitRobotTemplateItemTypeLinkBlock:
         {
-            NIMSessionRobotButton *button = [[NIMSessionRobotButton alloc] initWithFrame:CGRectMake(0, 0, width, 0)];
-            [button addTarget:self action:@selector(onTouchButton:) forControlEvents:UIControlEventTouchUpInside];
+            NIMSessionRobotButton *button = [self genButton];
             NIMKitRobotTemplateLinkItem *link = (NIMKitRobotTemplateLinkItem *)item;
             button.target = link.target;
             button.param  = link.params;
@@ -158,9 +156,8 @@
             
             for (NIMKitRobotTemplateItem *linkItem in link.items)
             {
-                [self applyItem:linkItem inView:button insets:UIEdgeInsetsZero];
+                [self applyItem:linkItem inView:button];
             }
-            [button sizeToFit];
             [view addSubview:button];
         }
             break;
@@ -230,6 +227,8 @@
 - (void)layoutSubviews
 {
     [super layoutSubviews];
+    [self resizeAllSubView:self insets:self.model.contentViewInsets];
+
     CGFloat top = [NIMSessionRobotContentView itemSpacing];
     for (UIView *view in self.subviews)
     {
@@ -251,6 +250,47 @@
 }
 
 
+- (void)resizeAllSubView:(UIView *)superView insets:(UIEdgeInsets)insets
+{
+    CGFloat width = superView.nim_width - insets.left - insets.right;
+    
+    for (UIView *subView in superView.subviews)
+    {
+        if (subView.nim_height == 0)
+        {
+            if ([subView isKindOfClass:[M80AttributedLabel class]])
+            {
+                M80AttributedLabel *label = (M80AttributedLabel *)subView;
+                CGSize size = [label sizeThatFits:CGSizeMake(width, CGFLOAT_MAX)];
+                label.nim_size = CGSizeMake(size.width, size.height);
+                
+                [self resizeAllSubView:label insets:UIEdgeInsetsZero];
+            }
+            else if ([subView isKindOfClass:[UIImageView class]])
+            {
+                UIImageView *imageView = (UIImageView *)subView;
+                CGFloat defaultImageWidth  = 75.f;
+                CGFloat defaultImageHeight = 75.f;
+                imageView.nim_size = CGSizeMake(defaultImageWidth, defaultImageHeight);
+                
+                [self resizeAllSubView:imageView insets:UIEdgeInsetsZero];
+            }
+            else if ([subView isKindOfClass:[NIMSessionRobotButton class]])
+            {
+                NIMSessionRobotButton *button = (NIMSessionRobotButton *)subView;
+                button.nim_width = width;
+                
+                [self resizeAllSubView:button insets:UIEdgeInsetsZero];
+                
+                [button sizeToFit];
+            }
+        }
+    }
+}
+
+
+
+
 - (void)recycleAllSubViews:(UIView *)view
 {
     for (UIView *subView in view.subviews)
@@ -260,6 +300,8 @@
         }
         [subView removeFromSuperview];
         
+        
+        subView.frame = CGRectZero;
         if ([subView isKindOfClass:[NIMSessionRobotButton class]])
         {
             NIMSessionRobotButton *btn = (NIMSessionRobotButton *)subView;
@@ -309,9 +351,9 @@
     return label;
 }
 
-- (UIButton *)genButton
+- (NIMSessionRobotButton *)genButton
 {
-    UIButton *button = nil;
+    NIMSessionRobotButton *button = nil;
     if (self.buttons.count)
     {
         button = self.buttons.anyObject;
@@ -319,9 +361,10 @@
     }
     else
     {
-        button = [UIButton buttonWithType:UIButtonTypeCustom];
+        button = [[NIMSessionRobotButton alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
         button.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     }
+    [button addTarget:self action:@selector(onTouchButton:) forControlEvents:UIControlEventTouchUpInside];
     return button;
 }
 

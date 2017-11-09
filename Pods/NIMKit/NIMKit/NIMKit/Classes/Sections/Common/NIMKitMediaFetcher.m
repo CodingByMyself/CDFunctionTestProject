@@ -13,6 +13,7 @@
 #import "NIMGlobalMacro.h"
 #import "NIMKitDependency.h"
 #import "TZImageManager.h"
+#import "NIMKitProgressHUD.h"
 
 @interface NIMKitMediaPickerController : TZImagePickerController
 
@@ -164,11 +165,13 @@
     if (!assets.count) {
         return;
     }
+    
     __weak typeof(self) weakSelf = self;
-    [SVProgressHUD show];
+    [NIMKitProgressHUD show];
     [self requestAsset:assets.firstObject handler:^(NSString *path, PHAssetMediaType type) {
-        [SVProgressHUD dismiss];
-        if (weakSelf.libraryResultHandler) {
+        [NIMKitProgressHUD dismiss];
+        if (weakSelf.libraryResultHandler)
+        {
             weakSelf.libraryResultHandler(nil,path,type);
         }
         NIMKit_Dispatch_Async_Main(^{

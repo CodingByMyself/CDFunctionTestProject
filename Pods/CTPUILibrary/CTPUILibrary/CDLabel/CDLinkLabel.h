@@ -50,25 +50,29 @@ typedef NS_OPTIONS(NSUInteger, CDLinkAlertMenuTypes)
 typedef void (^CDLinkHandler)(CDLinkType linkType, NSString *string, NSRange range);
 
 
-UIKIT_EXTERN NSString *ALERT_MENU_TITLE_KEY;
-UIKIT_EXTERN NSString *ALERT_MENU_TYPE_KEY;
+@interface CDAlertMenuModel : NSObject
+@property (nonatomic,copy) NSString *menuName;
+@property (nonatomic,assign) CDLinkAlertMenuTypes menuType;
+- (instancetype)initWithMenuType:(CDLinkAlertMenuTypes)type andMenuName:(NSString *)name;
+@end
 
 
 
+#pragma mark
 @protocol CDLinkLabelAlertMenuDelegate <NSObject>
 
 @optional
 - (void)linkLabel:(CDLinkLabel *)linkLabel didSelectedAlertMenuType:(CDLinkAlertMenuTypes)menuType;
 
 @required
-- (NSArray <NSDictionary *> *)alertMenuListOnLongPressLinkLabel:(CDLinkLabel *)linkLabel;
+- (NSArray <CDAlertMenuModel *> *)alertMenuListOnLongPressLinkLabel:(CDLinkLabel *)linkLabel;
 
 @end
 
 @interface CDLinkLabel : UILabel <NSLayoutManagerDelegate>
 
 
-#pragma mark - 长安弹出菜单 功能
+#pragma mark 长安弹出菜单 功能
 @property (nonatomic, weak) id <CDLinkLabelAlertMenuDelegate> alertMenuDelegate;
 // 初始字符内容(转码之前)
 @property (nonatomic, copy) NSString *originalString;

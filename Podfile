@@ -7,13 +7,15 @@ target "CDFunctionTestProject" do
     pod 'JSONKit-NoWarning', '~> 1.1'
     pod 'FSCalendar', '~> 2.7.7'
     
+    pod 'CYLTabBarController','1.14.1'
+    
 #    pod 'SDWebImage'
 #    pod 'SDWebImage', '~>3.8'
 #    pod 'SDCycleScrollView','~> 1.64'
 
     pod 'YYImage'
-    pod 'YYImage/WebP'
-    
+    #pod 'YYImage/WebP'
+
     
     # 2017.6.19 11:24
     pod 'NIMKit/Full'
@@ -26,5 +28,5 @@ target "CDFunctionTestProject" do
     
 
     pod 'CTPUILibrary',:git=>'http://10.10.15.98/comtopios/CTPUILibrary.git', :branch=>'develop'
-    
+
 end

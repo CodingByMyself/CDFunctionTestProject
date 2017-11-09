@@ -22,6 +22,7 @@
 #import "NIMContactSelectConfig.h"
 #import "NIMContactSelectViewController.h"
 #import "NIMGlobalMacro.h"
+#import "NIMKitProgressHUD.h"
 
 #define TableCellReuseId        @"tableCell"
 #define TableButtonCellReuseId  @"tableButtonCell"
@@ -139,7 +140,8 @@
     
     NIMTeamCardRowItem *teamNotify = [[NIMTeamCardRowItem alloc] init];
     teamNotify.title            = @"消息提醒";
-    teamNotify.switchOn         = [self.team notifyForNewMsg];
+    //普通群没有只接受管理员
+    teamNotify.switchOn         = [self.team notifyStateForNewMsg] == NIMTeamNotifyStateAll;
     teamNotify.rowHeight        = 50.f;
     teamNotify.type             = TeamCardRowItemTypeSwitch;
 
@@ -181,12 +183,12 @@
         __weak typeof(self) wself = self;
         switch (self.currentOpera) {
             case CardHeaderOpeatorAdd:{
-                [SVProgressHUD show];
+                [NIMKitProgressHUD show];
                 [[NIMSDK sharedSDK].teamManager addUsers:selectedContacts
                                                   toTeam:self.team.teamId
                                               postscript:@"邀请你加入讨论组"
                                               completion:^(NSError *error,NSArray *members) {
-                    [SVProgressHUD dismiss];
+                    [NIMKitProgressHUD dismiss];
                     if (!error) {
                         if (self.team.type == NIMTeamTypeNormal) {
                             [wself addHeaderDatas:members];
@@ -216,7 +218,8 @@
 - (void)onStateChanged:(BOOL)on
 {
     __weak typeof(self) weakSelf = self;
-    [[[NIMSDK sharedSDK] teamManager] updateNotifyState:on
+    NIMTeamNotifyState state = on? NIMTeamNotifyStateAll : NIMTeamNotifyStateNone;
+    [[[NIMSDK sharedSDK] teamManager] updateNotifyState:state
                                                  inTeam:[self.team teamId]
                                              completion:^(NSError *error) {
                                                  [weakSelf refreshTableBody];
@@ -448,9 +451,9 @@
 #pragma mark - NIMMemberGroupViewDelegate
 - (void)didSelectRemoveButtonWithMemberId:(NSString *)uid{
     __weak typeof(self) wself = self;
-    [SVProgressHUD show];
+    [NIMKitProgressHUD show];
     [[NIMSDK sharedSDK].teamManager kickUsers:@[uid] fromTeam:self.team.teamId completion:^(NSError *error) {
-        [SVProgressHUD dismiss];
+        [NIMKitProgressHUD dismiss];
         if (!error) {
             [wself removeMembers:@[uid]];
             [wself refreshTableHeader:self.view.nim_width];

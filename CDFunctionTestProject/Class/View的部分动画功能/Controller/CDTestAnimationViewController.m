@@ -45,8 +45,6 @@
     _tableAnimation.dataSource = self;
     [self.view addSubview:_tableAnimation];
     
-    []
-    
 }
 
 #pragma mark - UITableView Delegate

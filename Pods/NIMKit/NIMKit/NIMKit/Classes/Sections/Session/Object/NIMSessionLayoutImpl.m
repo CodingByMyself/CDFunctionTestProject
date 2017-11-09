@@ -12,6 +12,7 @@
 #import "NIMGlobalMacro.h"
 #import "NIMKitUIConfig.h"
 #import "NIMSessionTableAdapter.h"
+#import "UIView+NIM.h"
 
 @interface NIMSessionLayoutImpl(){
     NSMutableArray *_inserts;
@@ -64,7 +65,6 @@
 
 - (void)resetLayout
 {
-    [self setViewRect:self.tableView.superview.frame];
     [self adjustTableView];
 }
 
@@ -92,11 +92,22 @@
 
 - (void)adjustTableView
 {
+    BOOL viewRectChanged = !CGRectEqualToRect(_viewRect, self.tableView.superview.frame);
+    [self setViewRect:self.tableView.superview.frame];
+    
     CGRect rect = [_tableView frame];
     rect.origin.y = 0;
     rect.size.height = self.viewRect.size.height - _inputViewHeight;
-    [_tableView setFrame:rect];
-    [_tableView nim_scrollToBottom:NO];
+    BOOL tableChanged = !CGRectEqualToRect(_tableView.frame, rect);
+    if (tableChanged)
+    {
+        [_tableView setFrame:rect];
+    }
+    if (tableChanged || viewRectChanged)
+    {
+        [_tableView reloadData];
+        [_tableView nim_scrollToBottom:YES];
+    }
 }
 
 
@@ -108,9 +119,8 @@
 
 #pragma mark - Private
 
-- (void)layoutConfig:(NIMMessageModel *)model{
-    [model calculateContent:self.tableView.frame.size.width
-                      force:NO];
+- (void)calculateContent:(NIMMessageModel *)model{
+    [model contentSize:self.tableView.nim_width];
 }
 
 - (void)setupRefreshControl
@@ -132,20 +142,22 @@
 
 - (void)insert:(NSArray<NSIndexPath *> *)indexPaths animated:(BOOL)animated
 {
-    if (!indexPaths.count) {
+    if (!indexPaths.count)
+    {
         return;
     }
 
     NSMutableArray *addIndexPathes = [NSMutableArray array];
     [indexPaths enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        [addIndexPathes addObject:[NSIndexPath indexPathForRow:[obj integerValue] inSection:0]];
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:[obj integerValue] inSection:0];
+        [addIndexPathes addObject:indexPath];
     }];
+    
     [self.tableView beginUpdates];
-    [self.tableView insertRowsAtIndexPaths:addIndexPathes withRowAnimation:UITableViewRowAnimationNone];
+    [self.tableView insertRowsAtIndexPaths:addIndexPathes withRowAnimation:UITableViewRowAnimationAutomatic];
     [self.tableView endUpdates];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(.2f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self.tableView nim_scrollToBottom:animated];
-    });
+    [self.tableView nim_scrollToBottom:animated];
+
 }
 
 - (void)remove:(NSArray<NSIndexPath *> *)indexPaths

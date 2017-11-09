@@ -84,21 +84,19 @@ EOM
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_resource "${PODS_ROOT}/CTPUILibrary/CTPUILibrary/CDCreateBoundle.bundle"
+  install_resource "${PODS_ROOT}/CTPUILibrary/CTPUILibrary/CTPUILibrary.bundle"
   install_resource "${PODS_ROOT}/NIMKit/NIMKit/Resources/NIMKitEmoticon.bundle"
   install_resource "${PODS_ROOT}/NIMKit/NIMKit/Resources/NIMKitResource.bundle"
   install_resource "${PODS_ROOT}/NIMKit/NIMKit/Resources/NIMKitSettings.bundle"
-  install_resource "${PODS_ROOT}/NIMSDK/NIMAVChat/Resources/NMCVideoFilter.bundle"
-  install_resource "${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
+  install_resource "${PODS_ROOT}/NIMSDK/NIM_iOS_SDK_v4.3.0/NIMAVChat/Resources/NMCVideoFilter.bundle"
   install_resource "${PODS_ROOT}/TZImagePickerController/TZImagePickerController/TZImagePickerController/TZImagePickerController.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_resource "${PODS_ROOT}/CTPUILibrary/CTPUILibrary/CDCreateBoundle.bundle"
+  install_resource "${PODS_ROOT}/CTPUILibrary/CTPUILibrary/CTPUILibrary.bundle"
   install_resource "${PODS_ROOT}/NIMKit/NIMKit/Resources/NIMKitEmoticon.bundle"
   install_resource "${PODS_ROOT}/NIMKit/NIMKit/Resources/NIMKitResource.bundle"
   install_resource "${PODS_ROOT}/NIMKit/NIMKit/Resources/NIMKitSettings.bundle"
-  install_resource "${PODS_ROOT}/NIMSDK/NIMAVChat/Resources/NMCVideoFilter.bundle"
-  install_resource "${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
+  install_resource "${PODS_ROOT}/NIMSDK/NIM_iOS_SDK_v4.3.0/NIMAVChat/Resources/NMCVideoFilter.bundle"
   install_resource "${PODS_ROOT}/TZImagePickerController/TZImagePickerController/TZImagePickerController/TZImagePickerController.bundle"
 fi
 

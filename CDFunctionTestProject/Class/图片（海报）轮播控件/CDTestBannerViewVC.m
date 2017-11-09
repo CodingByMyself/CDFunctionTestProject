@@ -8,6 +8,7 @@
 
 #import "CDTestBannerViewVC.h"
 #import "CDBannerCarouselView.h"
+#import "YYWebImageManager.h"
 
 @interface CDTestBannerViewVC () <CDBannerCarouselViewDelegate>
 @property (nonatomic,strong) CDBannerCarouselView *bannerView;
@@ -22,6 +23,8 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.automaticallyAdjustsScrollViewInsets = NO;
     
+    
+    [[YYWebImageManager sharedManager] requestImageWithURL:[NSURL URLWithString:@"http://eim2.szcomtop.com:6888/api/fs/view/Z3JvdXAxL00wMC8wMC9BQi9DZ3B1WmxtdVRNeUFJc0hKQUFER0NKTlZLZ0E1OTMwNTkz?size=s"] options:YYWebImageOptionRefreshImageCache progress:nil transform:nil completion:nil];
     
     [self.bannerView reload];
 }
