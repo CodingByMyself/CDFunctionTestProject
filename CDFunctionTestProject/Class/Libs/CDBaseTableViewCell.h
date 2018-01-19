@@ -1,10 +1,10 @@
 //
 //  CDBaseTableViewCell.h
-//  CDFunctionTestProject
+//  EOA
 //
-//  Created by Cindy on 16/7/7.
-//  Copyright © 2016年 Cindy. All rights reserved.
+//  Created by Cindy on 2017/2/22.
 //
+
 
 #ifndef CDBaseTableViewCell_h
 #define CDBaseTableViewCell_h
@@ -14,14 +14,11 @@
 
 @interface CDBaseTableViewCell : UITableViewCell
 
-/**
- *  外界访问cell背景视图的统一入口
- *
- *  @return 返回cell背景视图的引用对象
- */
-@property (nonatomic,readonly) UIView *baseViewBg;
-@property (nonatomic,readonly) UILabel *baseLabelTitle;
 
+@property (nonatomic,weak) UITableView *weakTableView;
+
+
++ (CGFloat)estimateRowHeightCalculateByAutoData:(id)autoData;
 
 
 /**
@@ -70,7 +67,4 @@
 @end
 
 
-
 #endif /* CDBaseTableViewCell_h */
-
-

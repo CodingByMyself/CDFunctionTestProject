@@ -1,16 +1,19 @@
 //
 //  CDBaseTableViewCell.m
-//  CDFunctionTestProject
+//  EOA
 //
-//  Created by Cindy on 16/7/7.
-//  Copyright © 2016年 Cindy. All rights reserved.
+//  Created by Cindy on 2017/2/22.
 //
+
 
 #import "CDBaseTableViewCell.h"
 
 @implementation CDBaseTableViewCell
-@synthesize baseViewBg = _baseViewBg;
-@synthesize baseLabelTitle = _baseLabelTitle;
+
++ (CGFloat)estimateRowHeightCalculateByAutoData:(id)autoData
+{
+    return 50.0;
+}
 
 
 #pragma mark - Public init method
@@ -40,6 +43,7 @@
             self = [super initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
         }
         
+        self.weakTableView = tableView;
         [self setup];
         
         return self;
@@ -65,6 +69,7 @@
         
         self = [super initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
         
+        self.weakTableView = tableView;
         [self setup];
         
         return self;
@@ -79,7 +84,7 @@
  *
  *  @param identifier 对新创建的cell设置一个唯一标示，复用机制
  *  @param tableView  该cell所在的tableView
- *  @param style      cell的选中效果
+*  @param style      cell的选中效果
  *
  *  @return 返回一个该cell的实例对象
  */
@@ -89,9 +94,10 @@
     if (cell == nil) {
         
         self = [super initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
-        
+
         self.selectionStyle = style;
         
+        self.weakTableView = tableView;
         [self setup];
         
         return self;
@@ -105,60 +111,6 @@
 - (void)setup
 {
     //  空实现，子类可以重载该方法来自定义初始化代码 ,并且子类的重载方法中加上 [super setup];
-}
-
-
-
-
-
-#pragma mark   -  property  getter  method
-- (UIView *)baseViewBg
-{
-    if (_baseViewBg == nil) {
-        _baseViewBg = [[UIView alloc] init];
-        _baseViewBg.backgroundColor = [UIColor clearColor];
-        [self.contentView addSubview:_baseViewBg];
-        [_baseViewBg mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(_baseViewBg.superview);
-            make.left.equalTo(_baseViewBg.superview);
-            make.right.equalTo(_baseViewBg.superview);
-            make.bottom.equalTo(_baseViewBg.superview);
-        }];
-    }
-    return _baseViewBg;
-}
-
-- (UILabel *)baseLabelTitle
-{
-    if (_baseLabelTitle == nil) {
-        _baseLabelTitle = [[UILabel alloc] init];
-        _baseLabelTitle.font = [UIFont systemFontOfSize:15.0];
-        _baseLabelTitle.textColor = [UIColor darkGrayColor];
-        [self.baseViewBg addSubview:_baseLabelTitle];
-        [_baseLabelTitle mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(_baseLabelTitle.superview);
-            make.left.equalTo(_baseLabelTitle.superview).offset(6.0);
-            make.right.equalTo(_baseLabelTitle.superview).offset(-6.0);
-            make.bottom.equalTo(_baseLabelTitle.superview);
-        }];
-    }
-    return _baseLabelTitle;
-}
-
-#pragma mark
-- (void)layoutSubviews
-{
-    [self.contentView sendSubviewToBack:_baseViewBg];
-}
-
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
-}
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-    // Configure the view for the selected state
 }
 
 @end
