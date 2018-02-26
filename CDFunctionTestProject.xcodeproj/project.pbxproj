@@ -46,8 +46,6 @@
 		3755D80A1E55390A00534D24 /* CDBounceAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3755D8091E55390A00534D24 /* CDBounceAnimation.m */; };
 		3755D80D1E553D4600534D24 /* punch_ok@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3755D80B1E553D4600534D24 /* punch_ok@2x.png */; };
 		3755D80E1E553D4600534D24 /* punch_ok@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3755D80C1E553D4600534D24 /* punch_ok@3x.png */; };
-		3756FB841EC16B5C0075F12D /* CDMomentsItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3756FB831EC16B5C0075F12D /* CDMomentsItemCell.m */; };
-		375BBE1E1EC053C600D7DE41 /* follow_add_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 375BBE1D1EC053C600D7DE41 /* follow_add_icon.png */; };
 		3769EFFB1D41F6C3008B5083 /* CDTestTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3769EFFA1D41F6C3008B5083 /* CDTestTabBarViewController.m */; };
 		3769F0201D420059008B5083 /* CDFourTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3769F0181D420059008B5083 /* CDFourTabBarViewController.m */; };
 		3769F0211D420059008B5083 /* CDOneTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3769F01A1D420059008B5083 /* CDOneTabBarViewController.m */; };
@@ -79,8 +77,6 @@
 		376E1A4A1D47359A00D62128 /* loadingState270-00012.png in Resources */ = {isa = PBXBuildFile; fileRef = 376E1A471D47359A00D62128 /* loadingState270-00012.png */; };
 		3774CBDB1D3F793600240D43 /* CDBaseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3774CBDA1D3F793600240D43 /* CDBaseObject.m */; };
 		3778F91E1EBC61BB003FB618 /* CDTestBBSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3778F91D1EBC61BB003FB618 /* CDTestBBSViewController.m */; };
-		3778F9211EBC63E5003FB618 /* CDAddBBSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3778F9201EBC63E5003FB618 /* CDAddBBSViewController.m */; };
-		3778F9241EBC64C5003FB618 /* CDAddInputTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3778F9231EBC64C5003FB618 /* CDAddInputTextCell.m */; };
 		3780D2A01E80B8B900521D46 /* CDKeywordsArrayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3780D29F1E80B8B900521D46 /* CDKeywordsArrayView.m */; };
 		3780D2A31E80B8E300521D46 /* CDTestKeywordsArrayVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3780D2A21E80B8E300521D46 /* CDTestKeywordsArrayVC.m */; };
 		37863F321D58290900CB2715 /* CDCityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 37863F301D58290800CB2715 /* CDCityModel.m */; };
@@ -239,9 +235,7 @@
 		37EBD3E71E5AF6DD00B848F0 /* h1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 37EBD3E41E5AF6DD00B848F0 /* h1.jpg */; };
 		37EBD3EC1E5AF72D00B848F0 /* h2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 37EBD3EA1E5AF72D00B848F0 /* h2.jpg */; };
 		37EBD3ED1E5AF72D00B848F0 /* h3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 37EBD3EB1E5AF72D00B848F0 /* h3.jpg */; };
-		37EC20321EBC715200171DC6 /* CDPictureSelectedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EC20311EBC715200171DC6 /* CDPictureSelectedCell.m */; };
 		37EC20361EBC71D100171DC6 /* RECDCollectionViewLinkFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EC20351EBC71D100171DC6 /* RECDCollectionViewLinkFlowLayout.m */; };
-		37EF48071F330BAB007372F1 /* CDTestAutoHeightCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EF48061F330BAB007372F1 /* CDTestAutoHeightCell.m */; };
 		78DBA9475F1CBF735734A38E /* libPods-CDFunctionTestProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F5A388F56147CCBE0E353B4F /* libPods-CDFunctionTestProject.a */; };
 /* End PBXBuildFile section */
 
@@ -309,9 +303,6 @@
 		3755D8091E55390A00534D24 /* CDBounceAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDBounceAnimation.m; sourceTree = "<group>"; };
 		3755D80B1E553D4600534D24 /* punch_ok@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "punch_ok@2x.png"; sourceTree = "<group>"; };
 		3755D80C1E553D4600534D24 /* punch_ok@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "punch_ok@3x.png"; sourceTree = "<group>"; };
-		3756FB821EC16B5C0075F12D /* CDMomentsItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDMomentsItemCell.h; sourceTree = "<group>"; };
-		3756FB831EC16B5C0075F12D /* CDMomentsItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDMomentsItemCell.m; sourceTree = "<group>"; };
-		375BBE1D1EC053C600D7DE41 /* follow_add_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = follow_add_icon.png; sourceTree = "<group>"; };
 		3769EFF91D41F6C3008B5083 /* CDTestTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDTestTabBarViewController.h; sourceTree = "<group>"; };
 		3769EFFA1D41F6C3008B5083 /* CDTestTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDTestTabBarViewController.m; sourceTree = "<group>"; };
 		3769F0171D420059008B5083 /* CDFourTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDFourTabBarViewController.h; sourceTree = "<group>"; };
@@ -357,10 +348,6 @@
 		3774CBDA1D3F793600240D43 /* CDBaseObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDBaseObject.m; sourceTree = "<group>"; };
 		3778F91C1EBC61BB003FB618 /* CDTestBBSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDTestBBSViewController.h; sourceTree = "<group>"; };
 		3778F91D1EBC61BB003FB618 /* CDTestBBSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDTestBBSViewController.m; sourceTree = "<group>"; };
-		3778F91F1EBC63E5003FB618 /* CDAddBBSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDAddBBSViewController.h; sourceTree = "<group>"; };
-		3778F9201EBC63E5003FB618 /* CDAddBBSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDAddBBSViewController.m; sourceTree = "<group>"; };
-		3778F9221EBC64C5003FB618 /* CDAddInputTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDAddInputTextCell.h; sourceTree = "<group>"; };
-		3778F9231EBC64C5003FB618 /* CDAddInputTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDAddInputTextCell.m; sourceTree = "<group>"; };
 		3780D29E1E80B8B900521D46 /* CDKeywordsArrayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDKeywordsArrayView.h; sourceTree = "<group>"; };
 		3780D29F1E80B8B900521D46 /* CDKeywordsArrayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDKeywordsArrayView.m; sourceTree = "<group>"; };
 		3780D2A11E80B8E300521D46 /* CDTestKeywordsArrayVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDTestKeywordsArrayVC.h; sourceTree = "<group>"; };
@@ -573,12 +560,8 @@
 		37EBD3E41E5AF6DD00B848F0 /* h1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = h1.jpg; sourceTree = "<group>"; };
 		37EBD3EA1E5AF72D00B848F0 /* h2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = h2.jpg; sourceTree = "<group>"; };
 		37EBD3EB1E5AF72D00B848F0 /* h3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = h3.jpg; sourceTree = "<group>"; };
-		37EC20301EBC715200171DC6 /* CDPictureSelectedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDPictureSelectedCell.h; sourceTree = "<group>"; };
-		37EC20311EBC715200171DC6 /* CDPictureSelectedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDPictureSelectedCell.m; sourceTree = "<group>"; };
 		37EC20341EBC71D100171DC6 /* RECDCollectionViewLinkFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RECDCollectionViewLinkFlowLayout.h; sourceTree = "<group>"; };
 		37EC20351EBC71D100171DC6 /* RECDCollectionViewLinkFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RECDCollectionViewLinkFlowLayout.m; sourceTree = "<group>"; };
-		37EF48051F330BAB007372F1 /* CDTestAutoHeightCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDTestAutoHeightCell.h; sourceTree = "<group>"; };
-		37EF48061F330BAB007372F1 /* CDTestAutoHeightCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDTestAutoHeightCell.m; sourceTree = "<group>"; };
 		4BB1CEF029DE4E2CCD40335A /* Pods-CDFunctionTestProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CDFunctionTestProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CDFunctionTestProject/Pods-CDFunctionTestProject.debug.xcconfig"; sourceTree = "<group>"; };
 		F5A388F56147CCBE0E353B4F /* libPods-CDFunctionTestProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CDFunctionTestProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBDEFD3E84FF096BD97BEDF0 /* Pods-CDFunctionTestProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CDFunctionTestProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-CDFunctionTestProject/Pods-CDFunctionTestProject.release.xcconfig"; sourceTree = "<group>"; };
@@ -607,8 +590,6 @@
 			children = (
 				3778F91C1EBC61BB003FB618 /* CDTestBBSViewController.h */,
 				3778F91D1EBC61BB003FB618 /* CDTestBBSViewController.m */,
-				3778F91F1EBC63E5003FB618 /* CDAddBBSViewController.h */,
-				3778F9201EBC63E5003FB618 /* CDAddBBSViewController.m */,
 				371B9D8E1E9C7D8100BF9B2B /* View&Cell */,
 			);
 			path = "朋友圈帖子排版";
@@ -617,14 +598,6 @@
 		371B9D8E1E9C7D8100BF9B2B /* View&Cell */ = {
 			isa = PBXGroup;
 			children = (
-				37EF48051F330BAB007372F1 /* CDTestAutoHeightCell.h */,
-				37EF48061F330BAB007372F1 /* CDTestAutoHeightCell.m */,
-				3756FB811EC16AFA0075F12D /* ItemCells */,
-				375BBE1D1EC053C600D7DE41 /* follow_add_icon.png */,
-				3778F9221EBC64C5003FB618 /* CDAddInputTextCell.h */,
-				3778F9231EBC64C5003FB618 /* CDAddInputTextCell.m */,
-				37EC20301EBC715200171DC6 /* CDPictureSelectedCell.h */,
-				37EC20311EBC715200171DC6 /* CDPictureSelectedCell.m */,
 			);
 			path = "View&Cell";
 			sourceTree = "<group>";
@@ -893,15 +866,6 @@
 			children = (
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		3756FB811EC16AFA0075F12D /* ItemCells */ = {
-			isa = PBXGroup;
-			children = (
-				3756FB821EC16B5C0075F12D /* CDMomentsItemCell.h */,
-				3756FB831EC16B5C0075F12D /* CDMomentsItemCell.m */,
-			);
-			path = ItemCells;
 			sourceTree = "<group>";
 		};
 		3769EFEF1D41F6AA008B5083 /* TabBarControllerAndBlur */ = {
@@ -1653,7 +1617,6 @@
 				37E225631E711E77004E3615 /* 073.png in Resources */,
 				37E225391E711E76004E3615 /* 047.png in Resources */,
 				37E225591E711E77004E3615 /* 068.png in Resources */,
-				375BBE1E1EC053C600D7DE41 /* follow_add_icon.png in Resources */,
 				37E225921E7128F7004E3615 /* 052.png in Resources */,
 				37E225771E711E77004E3615 /* 083.png in Resources */,
 				37A5B6311D2DF9D100F09090 /* header_view_image_bg.jpg in Resources */,
@@ -1805,7 +1768,6 @@
 				375112F41D49E8B200810727 /* CDTestItemLongPressViewController.m in Sources */,
 				3780D2A31E80B8E300521D46 /* CDTestKeywordsArrayVC.m in Sources */,
 				37863F321D58290900CB2715 /* CDCityModel.m in Sources */,
-				3778F9241EBC64C5003FB618 /* CDAddInputTextCell.m in Sources */,
 				374912881D533C1600D2514F /* CDTipsView.m in Sources */,
 				373450581E9F0EDF00CAB3EF /* RECDPreviewDocumentManager.m in Sources */,
 				376C16271D3CDC6A002AA201 /* CDViewAnimation.m in Sources */,
@@ -1829,10 +1791,8 @@
 				37A2BE041EF1559000E0BB54 /* CDRefreshAutoNormalFooter.m in Sources */,
 				3769EFFB1D41F6C3008B5083 /* CDTestTabBarViewController.m in Sources */,
 				37A2BE071EF155C200E0BB54 /* CDRefreshAutoGifFooter.m in Sources */,
-				37EF48071F330BAB007372F1 /* CDTestAutoHeightCell.m in Sources */,
 				37532F0D1D3DD2A1003CFE0C /* CDTestModel.m in Sources */,
 				37DAF87F1D33A456001BF809 /* CDBaseTableViewCell.m in Sources */,
-				3756FB841EC16B5C0075F12D /* CDMomentsItemCell.m in Sources */,
 				37A2BDEF1EF153AC00E0BB54 /* CDRefreshStateHeader.m in Sources */,
 				374912821D53113000D2514F /* CDDateHelper.m in Sources */,
 				37A2BDDB1EF14F7800E0BB54 /* NSBundle+CDRefresh.m in Sources */,
@@ -1884,11 +1844,9 @@
 				37A2BDF21EF153FF00E0BB54 /* CDRefreshNormalHeader.m in Sources */,
 				3769F0201D420059008B5083 /* CDFourTabBarViewController.m in Sources */,
 				3778F91E1EBC61BB003FB618 /* CDTestBBSViewController.m in Sources */,
-				37EC20321EBC715200171DC6 /* CDPictureSelectedCell.m in Sources */,
 				37A5B6301D2DF9D100F09090 /* CExpandHeader.m in Sources */,
 				37A2BDCE1EF14CB500E0BB54 /* UIScrollView+CDRefreshExtension.m in Sources */,
 				3705E92A1D45ECF10028753A /* CDCenterViewController.m in Sources */,
-				3778F9211EBC63E5003FB618 /* CDAddBBSViewController.m in Sources */,
 				37A5B64A1D2E444700F09090 /* CDTestCustomGroupController.m in Sources */,
 				376E1A2B1D4733F200D62128 /* CDContinueFrameAnimation.m in Sources */,
 				37E224951E710992004E3615 /* CDFaceView.m in Sources */,

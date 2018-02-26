@@ -7,15 +7,9 @@
 //
 
 #import "CDTestBBSViewController.h"
-#import "CDAddBBSViewController.h"
 
 #import "CDRefresh.h"
 #import "CTPRefreshHeader.h"
-
-
-
-#import "CDTestAutoHeightCell.h"
-#import "UITableView+FDTemplateLayoutCell.h"
 
 
 
@@ -33,24 +27,7 @@
     
     self.tableViewBBS.delegate = self;
     self.tableViewBBS.dataSource = self;
-    
-    // 左侧进入个人中心按钮
-    UIButton *rightButton = [[UIButton alloc] init];
-    rightButton.imageView.contentMode = UIViewContentModeScaleAspectFit;
-    UIImage *imageMyself = [UIImage imageNamed:@"follow_add_icon"];
-    [rightButton setImage:imageMyself forState:UIControlStateNormal];
-    rightButton.frame =  CGRectMake(0, 0, 20.0, 20.0);
-    rightButton.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, -10);
-    [rightButton addTarget:self action:@selector(navigationAdd:) forControlEvents:UIControlEventTouchUpInside | UIControlEventTouchUpOutside];// 监听按钮点击
-    self.navigationItem.rightBarButtonItems = @[[[UIBarButtonItem alloc] initWithCustomView:rightButton]];
 
-    
-}
-
-- (void)navigationAdd:(UIButton *)button
-{
-    CDAddBBSViewController *addVC = [[CDAddBBSViewController alloc] init];
-    [self.navigationController pushViewController:addVC animated:YES];
 }
 
 

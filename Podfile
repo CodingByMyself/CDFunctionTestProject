@@ -28,5 +28,7 @@ target "CDFunctionTestProject" do
     
 
     pod 'CTPUILibrary',:git=>'http://10.10.15.98/comtopios/CTPUILibrary.git', :branch=>'develop'
+    
+    pod 'WCDB'
 
 end
